@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainab Ghadiyali | Tech Leader, Founder & Curiosity-Driven Career Designer</title>
+    <meta name="description" content="Comprehensive profile of Zainab Ghadiyali - Product Lead at Airbnb, Co-founder of Wogrammer, Founder of Eat Cook Joy. Full articles, career journey, ventures, talks, and 60+ resource links.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a1a2e;
+            --color-accent: #e94560;
+            --color-accent-light: #ff6b6b;
+            --color-gold: #f4a261;
+            --color-teal: #2ec4b6;
+            --color-purple: #7b2ff7;
+            --color-text: #e8e8e8;
+            --color-text-muted: #a0a0b8;
+            --color-bg: #0a0a1a;
+            --color-card: rgba(22, 33, 62, 0.7);
+            --color-border: rgba(233, 69, 96, 0.2);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'Inter', sans-serif; background: var(--color-bg); color: var(--color-text); line-height: 1.7; overflow-x: hidden; }
+
+        .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .bg-animation .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; animation: float 20s ease-in-out infinite; }
+        .bg-animation .orb:nth-child(1) { width: 600px; height: 600px; background: var(--color-accent); top: -200px; right: -200px; }
+        .bg-animation .orb:nth-child(2) { width: 400px; height: 400px; background: var(--color-purple); bottom: -100px; left: -100px; animation-delay: -7s; }
+        .bg-animation .orb:nth-child(3) { width: 500px; height: 500px; background: var(--color-teal); top: 50%; left: 50%; animation-delay: -14s; }
+        @keyframes float { 0%,100%{transform:translate(0,0) scale(1)} 25%{transform:translate(50px,-50px) scale(1.1)} 50%{transform:translate(-30px,30px) scale(0.95)} 75%{transform:translate(20px,50px) scale(1.05)} }
+
+        /* Nav */
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 2rem; backdrop-filter: blur(20px); background: rgba(10,10,26,0.88); border-bottom: 1px solid var(--color-border); }
+        .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 0.3rem; list-style: none; flex-wrap: wrap; }
+        .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.35rem 0.7rem; border-radius: 8px; transition: var(--transition); }
+        .nav-links a:hover { color: var(--color-text); background: rgba(233,69,96,0.1); }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--color-text); font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding: 7rem 2rem 4rem; }
+        .hero-inner { max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; font-weight: 700; line-height: 1.1; margin-bottom: 1.2rem; }
+        .hero-content h1 .highlight { background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 540px; }
+        .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .tag { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; border: 1px solid var(--color-border); background: rgba(233,69,96,0.06); color: var(--color-accent-light); transition: var(--transition); }
+        .tag:hover { background: rgba(233,69,96,0.12); transform: translateY(-2px); }
+        .tag.teal { border-color: rgba(46,196,182,0.3); background: rgba(46,196,182,0.06); color: var(--color-teal); }
+        .tag.gold { border-color: rgba(244,162,97,0.3); background: rgba(244,162,97,0.06); color: var(--color-gold); }
+        .tag.purple { border-color: rgba(123,47,247,0.3); background: rgba(123,47,247,0.06); color: var(--color-purple); }
+        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.6rem; border-radius: 12px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; border: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light)); color: white; box-shadow: 0 4px 20px rgba(233,69,96,0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(233,69,96,0.5); }
+        .btn-outline { background: transparent; color: var(--color-text); border: 1px solid var(--color-border); }
+        .btn-outline:hover { background: rgba(233,69,96,0.1); border-color: var(--color-accent); }
+
+        .hero-visual { position: relative; display: flex; justify-content: center; }
+        .hero-card { width: 360px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 2rem; backdrop-filter: blur(20px); }
+        .hero-card::before { content: ''; position: absolute; top: -1px; left: -1px; right: -1px; bottom: -1px; border-radius: var(--radius); background: linear-gradient(135deg, var(--color-accent), transparent, var(--color-purple)); z-index: -1; opacity: 0.4; }
+        .hero-card-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent), var(--color-purple)); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: white; margin: 0 auto 1.2rem; }
+        .hero-card h3 { text-align: center; font-size: 1.2rem; margin-bottom: 0.2rem; }
+        .hero-card p { text-align: center; color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+        .hero-card-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; }
+        .stat-value { font-size: 1.4rem; font-weight: 700; color: var(--color-accent-light); }
+        .stat-label { font-size: 0.68rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Sections */
+        section { padding: 4.5rem 2rem; }
+        .section-inner { max-width: 1400px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 2.5rem; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 0.6rem; }
+        .section-header p { color: var(--color-text-muted); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+        .section-label { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--color-accent); margin-bottom: 0.6rem; }
+
+        /* Stats */
+        .stats-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; padding: 1.5rem 0; }
+        .stats-strip-item { text-align: center; padding: 1.2rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); }
+        .stats-strip-value { font-size: 2.2rem; font-weight: 800; background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stats-strip-label { font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.2rem; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 2.5rem; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--color-accent), var(--color-purple), var(--color-teal)); }
+        .timeline-item { position: relative; margin-bottom: 2rem; padding: 1.2rem 1.5rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); backdrop-filter: blur(10px); transition: var(--transition); }
+        .timeline-item:hover { transform: translateX(6px); border-color: var(--color-accent); }
+        .timeline-item::before { content: ''; position: absolute; left: -2.5rem; top: 1.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--color-accent); border: 2px solid var(--color-bg); transform: translateX(-4px); }
+        .timeline-year { font-size: 0.72rem; font-weight: 700; color: var(--color-gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.2rem; }
+        .timeline-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .timeline-desc { font-size: 0.88rem; color: var(--color-text-muted); }
+
+        /* Article Reader */
+        .article-reader { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 2rem; overflow: hidden; backdrop-filter: blur(10px); }
+        .article-header { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
+        .article-header:hover { background: rgba(233,69,96,0.05); }
+        .article-header-left { flex: 1; }
+        .article-source { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-accent); margin-bottom: 0.3rem; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .article-meta { font-size: 0.8rem; color: var(--color-text-muted); }
+        .article-toggle { width: 36px; height: 36px; border-radius: 50%; background: rgba(233,69,96,0.1); display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.2rem; transition: var(--transition); flex-shrink: 0; }
+        .article-reader.open .article-toggle { transform: rotate(180deg); }
+        .article-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .article-reader.open .article-body { max-height: 20000px; }
+        .article-content { padding: 0 2rem 2rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.02rem; line-height: 1.85; color: #d0d0e0; }
+        .article-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 2rem 0 0.8rem; color: var(--color-text); }
+        .article-content h4 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--color-gold); }
+        .article-content p { margin-bottom: 1rem; }
+        .article-content blockquote { border-left: 3px solid var(--color-accent); padding: 0.8rem 1.2rem; margin: 1.2rem 0; background: rgba(233,69,96,0.05); border-radius: 0 8px 8px 0; font-style: italic; color: var(--color-text); }
+        .article-content ul, .article-content ol { margin: 0.8rem 0 1rem 1.5rem; }
+        .article-content li { margin-bottom: 0.4rem; }
+        .article-content .qa-question { font-weight: 700; color: var(--color-accent-light); margin-top: 1.5rem; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; }
+        .article-content .qa-answer { margin-bottom: 1.2rem; }
+        .article-content .article-source-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-accent-light); text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.82rem; margin-top: 1rem; transition: var(--transition); }
+        .article-content .article-source-link:hover { background: rgba(233,69,96,0.1); border-color: var(--color-accent); }
+        .article-divider { height: 1px; background: var(--color-border); margin: 0 2rem; }
+
+        /* Ventures */
+        .ventures-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+        .venture-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.8rem; backdrop-filter: blur(10px); transition: var(--transition); position: relative; overflow: hidden; }
+        .venture-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-accent), var(--color-gold)); }
+        .venture-card:hover { transform: translateY(-4px); border-color: var(--color-accent); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .venture-icon { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 0.8rem; }
+        .venture-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+        .venture-card p { color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 0.8rem; }
+        .venture-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .venture-link { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 500; text-decoration: none; color: var(--color-text-muted); border: 1px solid rgba(255,255,255,0.06); transition: var(--transition); }
+        .venture-link:hover { color: var(--color-text); background: rgba(255,255,255,0.04); border-color: var(--color-accent); }
+
+        /* Philosophy */
+        .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .philosophy-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.8rem; backdrop-filter: blur(10px); transition: var(--transition); }
+        .philosophy-card:hover { transform: translateY(-4px); border-color: var(--color-accent); }
+        .philosophy-number { font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 0.8rem; }
+        .philosophy-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+        .philosophy-card p { color: var(--color-text-muted); font-size: 0.88rem; }
+
+        /* Books */
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+        .book-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.3rem; display: flex; gap: 1rem; transition: var(--transition); }
+        .book-card:hover { transform: translateY(-3px); border-color: var(--color-gold); }
+        .book-cover { width: 60px; height: 85px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.8rem; }
+        .book-info h3 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+        .book-info .author { font-size: 0.78rem; color: var(--color-gold); margin-bottom: 0.3rem; }
+        .book-info p { font-size: 0.78rem; color: var(--color-text-muted); }
+        .reading-badge { display: inline-block; padding: 0.12rem 0.45rem; border-radius: 999px; font-size: 0.62rem; font-weight: 600; text-transform: uppercase; background: rgba(46,196,182,0.12); color: var(--color-teal); border: 1px solid rgba(46,196,182,0.3); margin-bottom: 0.4rem; }
+
+        /* Links */
+        .links-section { background: rgba(15,52,96,0.12); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+        .links-category { margin-bottom: 2rem; }
+        .links-category-title { display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--color-border); }
+        .links-category-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 0.6rem; }
+        .link-item { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 0.9rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: 10px; text-decoration: none; color: var(--color-text); transition: var(--transition); font-size: 0.82rem; }
+        .link-item:hover { border-color: var(--color-accent); background: rgba(233,69,96,0.04); transform: translateX(3px); }
+        .link-favicon { width: 26px; height: 26px; border-radius: 6px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.68rem; }
+        .link-info { overflow: hidden; flex: 1; }
+        .link-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .link-url { font-size: 0.7rem; color: var(--color-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .link-arrow { color: var(--color-text-muted); transition: var(--transition); flex-shrink: 0; }
+        .link-item:hover .link-arrow { color: var(--color-accent); transform: translateX(3px); }
+        .link-count { display: inline-flex; align-items: center; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; background: rgba(233,69,96,0.12); color: var(--color-accent-light); margin-left: 0.4rem; }
+
+        .search-bar { max-width: 500px; margin: 0 auto 2rem; }
+        .search-input { width: 100%; padding: 0.7rem 1.1rem; border-radius: 12px; border: 1px solid var(--color-border); background: var(--color-card); color: var(--color-text); font-size: 0.88rem; outline: none; transition: var(--transition); }
+        .search-input:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(233,69,96,0.1); }
+        .search-input::placeholder { color: var(--color-text-muted); }
+
+        /* Quote */
+        .quote-section { background: linear-gradient(135deg, rgba(233,69,96,0.06), rgba(123,47,247,0.06)); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+        .quote-block { max-width: 800px; margin: 0 auto; text-align: center; }
+        .quote-block blockquote { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; line-height: 1.4; margin-bottom: 1rem; }
+        .quote-block cite { color: var(--color-text-muted); font-style: normal; font-size: 0.88rem; }
+
+        /* Footer */
+        .footer { padding: 2.5rem 2rem; border-top: 1px solid var(--color-border); text-align: center; }
+        .footer p { color: var(--color-text-muted); font-size: 0.78rem; }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.82rem; transition: var(--transition); }
+        .footer-links a:hover { color: var(--color-accent); }
+
+        .fade-in { opacity: 0; transform: translateY(25px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 968px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 2.6rem; }
+            .hero-subtitle { margin: 0 auto 1.5rem; }
+            .hero-tags { justify-content: center; }
+            .hero-cta { justify-content: center; }
+            .hero-card { margin: 0 auto; }
+            .links-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,26,0.95); padding: 1rem; border-bottom: 1px solid var(--color-border); }
+            .mobile-toggle { display: block; }
+            .hero { padding: 5rem 1rem 2rem; }
+            .hero-content h1 { font-size: 2rem; }
+            section { padding: 3rem 1rem; }
+            .section-header h2 { font-size: 1.7rem; }
+            .ventures-grid, .philosophy-grid, .books-grid { grid-template-columns: 1fr; }
+            .article-title { font-size: 1.1rem; }
+            .article-content { padding: 0 1.2rem 1.5rem; font-size: 0.95rem; }
+            .quote-block blockquote { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">ZG</a>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#ventures">Ventures</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#links">All Links</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content fade-in">
+                <h1>Zainab<br><span class="highlight">Ghadiyali</span></h1>
+                <p class="hero-subtitle">From Mumbai with $107 to Product Lead at Airbnb, co-founder of Wogrammer, and founder of Eat Cook Joy. Designing a curiosity-driven career one bold move at a time.</p>
+                <div class="hero-tags">
+                    <span class="tag">Tech Leader</span>
+                    <span class="tag teal">Product Lead</span>
+                    <span class="tag gold">Eat Cook Joy</span>
+                    <span class="tag purple">Wogrammer</span>
+                    <span class="tag">Speaker</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn Profile</a>
+                    <a href="#articles" class="btn btn-outline">Read Articles</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="hero-card">
+                    <div class="hero-card-avatar">ZG</div>
+                    <h3>Zainab Ghadiyali</h3>
+                    <p>Founder & Product Leader</p>
+                    <div class="hero-card-stats">
+                        <div><div class="stat-value">3</div><div class="stat-label">Ventures</div></div>
+                        <div><div class="stat-value">60+</div><div class="stat-label">Links</div></div>
+                        <div><div class="stat-value">10+</div><div class="stat-label">Yrs in Tech</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section style="padding: 1.5rem 2rem;">
+        <div class="section-inner">
+            <div class="stats-strip fade-in">
+                <div class="stats-strip-item"><div class="stats-strip-value">$107</div><div class="stats-strip-label">Arrived in the US with</div></div>
+                <div class="stats-strip-item"><div class="stats-strip-value">200+</div><div class="stats-strip-label">Job rejections overcome</div></div>
+                <div class="stats-strip-item"><div class="stats-strip-value">200+</div><div class="stats-strip-label">Women engineers featured</div></div>
+                <div class="stats-strip-item"><div class="stats-strip-value">$1M</div><div class="stats-strip-label">Annualized revenue track</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote-section">
+        <div class="section-inner">
+            <div class="quote-block fade-in">
+                <blockquote>"Career ladder thinking puts you in a box."</blockquote>
+                <cite>-- Zainab Ghadiyali</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey -->
+    <section id="journey">
+        <div class="section-inner">
+            <div class="section-header fade-in"><span class="section-label">Career Path</span><h2>The Journey</h2><p>A career painted in bold brushstrokes, not climbed on a ladder</p></div>
+            <div class="timeline fade-in">
+                <div class="timeline-item"><div class="timeline-year">Origin</div><div class="timeline-title">Mumbai to South Carolina</div><div class="timeline-desc">Left India at 19 with $107 to study chemistry at Winthrop University. First-generation college student from a family of non-college-educated parents.</div></div>
+                <div class="timeline-item"><div class="timeline-year">College Years</div><div class="timeline-title">Global Research & Service</div><div class="timeline-desc">Conducted acupuncture research in Berlin via DAAD fellowship. Worked with FIMRC in remote Peru and Nicaragua building sustainable pediatric care models.</div></div>
+                <div class="timeline-item"><div class="timeline-year">2009</div><div class="timeline-title">200+ Rejections</div><div class="timeline-desc">Graduated during the recession. Discovered tech at 25 through a Facebook hackathon she attended for the free Chinese food. Won the hackathon and earned an engineering interview.</div></div>
+                <div class="timeline-item"><div class="timeline-year">Facebook</div><div class="timeline-title">Production Engineer to Tech Lead</div><div class="timeline-desc">Accepted a 3-month internship despite no coding experience. Promoted to full-time, advanced to Tech Lead. Built products used by 1.5+ billion people including Poke, Ads, Pages, and Blood Donations.</div></div>
+                <div class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-title">Co-founded Wogrammer</div><div class="timeline-desc">Co-founded with Erin Summers to reshape media narratives about women in tech. Featured 200+ women engineers. Named Foreign Policy Top 100 Global Thinkers 2015. Later acquired by AnitaB.org.</div></div>
+                <div class="timeline-item"><div class="timeline-year">Airbnb & Canva</div><div class="timeline-title">Product Lead</div><div class="timeline-desc">Product Lead at Airbnb building product infrastructure. Later at Canva leading product infrastructure teams. Mastered influence without authority.</div></div>
+                <div class="timeline-item"><div class="timeline-year">Current</div><div class="timeline-title">Eat Cook Joy & Stackbirds</div><div class="timeline-desc">Founded Eat Cook Joy, connecting families with personal chefs via AI. Survived a ransomware attack and rebuilt. On track for $1M annualized revenue. Now also building Stackbirds to democratize AI agent technology.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMBEDDED ARTICLES -->
+    <section id="articles" style="background: rgba(15,52,96,0.1);">
+        <div class="section-inner">
+            <div class="section-header fade-in"><span class="section-label">Read On-Site</span><h2>Featured Articles</h2><p>Full articles embedded for reading -- no external links needed</p></div>
+
+            <!-- Article 1: First Round Review -->
+            <div class="article-reader fade-in" id="article-firstround">
+                <div class="article-header" onclick="toggleArticle('article-firstround')">
+                    <div class="article-header-left">
+                        <div class="article-source">First Round Review</div>
+                        <div class="article-title">The Secrets to Designing a Curiosity-Driven Career</div>
+                        <div class="article-meta">Featured article on career philosophy, transferable skills, and beating impostor syndrome</div>
+                    </div>
+                    <div class="article-toggle">&#9660;</div>
+                </div>
+                <div class="article-divider"></div>
+                <div class="article-body">
+                    <div class="article-content">
+                        <p>Zainab Ghadiyali's path to tech has been anything but conventional. Her resume spans engineering at Facebook, Product Lead at Airbnb, and co-founder of Wogrammer -- but the real story is in the extraordinary transitions that got her there.</p>
+
+                        <h3>At Every Crossroads, Lean Into Curiosity</h3>
+                        <p>Growing up middle-class in Mumbai with parents who never graduated college, Ghadiyali discovered her guiding principle in the stacks of local libraries. Books gave her the desire to learn about worlds different from her own -- and that curiosity became her career compass.</p>
+
+                        <h4>Creative vs. Reactive Mindset</h4>
+                        <p>Drawing from Bob Anderson's Leadership Circle framework, Ghadiyali distinguishes between two ways of thinking about uncertainty. The reactive mindset is fear-driven -- you see a problem as a threat, react to it, and spiral into anxiety about why you can't do something. The creative mindset is possibility-driven -- instead of fretting over problems, you emphasize what's possible. To shift from reactive to creative, she begins by setting an intention: reminding herself of the outcome she wants before entering difficult situations.</p>
+
+                        <h4>Career as a Painting, Not a Ladder</h4>
+                        <p>The traditional career ladder implies linear progression along a narrow track. Ghadiyali advocates thinking of your career as a work of art instead. From a distance you see a cohesive picture, but up close there are hundreds of separate brushstrokes. Each experience -- even ones that seem like detours -- adds a brushstroke. She studied alternative medicine in Berlin, considered becoming a doctor, graduated during the 2009 recession, got rejected from 200+ jobs, and worked for a public health nonprofit in Peru and Nicaragua before finding tech. On paper these seem like missteps, but with curiosity as the throughline, the connections emerge.</p>
+
+                        <h4>Three Decision-Making Questions</h4>
+                        <p>At every career juncture, Ghadiyali asks herself:</p>
+                        <ol>
+                            <li><strong>Have I maximized growth in my current role?</strong> Don't move on prematurely. Soak up everything your current position offers.</li>
+                            <li><strong>Does this align with my values?</strong> She creates a spreadsheet with options in rows and factors (growth, financial stability, location, manager quality, creativity) in columns, assigning point values.</li>
+                            <li><strong>Do I want to expand laterally or dive deeper?</strong> Horizontal skills like communication and influence are essential even for deep specialists.</li>
+                        </ol>
+
+                        <h3>Reframe What It Means to Be "Qualified"</h3>
+                        <p>The key that unlocked Ghadiyali's door to tech was free Chinese food. During grad school, she stopped by an event advertising free food. It turned out to be a Facebook-sponsored hackathon. Before she could leave, a recruiter asked which team she was on. She sat at the one table with an empty chair. Her team won, earning an interview with Facebook.</p>
+                        <p>The catch: it was an engineering interview, and she didn't code. She was tempted to postpone and learn first, but recalled a mentor's advice about jumping on the train when it's leaving the station. She accepted the interview, emphasizing her strengths as a logical thinker and quick learner rather than hiding her gaps. She minimized the hiring risk by noting it was only a three-month internship.</p>
+
+                        <h4>Leap Before You're Ready -- But Catch Up</h4>
+                        <p>Those first weeks at Facebook were brutal. She didn't know what Python was. She wanted to quit. Her manager told her to stop comparing herself to others with more experience. She spent the remaining weeks sleeping at the office, cramming code. By the end, she'd completed her project and earned a full-time offer as Production Engineer.</p>
+                        <p>Her advice for landing in unfamiliar territory: be realistic about strengths and weaknesses, don't rest on laurels from previous roles, and stay open to feedback even when you disagree -- understanding the "why" behind it.</p>
+
+                        <h3>Tools for the Unconventional Path</h3>
+
+                        <h4>The Power of Persuasion</h4>
+                        <p>At Airbnb, Ghadiyali needed to convince leadership to invest in re-architecting the technical stack -- a massive undertaking. She wasn't the VP, CTO, or CPO, but she learned to influence from a place without authority. She realized she'd been building this skill since convincing Facebook to hire an unqualified intern. Influence, she argues, is a life skill everyone exercises more than they realize -- from convincing parents about movies to negotiating seat upgrades.</p>
+
+                        <h4>Hire for Hunger, Not Checklists</h4>
+                        <p>As a hiring manager, Ghadiyali ignores requirements like "3-5 years experience." Instead, she defines the three most important qualities per role. The one universal quality she seeks: hunger -- not just motivation, but a genuine desire to learn. She asks candidates what they geek out about, whether they work on side projects, and when they last learned something completely new.</p>
+
+                        <h4>Builders vs. Smushers</h4>
+                        <p>Borrowing from Mary Lou Jepsen's wisdom: there are people who build sandcastles and people who smush them. Builders leave you feeling inspired after conversations. Smushers make you feel depleted and discouraged. Surrounding yourself with builders is the antidote to impostor syndrome -- they won't let you give in to fear. Unconventional careers make you more susceptible to impostor syndrome, making this even more critical.</p>
+
+                        <h3>Side Hustles as Skill Accelerators</h3>
+                        <p>In 2014, while at Facebook, Ghadiyali and colleague Erin Summers grew frustrated that women engineers were always asked about being women in tech rather than their technical accomplishments. They launched Wogrammer on Instagram, which grew into profiles, workshops, and journalism fellowships. After interviewing 200+ women engineers, they found that women across all levels -- from high school students to CEOs -- were most proud of relationships rather than professional achievements. Wogrammer set out to change that narrative.</p>
+                        <p>Her advice for side projects: manage them like a business. Build scalable processes, bring in an executive director, create revenue models to minimize reliance on donations, and use automation to maximize limited time.</p>
+
+                        <h3>The Future is Curious</h3>
+                        <p>Ghadiyali encourages everyone in the workforce to remain adaptable. The jobs that will be most valuable require creative problem-solving, empathy, communication, and influence -- qualities that computers won't replicate for a long time. Whether through side projects, nonprofit work, or internal initiatives, developing soft skills is what will make you invaluable wherever you go.</p>
+
+                        <a href="https://review.firstround.com/the-secrets-to-designing-a-curiosity-driven-career/" target="_blank" rel="noopener" class="article-source-link">View original at First Round Review &#8594;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2: Crunchbase News -->
+            <div class="article-reader fade-in" id="article-crunchbase">
+                <div class="article-header" onclick="toggleArticle('article-crunchbase')">
+                    <div class="article-header-left">
+                        <div class="article-source">Crunchbase News</div>
+                        <div class="article-title">How This AI Founder Fought Back Against Ransomware</div>
+                        <div class="article-meta">Zainab's account of surviving a ransomware attack on Eat Cook Joy and the lessons for founders</div>
+                    </div>
+                    <div class="article-toggle">&#9660;</div>
+                </div>
+                <div class="article-divider"></div>
+                <div class="article-body">
+                    <div class="article-content">
+                        <p>On a January morning, two weeks before Eat Cook Joy's public launch, Ghadiyali walked into a founder's nightmare. She was locked out of her own site. The platform she had built over two and a half years -- containing the most comprehensive data set for the private chef industry, worth millions of dollars -- had vanished.</p>
+                        <p>FBI intelligence revealed the attack showed signs of a sophisticated international crime group targeting early-stage startups for ransom. Statistics show most business leaders in this position would negotiate and pay. Ghadiyali refused.</p>
+
+                        <h4>Clear Goals with the Right Team</h4>
+                        <p>Her goal was non-negotiable: recover all data, restore the platform, bring it online securely. She assembled a legal team led by Amy Mushahwar of Lowenstein Sandler -- people who understood the mission, anticipated the criminals' moves, and had strong law enforcement ties. One colleague, Tricia Wagner, spent her birthday consolidating evidence.</p>
+
+                        <h4>Fearless Strategic Execution</h4>
+                        <p>The strategy rested on three pillars: patience, detailed evidence, and fearlessness. When the crime ring denied having data or claimed it was deleted, Ghadiyali presented evidence that contradicted their claims. She knew the technical details of the platform better than they did. Meanwhile, she moved Eat Cook Joy operations offline to protect customer data, doubled engineering resources, and reinforced IP protections.</p>
+                        <p>Within weeks of the ransom demand, the crime ring had transferred everything back.</p>
+
+                        <h4>Lessons for Founders</h4>
+                        <ul>
+                            <li><strong>Set a clear goal.</strong> Define success upfront -- full recovery with no compromise.</li>
+                            <li><strong>Do not pay.</strong> Paying fuels more attacks and doesn't guarantee results.</li>
+                            <li><strong>Build the right team.</strong> Find lawyers with relevant experience, law enforcement relationships, and commitment to the mission.</li>
+                            <li><strong>Document everything.</strong> Evidence strengthens your position with law enforcement and adversaries.</li>
+                            <li><strong>Safeguard trust and capital.</strong> Protecting customers and investors must remain the top priority.</li>
+                        </ul>
+                        <p>Two weeks after regaining control, Eat Cook Joy was back online. Within six months, their chef network tripled. The company is now on track for $1 million in annualized revenue, making it one of the fastest-growing startups in food tech.</p>
+                        <p><em>Ghadiyali is now also building Stackbirds, a platform democratizing AI agent technology for the next generation of entrepreneurs.</em></p>
+
+                        <a href="https://news.crunchbase.com/startups/ai-founder-stopping-platform-ransom-ghadiyali-eat-cook-joy/" target="_blank" rel="noopener" class="article-source-link">View original at Crunchbase News &#8594;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3: Voyage San Antonio -->
+            <div class="article-reader fade-in" id="article-voyage">
+                <div class="article-header" onclick="toggleArticle('article-voyage')">
+                    <div class="article-header-left">
+                        <div class="article-source">Voyage San Antonio Magazine</div>
+                        <div class="article-title">Community Highlights: Meet Zainab Ghadiyali of Eat Cook Joy Inc</div>
+                        <div class="article-meta">Full interview on founding Eat Cook Joy, challenges, and personal journey</div>
+                    </div>
+                    <div class="article-toggle">&#9660;</div>
+                </div>
+                <div class="article-divider"></div>
+                <div class="article-body">
+                    <div class="article-content">
+                        <div class="qa-question">Where does your story begin?</div>
+                        <div class="qa-answer">
+                            <p>Eat Cook Joy began with a simple idea: what if having a private chef could feel as natural and affordable as ordering takeout? Ghadiyali started it when she realized how many busy people loved home-cooked meals but didn't have time to plan, shop, cook, and clean. On the flip side, incredible chefs wanted to cook for people without the pressure of running a restaurant.</p>
+                            <p>She first worked in Austin restaurant kitchens to understand what it's like to work as a chef. There she saw a massively talented chef pool looking to monetize skills outside the restaurant industry. She started small -- planning menus, shopping for groceries, and inviting chefs into people's kitchens to cook meals that felt both special and effortless, always including cleanup.</p>
+                            <p>Today, Eat Cook Joy serves busy families, new parents, professionals, and anyone who wants to eat well without the stress. Their mission: make it easy to come home to good food and support the local chef economy.</p>
+                        </div>
+
+                        <div class="qa-question">Has it been a smooth road?</div>
+                        <div class="qa-answer">
+                            <p>Not at all. Before starting Eat Cook Joy, Ghadiyali became a chef at restaurants and saw how talented chefs were stuck in rigid, exhausting environments. Many dreamed of taking skills directly to people but had no tools to make it work. Every profession has tools -- accountants have software, designers have platforms -- but chefs had nothing. That gap became Eat Cook Joy's foundation.</p>
+                            <p>Personally, she didn't come from a food background. Learning to work with chef talent meant understanding an entirely new language -- from knife prep to sourcing seasonal ingredients. One turning point was partnering with Chef Chance Smith, who brought operational excellence and helped reimagine what's possible when great chefs get proper support.</p>
+                        </div>
+
+                        <div class="qa-question">What sets you apart?</div>
+                        <div class="qa-answer">
+                            <p>Eat Cook Joy makes it easy for families to connect with local chefs at a fraction of the usual price. Weekly meal prep services offer personalized chef-prepared meals starting at $7 per serving. They leverage AI to help families customize meals per preferences, find grocery savings, and provide chefs with tools for successful execution. They now serve parties of all sizes in San Antonio, Austin, Dallas, and Houston.</p>
+                        </div>
+
+                        <div class="qa-question">How would we have described you growing up?</div>
+                        <div class="qa-answer">
+                            <p>Ghadiyali's path has been anything but conventional. She moved to the US alone at 19 with $107, supported herself through college and graduate school. As Field Operations Manager for FIMRC, she built sustainable business models providing free pediatric care in some of the world's most remote regions. As a DAAD fellowship awardee, she conducted research at Europe's largest university hospital and published clinical trials.</p>
+                            <p>As Tech Lead at Facebook, she led development of products used by over 1.5 billion people -- including Poke, advertising, Pages, and Blood Donations. She went on to serve as Product Lead at Airbnb and Canva. She co-founded Wogrammer, reaching 4+ million people and reshaping stories about women in engineering.</p>
+                            <p>She holds a B.Sc. in Chemistry from Winthrop University and an M.Sc. in Industrial Engineering and Computer Science from the University of Wisconsin-Madison. For bridging the gender gap in technology, she was named one of Foreign Policy magazine's Top 100 Global Thinkers in 2015.</p>
+                        </div>
+
+                        <a href="https://voyagesanantonio.com/interview/community-highlights-meet-zainab-ghadiyali-of-eat-cook-joy-inc/" target="_blank" rel="noopener" class="article-source-link">View original at Voyage San Antonio &#8594;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4: Meta Engineering -->
+            <div class="article-reader fade-in" id="article-meta">
+                <div class="article-header" onclick="toggleArticle('article-meta')">
+                    <div class="article-header-left">
+                        <div class="article-source">Engineering at Meta (Facebook)</div>
+                        <div class="article-title">Meet the Wogrammers -- Women in Engineering</div>
+                        <div class="article-meta">The origin story of Wogrammer and its ripple effect on women in tech</div>
+                    </div>
+                    <div class="article-toggle">&#9660;</div>
+                </div>
+                <div class="article-divider"></div>
+                <div class="article-body">
+                    <div class="article-content">
+                        <p>Erin Summers and Zainab Ghadiyali were sure there was a better way. The two software engineers were en route to grab an afternoon snack after a long meeting when they got discussing how typical media coverage of women engineers was one-sided.</p>
+                        <blockquote>"As software engineers, we get asked a lot about what it's like to be a woman in tech. Are there any horror stories? Have we experienced sexism? We would much rather be asked about our technical accomplishments and the technology we've built."</blockquote>
+                        <p>The vision was clear: showcase women engineers -- from the newcomer learning to code to the CEO -- to show you can learn anywhere in the world and at any age.</p>
+
+                        <h4>The First Wogrammer</h4>
+                        <p>The very first person featured hadn't graduated high school yet. Summers' mentee from Girls Who Code, Morgan Lewis, had started the summer thinking code looked like someone "threw a keyboard at the wall." In just two weeks, she built a mobile app for location tracking and notification sending. With that profile, Wogrammer was born.</p>
+
+                        <h4>The Ripple Effect</h4>
+                        <p>In about a year, Summers and Ghadiyali featured 46 women programmers from across the tech industry. Posts focused on engineering accomplishments, how coding became part of their lives, what they're most proud of building, and advice for others. The best part: each feature created what they call "secondary connections" -- a ripple effect where featured women get invited to projects and events, inspiring others to get into coding.</p>
+
+                        <h4>Featured Wogrammers</h4>
+                        <ul>
+                            <li><strong>Denae Ford</strong> -- CS Ph.D. candidate at NC State, published her first paper at CHASE 2015. Advised wogrammers to increase their network.</li>
+                            <li><strong>Leah Mcgowen-Hare</strong> -- Salesforce technical trainer. Received emails about daughters inspired to see someone like them in the field. Even got a request from Hour of Code in Suriname.</li>
+                            <li><strong>Ilona Bodnar</strong> -- Featured while still in high school. Self-taught coder who interned at Pixar. Became an instant role model with young girls asking technical questions.</li>
+                            <li><strong>Linda He</strong> -- CS student at Cal who learned iOS development. Her wogrammer advice brought her closer to friends who found it inspirational.</li>
+                            <li><strong>Kendell Byrd</strong> -- Self-taught coder with internships at Jawbone and JPMorgan. After being featured, was invited to speak at Urban Prep Academies.</li>
+                        </ul>
+
+                        <a href="https://engineering.fb.com/2015/06/04/culture/meet-the-wogrammers-women-in-engineering/" target="_blank" rel="noopener" class="article-source-link">View original at Engineering at Meta &#8594;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 5: Inside Outside Innovation -->
+            <div class="article-reader fade-in" id="article-podcast">
+                <div class="article-header" onclick="toggleArticle('article-podcast')">
+                    <div class="article-header-left">
+                        <div class="article-source">Inside Outside Innovation - Episode 191</div>
+                        <div class="article-title">On Ignorance, Curiosity, and Persistence</div>
+                        <div class="article-meta">Podcast featuring Zainab's journey from Airbnb to Wogrammer and the power of curiosity</div>
+                    </div>
+                    <div class="article-toggle">&#9660;</div>
+                </div>
+                <div class="article-divider"></div>
+                <div class="article-body">
+                    <div class="article-content">
+                        <p>In this episode of Inside Outside Innovation, Ghadiyali shares the full arc of her career from arriving in the US with $107 to leading product at Airbnb, while co-founding a movement to reshape narratives about women in tech.</p>
+
+                        <h4>Key Topics Discussed</h4>
+                        <ul>
+                            <li><strong>The power of "productive ignorance"</strong> -- Not knowing the rules can be an advantage. Ghadiyali didn't know she was "supposed to" have coding experience before interviewing at Facebook.</li>
+                            <li><strong>Curiosity as navigation</strong> -- Every career transition was driven by asking "what am I excited to learn next?" rather than following conventional paths.</li>
+                            <li><strong>Building Wogrammer</strong> -- How a side project born from frustration about media narratives grew into an organization reaching 4+ million people.</li>
+                            <li><strong>Persistence through rejection</strong> -- The 200+ job rejections that preceded her tech career, and why persistence isn't about stubbornness but about finding different angles.</li>
+                            <li><strong>Influence without authority</strong> -- Practical advice on how to drive change at organizations when you don't have the title or formal power.</li>
+                        </ul>
+
+                        <h4>Listen on Multiple Platforms</h4>
+                        <p>Available on <a href="https://insideoutside.io/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer-on-ignorance-curiosity-and-persistence/" target="_blank" rel="noopener" style="color: var(--color-accent-light);">insideoutside.io</a>, <a href="https://open.spotify.com/episode/inside-outside-innovation-191-zainab-ghadiyali" target="_blank" rel="noopener" style="color: var(--color-accent-light);">Spotify</a>, <a href="https://podcasts.apple.com/us/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer/id1170743283" target="_blank" rel="noopener" style="color: var(--color-accent-light);">Apple Podcasts</a>, and <a href="https://www.youtube.com/watch?v=VmTSq1Gzb68" target="_blank" rel="noopener" style="color: var(--color-accent-light);">YouTube</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventures -->
+    <section id="ventures">
+        <div class="section-inner">
+            <div class="section-header fade-in"><span class="section-label">Ventures & Impact</span><h2>What She's Built</h2></div>
+            <div class="ventures-grid fade-in">
+                <div class="venture-card">
+                    <div class="venture-icon" style="background:rgba(244,162,97,0.15);">&#127858;</div>
+                    <h3>Eat Cook Joy</h3>
+                    <p>AI-powered platform connecting families with local chefs. Weekly meal prep from $7/serving across San Antonio, Austin, Dallas, Houston.</p>
+                    <div class="venture-links">
+                        <a href="https://www.eatcookjoy.com" target="_blank" rel="noopener" class="venture-link">Website</a>
+                        <a href="https://www.eatcookjoy.com/about-us" target="_blank" rel="noopener" class="venture-link">About</a>
+                        <a href="https://www.eatcookjoy.com/chefs/zainab-ghadiyali" target="_blank" rel="noopener" class="venture-link">Chef Profile</a>
+                        <a href="https://www.youtube.com/watch?v=1Yc317SgPBY" target="_blank" rel="noopener" class="venture-link">YouTube 1</a>
+                        <a href="https://www.youtube.com/watch?v=6aj5orFiQWk" target="_blank" rel="noopener" class="venture-link">YouTube 2</a>
+                        <a href="https://www.instagram.com/eatcookjoy" target="_blank" rel="noopener" class="venture-link">Instagram</a>
+                        <a href="https://www.facebook.com/eatcookjoy" target="_blank" rel="noopener" class="venture-link">Facebook</a>
+                        <a href="https://www.linkedin.com/company/eat-cook-joy" target="_blank" rel="noopener" class="venture-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="venture-card">
+                    <div class="venture-icon" style="background:rgba(123,47,247,0.15);">&#128105;</div>
+                    <h3>Wogrammer</h3>
+                    <p>Co-founded 2014. Reshaped media narratives about women in tech. 200+ profiles. Acquired by AnitaB.org. Reached 4M+ people.</p>
+                    <div class="venture-links">
+                        <a href="https://www.wogrammer.org" target="_blank" rel="noopener" class="venture-link">Website</a>
+                        <a href="https://www.facebook.com/wogrammer" target="_blank" rel="noopener" class="venture-link">Facebook</a>
+                        <a href="https://twitter.com/wogrammer" target="_blank" rel="noopener" class="venture-link">Twitter</a>
+                        <a href="https://www.instagram.com/wogrammer" target="_blank" rel="noopener" class="venture-link">Instagram</a>
+                        <a href="https://medium.com/@wogrammer" target="_blank" rel="noopener" class="venture-link">Medium</a>
+                        <a href="https://anitab.org/press-release/anitab-org-acquires-wogrammer" target="_blank" rel="noopener" class="venture-link">AnitaB Acquisition</a>
+                    </div>
+                </div>
+                <div class="venture-card">
+                    <div class="venture-icon" style="background:rgba(46,196,182,0.15);">&#129302;</div>
+                    <h3>Stackbirds</h3>
+                    <p>Building a platform to democratize AI agent technology, empowering the next generation of entrepreneurs.</p>
+                    <div class="venture-links">
+                        <a href="https://news.crunchbase.com/startups/ai-founder-stopping-platform-ransom-ghadiyali-eat-cook-joy/" target="_blank" rel="noopener" class="venture-link">Crunchbase News</a>
+                        <a href="https://www.aliciadiamond.com/blog/advice-from-zainab-ghadiyali-for-current-and-future-chiefs-of-staff" target="_blank" rel="noopener" class="venture-link">Leadership Advice</a>
+                        <a href="https://www.productschool.com/blog/product-management-2/zainab-ghadiyali-airbnb-product-lead" target="_blank" rel="noopener" class="venture-link">Product School</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" style="background:rgba(15,52,96,0.1);">
+        <div class="section-inner">
+            <div class="section-header fade-in"><span class="section-label">Core Principles</span><h2>Career Philosophy</h2></div>
+            <div class="philosophy-grid fade-in">
+                <div class="philosophy-card"><div class="philosophy-number">01</div><h3>Lean Into Curiosity</h3><p>At each crossroads ask: "What am I excited to learn next?" Let curiosity be your primary navigation tool.</p></div>
+                <div class="philosophy-card"><div class="philosophy-number">02</div><h3>Career as a Painting</h3><p>Reject the career ladder. Embrace interconnected brushstrokes that reveal a larger picture over time.</p></div>
+                <div class="philosophy-card"><div class="philosophy-number">03</div><h3>Creative Over Reactive</h3><p>A creative mindset is possibility-driven. Set positive intentions before difficult situations.</p></div>
+                <div class="philosophy-card"><div class="philosophy-number">04</div><h3>Three Key Questions</h3><p>Have I maximized growth here? Does this align with my values? Expand laterally or dive deeper?</p></div>
+                <div class="philosophy-card"><div class="philosophy-number">05</div><h3>Builders, Not Smushers</h3><p>Surround yourself with people who inspire -- the antidote to impostor syndrome.</p></div>
+                <div class="philosophy-card"><div class="philosophy-number">06</div><h3>Influence Without Authority</h3><p>Everyone is an influencer. Exercise persuasion deliberately -- it's a life skill.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books -->
+    <section id="books">
+        <div class="section-inner">
+            <div class="section-header fade-in"><span class="section-label">Currently Reading</span><h2>Books in Progress</h2><p>Multiple books at once -- curiosity-driven reading</p></div>
+            <div class="books-grid fade-in">
+                <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#1a365d,#2c5282);">&#128218;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>HBR's 10 Must Reads on Communication</h3><div class="author">Harvard Business Review</div><p>Essential frameworks for persuasion, storytelling, and building influence.</p></div></div>
+                <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#2d3748,#4a5568);">&#129504;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>Spark: The Revolutionary New Science of Exercise and the Brain</h3><div class="author">John J. Ratey, MD</div><p>How exercise transforms the brain, boosts mood, and supercharges cognition.</p></div></div>
+                <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#744210,#dd6b20);">&#127909;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>Yo Soy Betty, La Fea (Transcripts)</h3><div class="author">Fernando Gaitan</div><p>Iconic Colombian telenovela transcripts. A masterclass in storytelling.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Links -->
+    <section id="links" class="links-section">
+        <div class="section-inner">
+            <div class="section-header fade-in"><span class="section-label">Resource Directory</span><h2>All Links <span class="link-count">60+</span></h2><p>Comprehensive collection organized by category</p></div>
+            <div class="search-bar fade-in"><input type="text" class="search-input" id="linkSearch" placeholder="Search links..." oninput="filterLinks()"></div>
+
+            <div id="linksContainer">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(233,69,96,0.15);">&#128100;</div>Core Profiles & Social</div><div class="links-grid">
+                    <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">in</div><div class="link-info"><div class="link-title">LinkedIn</div><div class="link-url">linkedin.com/in/zainabg</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://clay.earth/profile/zainab-g" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">&#9675;</div><div class="link-info"><div class="link-title">Clay Profile</div><div class="link-url">clay.earth</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://about.me/breaking-stereotypes-consulting" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">&#128100;</div><div class="link-info"><div class="link-title">About.me</div><div class="link-url">about.me</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.weekday.works/people/zainab-ghadiyali-zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W</div><div class="link-info"><div class="link-title">Weekday</div><div class="link-url">weekday.works</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://contactout.com/Zainab-Ghadiyali-84595550" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">C</div><div class="link-info"><div class="link-title">ContactOut</div><div class="link-url">contactout.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.crunchbase.com/person/zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">CB</div><div class="link-info"><div class="link-title">Crunchbase</div><div class="link-url">crunchbase.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://angel.co/u/zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">A</div><div class="link-info"><div class="link-title">AngelList</div><div class="link-url">angel.co</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.producthunt.com/@zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">PH</div><div class="link-info"><div class="link-title">Product Hunt</div><div class="link-url">producthunt.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://github.com/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">GH</div><div class="link-info"><div class="link-title">GitHub</div><div class="link-url">github.com/zainabg</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://twitter.com/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">X</div><div class="link-info"><div class="link-title">Twitter/X</div><div class="link-url">twitter.com/zainabg</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.facebook.com/zainab.ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">f</div><div class="link-info"><div class="link-title">Facebook</div><div class="link-url">facebook.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.goodreads.com/user/show/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">GR</div><div class="link-info"><div class="link-title">Goodreads</div><div class="link-url">goodreads.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://stackoverflow.com/users/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">SO</div><div class="link-info"><div class="link-title">Stack Overflow</div><div class="link-url">stackoverflow.com</div></div><span class="link-arrow">&#8594;</span></a>
+                </div></div>
+
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(244,162,97,0.15);">&#127891;</div>University & Alumni</div><div class="links-grid">
+                    <a href="https://www.uwalumni.com/news/meet-2018-fuf-award-recipient-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">UW</div><div class="link-info"><div class="link-title">UW Alumni Award 2018</div><div class="link-url">uwalumni.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://engineering.wisc.edu/blog/alumni-spotlight-zainab-ghadiyali-tech-founder/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">UW</div><div class="link-info"><div class="link-title">Engineering Alumni Spotlight</div><div class="link-url">engineering.wisc.edu</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.winthrop.edu/mwe/zainab-ghadiyali.aspx" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">WU</div><div class="link-info"><div class="link-title">Winthrop University</div><div class="link-url">winthrop.edu</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.uwmadison.edu/alumni/zainab-ghadiyali-wogrammer-profile" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">UW</div><div class="link-info"><div class="link-title">UW Madison Profile</div><div class="link-url">uwmadison.edu</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.warf.org/videos/innovation-roadmap-speaker-zainab-ghadiyali-9-20-18/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W</div><div class="link-info"><div class="link-title">WARF Innovation Talk</div><div class="link-url">warf.org</div></div><span class="link-arrow">&#8594;</span></a>
+                </div></div>
+
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(46,196,182,0.15);">&#128240;</div>Press & Features</div><div class="links-grid">
+                    <a href="https://review.firstround.com/the-secrets-to-designing-a-curiosity-driven-career/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">FR</div><div class="link-info"><div class="link-title">First Round Review</div><div class="link-url">review.firstround.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://news.crunchbase.com/startups/ai-founder-stopping-platform-ransom-ghadiyali-eat-cook-joy/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">CB</div><div class="link-info"><div class="link-title">Crunchbase News</div><div class="link-url">news.crunchbase.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.bizjournals.com/austin/inno/stories/inno-insights/2025/02/28/austin-startups-to-watch-eat-cook-joy.html" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ABJ</div><div class="link-info"><div class="link-title">Austin Biz Journal</div><div class="link-url">bizjournals.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://voyagesanantonio.com/interview/community-highlights-meet-zainab-ghadiyali-of-eat-cook-joy-inc/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">V</div><div class="link-info"><div class="link-title">Voyage San Antonio</div><div class="link-url">voyagesanantonio.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.austinbusinesswoman.com/post/eat-cook-joy-member-feature-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ABW</div><div class="link-info"><div class="link-title">Austin Business Woman</div><div class="link-url">austinbusinesswoman.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://engineering.fb.com/2015/06/04/culture/meet-the-wogrammers-women-in-engineering/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">M</div><div class="link-info"><div class="link-title">Meta Engineering</div><div class="link-url">engineering.fb.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.linkedin.com/pulse/we-interviewed-200-women-engineers-here-what-learnt-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">in</div><div class="link-info"><div class="link-title">200 Women Engineers Study</div><div class="link-url">linkedin.com/pulse</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://foreignpolicy.com/2015-global-thinkers" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">FP</div><div class="link-info"><div class="link-title">FP Global Thinkers 2015</div><div class="link-url">foreignpolicy.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.women2.com/stories/zainab-ghadiyali-wogrammer-facebook-airbnb" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W2</div><div class="link-info"><div class="link-title">Women 2.0</div><div class="link-url">women2.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.austinstartup.com/eat-cook-joy-personal-chefs-ai-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">AS</div><div class="link-info"><div class="link-title">Austin Startup</div><div class="link-url">austinstartup.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.startupdigest.com/founders/eat-cook-joy-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">SD</div><div class="link-info"><div class="link-title">Startup Digest</div><div class="link-url">startupdigest.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.austinbusinesswoman.com/directory/eat-cook-joy-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ABW</div><div class="link-info"><div class="link-title">ABW Directory</div><div class="link-url">austinbusinesswoman.com</div></div><span class="link-arrow">&#8594;</span></a>
+                </div></div>
+
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(123,47,247,0.15);">&#127908;</div>Talks, Podcasts & Videos</div><div class="links-grid">
+                    <a href="https://insideoutside.io/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer-on-ignorance-curiosity-and-persistence/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">IO</div><div class="link-info"><div class="link-title">Inside Outside Ep 191</div><div class="link-url">insideoutside.io</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.youtube.com/watch?v=VmTSq1Gzb68" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">YT</div><div class="link-info"><div class="link-title">IO Innovation (Video)</div><div class="link-url">youtube.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://share.transistor.fm/s/b27b2a47" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">T</div><div class="link-info"><div class="link-title">Transistor FM</div><div class="link-url">transistor.fm</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.youtube.com/watch?v=1Yc317SgPBY" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">YT</div><div class="link-info"><div class="link-title">Eat Cook Joy Video 1</div><div class="link-url">youtube.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.youtube.com/watch?v=6aj5orFiQWk" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">YT</div><div class="link-info"><div class="link-title">Eat Cook Joy Video 2</div><div class="link-url">youtube.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.youtube.com/results?search_query=%22Zainab+Ghadiyali%22" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">YT</div><div class="link-info"><div class="link-title">All YouTube Videos</div><div class="link-url">youtube.com/results</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.warf.org/videos/innovation-roadmap-speaker-zainab-ghadiyali-9-20-18/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W</div><div class="link-info"><div class="link-title">WARF Talk</div><div class="link-url">warf.org</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.productschool.com/blog/product-management-2/zainab-ghadiyali-airbnb-product-lead" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">PS</div><div class="link-info"><div class="link-title">Product School</div><div class="link-url">productschool.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://mindtheproduct.com/speaker/zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">MP</div><div class="link-info"><div class="link-title">Mind the Product</div><div class="link-url">mindtheproduct.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.aliciadiamond.com/blog/advice-from-zainab-ghadiyali-for-current-and-future-chiefs-of-staff" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">AD</div><div class="link-info"><div class="link-title">Chiefs of Staff Advice</div><div class="link-url">aliciadiamond.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://open.spotify.com/episode/inside-outside-innovation-191-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">SP</div><div class="link-info"><div class="link-title">Spotify Podcast</div><div class="link-url">open.spotify.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://podcasts.apple.com/us/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer/id1170743283" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">AP</div><div class="link-info"><div class="link-title">Apple Podcasts</div><div class="link-url">podcasts.apple.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.stitcher.com/show/inside-outside-innovation/episode/191-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ST</div><div class="link-info"><div class="link-title">Stitcher</div><div class="link-url">stitcher.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.slideshare.net/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">SS</div><div class="link-info"><div class="link-title">SlideShare</div><div class="link-url">slideshare.net</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.winwisconsin.org/events/speaker-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">WI</div><div class="link-info"><div class="link-title">WiN Wisconsin</div><div class="link-url">winwisconsin.org</div></div><span class="link-arrow">&#8594;</span></a>
+                </div></div>
+
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(123,47,247,0.15);">&#128105;</div>Wogrammer Ecosystem</div><div class="links-grid">
+                    <a href="https://www.wogrammer.org" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W</div><div class="link-info"><div class="link-title">Wogrammer.org</div><div class="link-url">wogrammer.org</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.facebook.com/wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">f</div><div class="link-info"><div class="link-title">Wogrammer Facebook</div><div class="link-url">facebook.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://twitter.com/wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">X</div><div class="link-info"><div class="link-title">Wogrammer Twitter</div><div class="link-url">twitter.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.instagram.com/wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">IG</div><div class="link-info"><div class="link-title">Wogrammer Instagram</div><div class="link-url">instagram.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://medium.com/@wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">M</div><div class="link-info"><div class="link-title">Wogrammer Medium</div><div class="link-url">medium.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://anitab.org/press-release/anitab-org-acquires-wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">AB</div><div class="link-info"><div class="link-title">AnitaB Acquisition</div><div class="link-url">anitab.org</div></div><span class="link-arrow">&#8594;</span></a>
+                </div></div>
+
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(244,162,97,0.15);">&#127858;</div>Eat Cook Joy</div><div class="links-grid">
+                    <a href="https://www.eatcookjoy.com" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">Website</div><div class="link-url">eatcookjoy.com</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.eatcookjoy.com/about-us" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">About Us</div><div class="link-url">eatcookjoy.com/about-us</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.eatcookjoy.com/chefs/zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">Chef Profile</div><div class="link-url">eatcookjoy.com/chefs</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.eatcookjoy.com/archive/chef-profile" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">Chef Archive</div><div class="link-url">eatcookjoy.com/archive</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.instagram.com/eatcookjoy" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">IG</div><div class="link-info"><div class="link-title">Instagram</div><div class="link-url">instagram.com/eatcookjoy</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.facebook.com/eatcookjoy" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">f</div><div class="link-info"><div class="link-title">Facebook</div><div class="link-url">facebook.com/eatcookjoy</div></div><span class="link-arrow">&#8594;</span></a>
+                    <a href="https://www.linkedin.com/company/eat-cook-joy" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">in</div><div class="link-info"><div class="link-title">LinkedIn Company</div><div class="link-url">linkedin.com/company</div></div><span class="link-arrow">&#8594;</span></a>
+                </div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.eatcookjoy.com" target="_blank" rel="noopener">Eat Cook Joy</a>
+            <a href="https://www.wogrammer.org" target="_blank" rel="noopener">Wogrammer</a>
+            <a href="https://review.firstround.com/the-secrets-to-designing-a-curiosity-driven-career/" target="_blank" rel="noopener">First Round Review</a>
+        </div>
+        <p>Compiled profile with 60+ links and embedded articles. Last updated April 2026.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, {threshold: 0.1});
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        function toggleArticle(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('open');
+        }
+
+        function filterLinks() {
+            const q = document.getElementById('linkSearch').value.toLowerCase();
+            document.querySelectorAll('.link-item').forEach(item => { item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none'; });
+            document.querySelectorAll('.links-category').forEach(cat => { cat.style.display = cat.querySelectorAll('.link-item:not([style*="display: none"])').length === 0 ? 'none' : ''; });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if(t) { t.scrollIntoView({behavior:'smooth',block:'start'}); document.querySelector('.nav-links').classList.remove('active'); } }); });
+    </script>
+</body>
+</html>
