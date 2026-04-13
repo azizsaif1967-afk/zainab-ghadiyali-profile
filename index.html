@@ -7,219 +7,649 @@
     <meta name="description" content="Comprehensive profile of Zainab Ghadiyali - Product Lead at Airbnb, Co-founder of Wogrammer, Founder of Eat Cook Joy. Full articles, career journey, ventures, talks, and 60+ resource links.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #1a1a2e;
-            --color-accent: #e94560;
-            --color-accent-light: #ff6b6b;
-            --color-gold: #f4a261;
-            --color-teal: #2ec4b6;
-            --color-purple: #7b2ff7;
-            --color-text: #e8e8e8;
-            --color-text-muted: #a0a0b8;
-            --color-bg: #0a0a1a;
-            --color-card: rgba(22, 33, 62, 0.7);
-            --color-border: rgba(233, 69, 96, 0.2);
+            --bg-primary: #0F0E17;
+            --bg-secondary: #1a1926;
+            --bg-card: rgba(26, 25, 45, 0.85);
+            --bg-card-hover: rgba(35, 33, 60, 0.95);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.7);
+            --text-muted: rgba(255,255,255,0.45);
+            --accent-magenta: #e91e8c;
+            --accent-purple: #7b4bff;
+            --accent-blue: #3b82f6;
+            --accent-teal: #06b6d4;
+            --accent-pink: #f472b6;
+            --accent-orange: #f59e0b;
+            --gradient-hero: linear-gradient(135deg, #1a0533 0%, #0F0E17 40%, #0a1628 100%);
+            --gradient-magenta: linear-gradient(135deg, #e91e8c, #7b4bff);
+            --gradient-blue: linear-gradient(135deg, #3b82f6, #06b6d4);
+            --gradient-warm: linear-gradient(135deg, #f59e0b, #e91e8c);
+            --gradient-purple: linear-gradient(135deg, #7b4bff, #3b82f6);
+            --gradient-overlay: linear-gradient(180deg, rgba(15,14,23,0) 0%, rgba(15,14,23,0.85) 100%);
             --radius: 16px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 12px;
+            --radius-xs: 8px;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: 'Inter', sans-serif; background: var(--color-bg); color: var(--color-text); line-height: 1.7; overflow-x: hidden; }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
-        .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-        .bg-animation .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; animation: float 20s ease-in-out infinite; }
-        .bg-animation .orb:nth-child(1) { width: 600px; height: 600px; background: var(--color-accent); top: -200px; right: -200px; }
-        .bg-animation .orb:nth-child(2) { width: 400px; height: 400px; background: var(--color-purple); bottom: -100px; left: -100px; animation-delay: -7s; }
-        .bg-animation .orb:nth-child(3) { width: 500px; height: 500px; background: var(--color-teal); top: 50%; left: 50%; animation-delay: -14s; }
-        @keyframes float { 0%,100%{transform:translate(0,0) scale(1)} 25%{transform:translate(50px,-50px) scale(1.1)} 50%{transform:translate(-30px,30px) scale(0.95)} 75%{transform:translate(20px,50px) scale(1.05)} }
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 3rem;
+            height: 72px;
+            display: flex; align-items: center;
+            backdrop-filter: blur(24px) saturate(1.4);
+            background: rgba(15,14,23,0.82);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            transition: var(--transition);
+        }
+        .nav.scrolled { background: rgba(15,14,23,0.95); }
+        .nav-inner {
+            max-width: 1400px; margin: 0 auto; width: 100%;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em;
+            text-decoration: none; color: var(--text-primary);
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .nav-logo-mark {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: var(--gradient-magenta);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.9rem; font-weight: 800; color: white;
+        }
+        .nav-links { display: flex; gap: 0.2rem; list-style: none; align-items: center; }
+        .nav-links a {
+            color: var(--text-secondary); text-decoration: none;
+            font-size: 0.85rem; font-weight: 500;
+            padding: 0.5rem 1rem; border-radius: 999px;
+            transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); }
+        .mobile-toggle {
+            display: none; background: none; border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text-primary); font-size: 1.2rem; cursor: pointer;
+            padding: 0.4rem 0.6rem; border-radius: var(--radius-xs);
+        }
 
-        /* Nav */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 2rem; backdrop-filter: blur(20px); background: rgba(10,10,26,0.88); border-bottom: 1px solid var(--color-border); }
-        .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        .nav-links { display: flex; gap: 0.3rem; list-style: none; flex-wrap: wrap; }
-        .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.35rem 0.7rem; border-radius: 8px; transition: var(--transition); }
-        .nav-links a:hover { color: var(--color-text); background: rgba(233,69,96,0.1); }
-        .mobile-toggle { display: none; background: none; border: none; color: var(--color-text); font-size: 1.5rem; cursor: pointer; }
-
-        /* Hero */
-        .hero { min-height: 100vh; display: flex; align-items: center; padding: 7rem 2rem 4rem; }
-        .hero-inner { max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
-        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; font-weight: 700; line-height: 1.1; margin-bottom: 1.2rem; }
-        .hero-content h1 .highlight { background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-subtitle { font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 540px; }
-        .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
-        .tag { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; border: 1px solid var(--color-border); background: rgba(233,69,96,0.06); color: var(--color-accent-light); transition: var(--transition); }
-        .tag:hover { background: rgba(233,69,96,0.12); transform: translateY(-2px); }
-        .tag.teal { border-color: rgba(46,196,182,0.3); background: rgba(46,196,182,0.06); color: var(--color-teal); }
-        .tag.gold { border-color: rgba(244,162,97,0.3); background: rgba(244,162,97,0.06); color: var(--color-gold); }
-        .tag.purple { border-color: rgba(123,47,247,0.3); background: rgba(123,47,247,0.06); color: var(--color-purple); }
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            padding: 7rem 3rem 5rem;
+            background: var(--gradient-hero);
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -30%; right: -15%;
+            width: 800px; height: 800px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(123,75,255,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -20%; left: -10%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(233,30,140,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            max-width: 1400px; margin: 0 auto; width: 100%;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+            position: relative; z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 4rem; font-weight: 800; line-height: 1.08;
+            letter-spacing: -0.03em; margin-bottom: 1.5rem;
+        }
+        .hero-content h1 span {
+            background: var(--gradient-magenta);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem; color: var(--text-secondary);
+            margin-bottom: 2rem; max-width: 520px; line-height: 1.7;
+        }
+        .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .tag {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            padding: 0.4rem 1rem; border-radius: 999px;
+            font-size: 0.78rem; font-weight: 500;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: var(--text-secondary); transition: var(--transition);
+        }
+        .tag:hover { background: rgba(255,255,255,0.1); color: var(--text-primary); }
+        .tag.magenta { background: rgba(233,30,140,0.1); border-color: rgba(233,30,140,0.2); color: var(--accent-pink); }
+        .tag.purple { background: rgba(123,75,255,0.1); border-color: rgba(123,75,255,0.2); color: var(--accent-purple); }
+        .tag.blue { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.2); color: var(--accent-blue); }
+        .tag.teal { background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.2); color: var(--accent-teal); }
         .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.6rem; border-radius: 12px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; border: none; }
-        .btn-primary { background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light)); color: white; box-shadow: 0 4px 20px rgba(233,69,96,0.3); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(233,69,96,0.5); }
-        .btn-outline { background: transparent; color: var(--color-text); border: 1px solid var(--color-border); }
-        .btn-outline:hover { background: rgba(233,69,96,0.1); border-color: var(--color-accent); }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.85rem 2rem; border-radius: 999px;
+            font-size: 0.88rem; font-weight: 600; text-decoration: none;
+            transition: var(--transition); cursor: pointer; border: none;
+            letter-spacing: 0.01em;
+        }
+        .btn-primary {
+            background: var(--gradient-magenta); color: white;
+            position: relative; overflow: hidden;
+        }
+        .btn-primary::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+            opacity: 0; transition: var(--transition);
+        }
+        .btn-primary:hover::before { opacity: 1; }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent; color: var(--text-primary);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.3); }
 
-        .hero-visual { position: relative; display: flex; justify-content: center; }
-        .hero-card { width: 360px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 2rem; backdrop-filter: blur(20px); }
-        .hero-card::before { content: ''; position: absolute; top: -1px; left: -1px; right: -1px; bottom: -1px; border-radius: var(--radius); background: linear-gradient(135deg, var(--color-accent), transparent, var(--color-purple)); z-index: -1; opacity: 0.4; }
-        .hero-card-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent), var(--color-purple)); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: white; margin: 0 auto 1.2rem; }
-        .hero-card h3 { text-align: center; font-size: 1.2rem; margin-bottom: 0.2rem; }
-        .hero-card p { text-align: center; color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
-        .hero-card-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; }
-        .stat-value { font-size: 1.4rem; font-weight: 700; color: var(--color-accent-light); }
-        .stat-label { font-size: 0.68rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        /* Hero Cards Carousel */
+        .hero-cards {
+            display: flex; flex-direction: column; gap: 1rem;
+            position: relative;
+        }
+        .hero-feature-card {
+            background: var(--bg-card); border-radius: var(--radius);
+            padding: 1.5rem 1.8rem; position: relative; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            transition: var(--transition);
+        }
+        .hero-feature-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.12); }
+        .hero-feature-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+        }
+        .hero-feature-card:nth-child(1)::before { background: var(--gradient-magenta); }
+        .hero-feature-card:nth-child(2)::before { background: var(--gradient-blue); }
+        .hero-feature-card:nth-child(3)::before { background: var(--gradient-warm); }
+        .hero-feature-card .card-label {
+            font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 0.4rem;
+        }
+        .hero-feature-card:nth-child(1) .card-label { color: var(--accent-magenta); }
+        .hero-feature-card:nth-child(2) .card-label { color: var(--accent-blue); }
+        .hero-feature-card:nth-child(3) .card-label { color: var(--accent-orange); }
+        .hero-feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .hero-feature-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
 
-        /* Sections */
-        section { padding: 4.5rem 2rem; }
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: var(--bg-secondary);
+            border-top: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 2.5rem 3rem;
+        }
+        .stats-bar-inner {
+            max-width: 1400px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+        }
+        .stat-item { text-align: center; }
+        .stat-value {
+            font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em;
+            background: var(--gradient-magenta);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-item:nth-child(2) .stat-value { background: var(--gradient-blue); -webkit-background-clip: text; background-clip: text; }
+        .stat-item:nth-child(3) .stat-value { background: var(--gradient-purple); -webkit-background-clip: text; background-clip: text; }
+        .stat-item:nth-child(4) .stat-value { background: var(--gradient-warm); -webkit-background-clip: text; background-clip: text; }
+        .stat-label {
+            font-size: 0.75rem; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0.3rem; font-weight: 500;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 6rem 3rem; }
         .section-inner { max-width: 1400px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 2.5rem; }
-        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 0.6rem; }
-        .section-header p { color: var(--color-text-muted); font-size: 1rem; max-width: 600px; margin: 0 auto; }
-        .section-label { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--color-accent); margin-bottom: 0.6rem; }
+        .section-header { margin-bottom: 3.5rem; }
+        .section-header.center { text-align: center; }
+        .section-label {
+            display: inline-block; font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2.5px;
+            margin-bottom: 0.8rem; padding: 0.35rem 1rem;
+            border-radius: 999px;
+        }
+        .section-label.magenta { background: rgba(233,30,140,0.1); color: var(--accent-magenta); }
+        .section-label.blue { background: rgba(59,130,246,0.1); color: var(--accent-blue); }
+        .section-label.purple { background: rgba(123,75,255,0.1); color: var(--accent-purple); }
+        .section-label.teal { background: rgba(6,182,212,0.1); color: var(--accent-teal); }
+        .section-label.orange { background: rgba(245,158,11,0.1); color: var(--accent-orange); }
+        .section-header h2 {
+            font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em;
+            margin-bottom: 0.8rem; line-height: 1.15;
+        }
+        .section-header p { color: var(--text-secondary); font-size: 1.05rem; max-width: 600px; }
+        .section-header.center p { margin: 0 auto; }
 
-        /* Stats */
-        .stats-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; padding: 1.5rem 0; }
-        .stats-strip-item { text-align: center; padding: 1.2rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); }
-        .stats-strip-value { font-size: 2.2rem; font-weight: 800; background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .stats-strip-label { font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.2rem; }
+        /* ===== QUOTE BANNER ===== */
+        .quote-banner {
+            background: linear-gradient(135deg, rgba(233,30,140,0.08), rgba(123,75,255,0.08));
+            border-top: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 4rem 3rem;
+        }
+        .quote-inner {
+            max-width: 900px; margin: 0 auto; text-align: center;
+        }
+        .quote-inner blockquote {
+            font-size: 2rem; font-weight: 700; line-height: 1.35;
+            letter-spacing: -0.02em; margin-bottom: 1rem;
+            background: var(--gradient-magenta);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .quote-inner cite {
+            color: var(--text-muted); font-style: normal;
+            font-size: 0.88rem; font-weight: 500;
+        }
 
-        /* Timeline */
-        .timeline { position: relative; padding-left: 2.5rem; }
-        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--color-accent), var(--color-purple), var(--color-teal)); }
-        .timeline-item { position: relative; margin-bottom: 2rem; padding: 1.2rem 1.5rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); backdrop-filter: blur(10px); transition: var(--transition); }
-        .timeline-item:hover { transform: translateX(6px); border-color: var(--color-accent); }
-        .timeline-item::before { content: ''; position: absolute; left: -2.5rem; top: 1.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--color-accent); border: 2px solid var(--color-bg); transform: translateX(-4px); }
-        .timeline-year { font-size: 0.72rem; font-weight: 700; color: var(--color-gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.2rem; }
-        .timeline-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
-        .timeline-desc { font-size: 0.88rem; color: var(--color-text-muted); }
+        /* ===== TIMELINE ===== */
+        .timeline { position: relative; padding-left: 3rem; }
+        .timeline::before {
+            content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-magenta), var(--accent-purple), var(--accent-blue), var(--accent-teal));
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 1.5rem;
+            padding: 1.5rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .timeline-item:hover {
+            transform: translateX(8px);
+            border-color: rgba(255,255,255,0.1);
+            background: var(--bg-card-hover);
+        }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -3rem; top: 1.8rem;
+            width: 14px; height: 14px; border-radius: 50%;
+            background: var(--accent-magenta);
+            border: 3px solid var(--bg-primary);
+            transform: translateX(-0.5px);
+        }
+        .timeline-item:nth-child(2)::before { background: var(--accent-purple); }
+        .timeline-item:nth-child(3)::before { background: var(--accent-blue); }
+        .timeline-item:nth-child(4)::before { background: var(--accent-teal); }
+        .timeline-item:nth-child(5)::before { background: var(--accent-orange); }
+        .timeline-item:nth-child(6)::before { background: var(--accent-pink); }
+        .timeline-item:nth-child(7)::before { background: var(--accent-magenta); }
+        .timeline-year {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 0.3rem;
+        }
+        .timeline-item:nth-child(1) .timeline-year { color: var(--accent-magenta); }
+        .timeline-item:nth-child(2) .timeline-year { color: var(--accent-purple); }
+        .timeline-item:nth-child(3) .timeline-year { color: var(--accent-blue); }
+        .timeline-item:nth-child(4) .timeline-year { color: var(--accent-teal); }
+        .timeline-item:nth-child(5) .timeline-year { color: var(--accent-orange); }
+        .timeline-item:nth-child(6) .timeline-year { color: var(--accent-pink); }
+        .timeline-item:nth-child(7) .timeline-year { color: var(--accent-magenta); }
+        .timeline-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .timeline-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
 
-        /* Article Reader */
-        .article-reader { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 2rem; overflow: hidden; backdrop-filter: blur(10px); }
-        .article-header { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
-        .article-header:hover { background: rgba(233,69,96,0.05); }
+        /* ===== ARTICLE READERS ===== */
+        .articles-section { background: var(--bg-secondary); }
+        .article-reader {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            margin-bottom: 1.2rem; overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .article-reader:hover { border-color: rgba(255,255,255,0.1); }
+        .article-header {
+            padding: 1.5rem 2rem; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+            transition: var(--transition);
+        }
+        .article-header:hover { background: rgba(255,255,255,0.02); }
         .article-header-left { flex: 1; }
-        .article-source { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-accent); margin-bottom: 0.3rem; }
-        .article-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
-        .article-meta { font-size: 0.8rem; color: var(--color-text-muted); }
-        .article-toggle { width: 36px; height: 36px; border-radius: 50%; background: rgba(233,69,96,0.1); display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.2rem; transition: var(--transition); flex-shrink: 0; }
-        .article-reader.open .article-toggle { transform: rotate(180deg); }
-        .article-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .article-source {
+            font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; color: var(--accent-magenta); margin-bottom: 0.3rem;
+        }
+        .article-reader:nth-child(odd) .article-source { color: var(--accent-blue); }
+        .article-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; letter-spacing: -0.01em; }
+        .article-meta { font-size: 0.8rem; color: var(--text-muted); }
+        .article-toggle {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-secondary); font-size: 0.9rem;
+            transition: var(--transition); flex-shrink: 0;
+        }
+        .article-reader:hover .article-toggle { background: rgba(255,255,255,0.08); }
+        .article-reader.open .article-toggle { transform: rotate(180deg); background: rgba(233,30,140,0.15); color: var(--accent-magenta); }
+        .article-body {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         .article-reader.open .article-body { max-height: 20000px; }
-        .article-content { padding: 0 2rem 2rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.02rem; line-height: 1.85; color: #d0d0e0; }
-        .article-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 2rem 0 0.8rem; color: var(--color-text); }
-        .article-content h4 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--color-gold); }
+        .article-divider { height: 1px; background: rgba(255,255,255,0.05); margin: 0 2rem; }
+        .article-content {
+            padding: 0 2rem 2rem; font-size: 1rem; line-height: 1.85;
+            color: var(--text-secondary);
+        }
+        .article-content h3 {
+            font-size: 1.25rem; font-weight: 700; margin: 2.5rem 0 0.8rem;
+            color: var(--text-primary); letter-spacing: -0.01em;
+        }
+        .article-content h4 {
+            font-size: 1rem; font-weight: 700; margin: 1.8rem 0 0.5rem;
+            color: var(--accent-pink);
+        }
         .article-content p { margin-bottom: 1rem; }
-        .article-content blockquote { border-left: 3px solid var(--color-accent); padding: 0.8rem 1.2rem; margin: 1.2rem 0; background: rgba(233,69,96,0.05); border-radius: 0 8px 8px 0; font-style: italic; color: var(--color-text); }
+        .article-content blockquote {
+            border-left: 3px solid var(--accent-magenta);
+            padding: 1rem 1.4rem; margin: 1.5rem 0;
+            background: rgba(233,30,140,0.05);
+            border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+            font-style: italic; color: var(--text-primary);
+        }
         .article-content ul, .article-content ol { margin: 0.8rem 0 1rem 1.5rem; }
-        .article-content li { margin-bottom: 0.4rem; }
-        .article-content .qa-question { font-weight: 700; color: var(--color-accent-light); margin-top: 1.5rem; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content .qa-question {
+            font-weight: 700; color: var(--accent-pink);
+            margin-top: 1.8rem; margin-bottom: 0.5rem; font-size: 0.95rem;
+        }
         .article-content .qa-answer { margin-bottom: 1.2rem; }
-        .article-content .article-source-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-accent-light); text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.82rem; margin-top: 1rem; transition: var(--transition); }
-        .article-content .article-source-link:hover { background: rgba(233,69,96,0.1); border-color: var(--color-accent); }
-        .article-divider { height: 1px; background: var(--color-border); margin: 0 2rem; }
+        .article-content .article-source-link {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.6rem 1.2rem; border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-secondary); text-decoration: none;
+            font-size: 0.82rem; font-weight: 500; margin-top: 1.5rem;
+            transition: var(--transition);
+        }
+        .article-content .article-source-link:hover {
+            background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.2);
+            color: var(--text-primary);
+        }
 
-        /* Ventures */
-        .ventures-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
-        .venture-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.8rem; backdrop-filter: blur(10px); transition: var(--transition); position: relative; overflow: hidden; }
-        .venture-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-accent), var(--color-gold)); }
-        .venture-card:hover { transform: translateY(-4px); border-color: var(--color-accent); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .venture-icon { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 0.8rem; }
-        .venture-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
-        .venture-card p { color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 0.8rem; }
+        /* ===== VENTURES GRID ===== */
+        .ventures-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .venture-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 2rem; position: relative; overflow: hidden;
+            backdrop-filter: blur(10px); transition: var(--transition);
+        }
+        .venture-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255,255,255,0.12);
+            background: var(--bg-card-hover);
+        }
+        .venture-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+        }
+        .venture-card:nth-child(1)::before { background: var(--gradient-warm); }
+        .venture-card:nth-child(2)::before { background: var(--gradient-purple); }
+        .venture-card:nth-child(3)::before { background: var(--gradient-blue); }
+        .venture-icon {
+            width: 52px; height: 52px; border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 1rem;
+        }
+        .venture-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .venture-card > p { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.6; }
         .venture-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .venture-link { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 500; text-decoration: none; color: var(--color-text-muted); border: 1px solid rgba(255,255,255,0.06); transition: var(--transition); }
-        .venture-link:hover { color: var(--color-text); background: rgba(255,255,255,0.04); border-color: var(--color-accent); }
+        .venture-link {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            padding: 0.3rem 0.7rem; border-radius: 999px;
+            font-size: 0.72rem; font-weight: 500; text-decoration: none;
+            color: var(--text-muted); border: 1px solid rgba(255,255,255,0.06);
+            transition: var(--transition);
+        }
+        .venture-link:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); }
 
-        /* Philosophy */
-        .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
-        .philosophy-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.8rem; backdrop-filter: blur(10px); transition: var(--transition); }
-        .philosophy-card:hover { transform: translateY(-4px); border-color: var(--color-accent); }
-        .philosophy-number { font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, var(--color-accent), var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 0.8rem; }
-        .philosophy-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
-        .philosophy-card p { color: var(--color-text-muted); font-size: 0.88rem; }
+        /* ===== PHILOSOPHY CARDS ===== */
+        .philosophy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .philosophy-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius); padding: 2rem;
+            backdrop-filter: blur(10px); transition: var(--transition);
+            position: relative; overflow: hidden;
+        }
+        .philosophy-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.12);
+            background: var(--bg-card-hover);
+        }
+        .philosophy-number {
+            font-size: 3rem; font-weight: 900; line-height: 1;
+            margin-bottom: 0.8rem;
+            background: var(--gradient-magenta);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .philosophy-card:nth-child(2) .philosophy-number { background: var(--gradient-blue); -webkit-background-clip: text; background-clip: text; }
+        .philosophy-card:nth-child(3) .philosophy-number { background: var(--gradient-purple); -webkit-background-clip: text; background-clip: text; }
+        .philosophy-card:nth-child(4) .philosophy-number { background: var(--gradient-warm); -webkit-background-clip: text; background-clip: text; }
+        .philosophy-card:nth-child(5) .philosophy-number { background: var(--gradient-blue); -webkit-background-clip: text; background-clip: text; }
+        .philosophy-card:nth-child(6) .philosophy-number { background: var(--gradient-magenta); -webkit-background-clip: text; background-clip: text; }
+        .philosophy-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .philosophy-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; }
 
-        /* Books */
-        .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
-        .book-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.3rem; display: flex; gap: 1rem; transition: var(--transition); }
-        .book-card:hover { transform: translateY(-3px); border-color: var(--color-gold); }
-        .book-cover { width: 60px; height: 85px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.8rem; }
-        .book-info h3 { font-size: 0.95rem; margin-bottom: 0.2rem; }
-        .book-info .author { font-size: 0.78rem; color: var(--color-gold); margin-bottom: 0.3rem; }
-        .book-info p { font-size: 0.78rem; color: var(--color-text-muted); }
-        .reading-badge { display: inline-block; padding: 0.12rem 0.45rem; border-radius: 999px; font-size: 0.62rem; font-weight: 600; text-transform: uppercase; background: rgba(46,196,182,0.12); color: var(--color-teal); border: 1px solid rgba(46,196,182,0.3); margin-bottom: 0.4rem; }
+        /* ===== BOOKS CAROUSEL ===== */
+        .books-carousel-wrapper { position: relative; }
+        .books-carousel {
+            display: flex; gap: 1.5rem; overflow-x: auto;
+            scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; padding-bottom: 1rem;
+        }
+        .books-carousel::-webkit-scrollbar { display: none; }
+        .book-card {
+            min-width: 340px; flex-shrink: 0; scroll-snap-align: start;
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius); padding: 1.5rem;
+            display: flex; gap: 1.2rem;
+            transition: var(--transition);
+        }
+        .book-card:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+        .book-cover {
+            width: 65px; height: 90px; border-radius: var(--radius-xs);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; font-size: 1.8rem;
+        }
+        .book-info h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+        .book-info .author { font-size: 0.78rem; color: var(--accent-pink); margin-bottom: 0.4rem; font-weight: 500; }
+        .book-info p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+        .reading-badge {
+            display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px;
+            font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(6,182,212,0.1); color: var(--accent-teal);
+            border: 1px solid rgba(6,182,212,0.2); margin-bottom: 0.5rem;
+        }
 
-        /* Links */
-        .links-section { background: rgba(15,52,96,0.12); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
-        .links-category { margin-bottom: 2rem; }
-        .links-category-title { display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--color-border); }
-        .links-category-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+        /* ===== LINKS SECTION ===== */
+        .links-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .links-category { margin-bottom: 2.5rem; }
+        .links-category-title {
+            display: flex; align-items: center; gap: 0.7rem;
+            font-size: 1rem; font-weight: 700; margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .links-category-icon {
+            width: 32px; height: 32px; border-radius: var(--radius-xs);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem;
+        }
         .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 0.6rem; }
-        .link-item { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 0.9rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: 10px; text-decoration: none; color: var(--color-text); transition: var(--transition); font-size: 0.82rem; }
-        .link-item:hover { border-color: var(--color-accent); background: rgba(233,69,96,0.04); transform: translateX(3px); }
-        .link-favicon { width: 26px; height: 26px; border-radius: 6px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.68rem; }
+        .link-item {
+            display: flex; align-items: center; gap: 0.8rem;
+            padding: 0.7rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: var(--radius-sm);
+            text-decoration: none; color: var(--text-primary);
+            transition: var(--transition); font-size: 0.84rem;
+        }
+        .link-item:hover {
+            border-color: rgba(255,255,255,0.1);
+            background: var(--bg-card-hover);
+            transform: translateX(4px);
+        }
+        .link-favicon {
+            width: 28px; height: 28px; border-radius: var(--radius-xs);
+            background: rgba(255,255,255,0.04);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; font-size: 0.7rem; font-weight: 600;
+            color: var(--text-muted);
+        }
         .link-info { overflow: hidden; flex: 1; }
         .link-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .link-url { font-size: 0.7rem; color: var(--color-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .link-arrow { color: var(--color-text-muted); transition: var(--transition); flex-shrink: 0; }
-        .link-item:hover .link-arrow { color: var(--color-accent); transform: translateX(3px); }
-        .link-count { display: inline-flex; align-items: center; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; background: rgba(233,69,96,0.12); color: var(--color-accent-light); margin-left: 0.4rem; }
+        .link-url { font-size: 0.7rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .link-arrow { color: var(--text-muted); transition: var(--transition); flex-shrink: 0; font-size: 0.85rem; }
+        .link-item:hover .link-arrow { color: var(--accent-magenta); transform: translateX(3px); }
+        .link-count {
+            display: inline-flex; align-items: center; padding: 0.2rem 0.6rem;
+            border-radius: 999px; font-size: 0.7rem; font-weight: 700;
+            background: rgba(233,30,140,0.1); color: var(--accent-magenta);
+            margin-left: 0.5rem;
+        }
+        .search-bar { max-width: 520px; margin: 0 auto 2.5rem; }
+        .search-input {
+            width: 100%; padding: 0.8rem 1.3rem; border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: var(--bg-card); color: var(--text-primary);
+            font-size: 0.88rem; font-family: 'Noto Sans', sans-serif;
+            outline: none; transition: var(--transition);
+        }
+        .search-input:focus { border-color: rgba(233,30,140,0.4); background: var(--bg-card-hover); }
+        .search-input::placeholder { color: var(--text-muted); }
 
-        .search-bar { max-width: 500px; margin: 0 auto 2rem; }
-        .search-input { width: 100%; padding: 0.7rem 1.1rem; border-radius: 12px; border: 1px solid var(--color-border); background: var(--color-card); color: var(--color-text); font-size: 0.88rem; outline: none; transition: var(--transition); }
-        .search-input:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(233,69,96,0.1); }
-        .search-input::placeholder { color: var(--color-text-muted); }
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 4rem 3rem 2.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+        }
+        .footer-headline {
+            font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            background: var(--gradient-magenta);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .footer-links {
+            display: flex; justify-content: center; gap: 2rem;
+            margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--text-muted); text-decoration: none;
+            font-size: 0.85rem; font-weight: 500;
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--text-primary); }
+        .footer-social {
+            display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem;
+        }
+        .footer-social a {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-muted); text-decoration: none;
+            font-size: 0.8rem; font-weight: 600; transition: var(--transition);
+        }
+        .footer-social a:hover { background: rgba(255,255,255,0.08); color: var(--text-primary); border-color: rgba(255,255,255,0.15); }
+        .footer-divider { height: 1px; background: rgba(255,255,255,0.06); margin-bottom: 1.5rem; }
+        .footer-bottom { color: var(--text-muted); font-size: 0.75rem; }
 
-        /* Quote */
-        .quote-section { background: linear-gradient(135deg, rgba(233,69,96,0.06), rgba(123,47,247,0.06)); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
-        .quote-block { max-width: 800px; margin: 0 auto; text-align: center; }
-        .quote-block blockquote { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; line-height: 1.4; margin-bottom: 1rem; }
-        .quote-block cite { color: var(--color-text-muted); font-style: normal; font-size: 0.88rem; }
-
-        /* Footer */
-        .footer { padding: 2.5rem 2rem; border-top: 1px solid var(--color-border); text-align: center; }
-        .footer p { color: var(--color-text-muted); font-size: 0.78rem; }
-        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
-        .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.82rem; transition: var(--transition); }
-        .footer-links a:hover { color: var(--color-accent); }
-
-        .fade-in { opacity: 0; transform: translateY(25px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        /* ===== ANIMATIONS ===== */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
 
-        @media (max-width: 968px) {
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
             .hero-inner { grid-template-columns: 1fr; text-align: center; }
-            .hero-content h1 { font-size: 2.6rem; }
-            .hero-subtitle { margin: 0 auto 1.5rem; }
+            .hero-subtitle { margin: 0 auto 2rem; }
             .hero-tags { justify-content: center; }
             .hero-cta { justify-content: center; }
-            .hero-card { margin: 0 auto; }
+            .ventures-grid { grid-template-columns: 1fr 1fr; }
+            .philosophy-grid { grid-template-columns: 1fr 1fr; }
+            .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
             .links-grid { grid-template-columns: 1fr; }
         }
-        @media (max-width: 640px) {
-            .nav-links { display: none; }
-            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,26,0.95); padding: 1rem; border-bottom: 1px solid var(--color-border); }
+        @media (max-width: 768px) {
+            .nav { padding: 0 1.5rem; }
+            .nav-links {
+                display: none; flex-direction: column;
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(15,14,23,0.97); padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+                backdrop-filter: blur(24px);
+            }
+            .nav-links.active { display: flex; }
             .mobile-toggle { display: block; }
-            .hero { padding: 5rem 1rem 2rem; }
-            .hero-content h1 { font-size: 2rem; }
-            section { padding: 3rem 1rem; }
-            .section-header h2 { font-size: 1.7rem; }
-            .ventures-grid, .philosophy-grid, .books-grid { grid-template-columns: 1fr; }
+            .hero { padding: 6rem 1.5rem 3rem; }
+            .hero-content h1 { font-size: 2.6rem; }
+            section { padding: 4rem 1.5rem; }
+            .section-header h2 { font-size: 2rem; }
+            .stats-bar { padding: 2rem 1.5rem; }
+            .stats-bar-inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .stat-value { font-size: 2rem; }
+            .ventures-grid, .philosophy-grid { grid-template-columns: 1fr; }
+            .quote-banner { padding: 3rem 1.5rem; }
+            .quote-inner blockquote { font-size: 1.4rem; }
             .article-title { font-size: 1.1rem; }
-            .article-content { padding: 0 1.2rem 1.5rem; font-size: 0.95rem; }
-            .quote-block blockquote { font-size: 1.3rem; }
+            .article-content { padding: 0 1.2rem 1.5rem; font-size: 0.92rem; }
+            .footer { padding: 3rem 1.5rem 2rem; }
+            .book-card { min-width: 290px; }
+        }
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 2rem; }
+            .stats-bar-inner { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="bg-animation"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
 
     <!-- Nav -->
-    <nav class="nav">
+    <nav class="nav" id="mainNav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">ZG</a>
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-mark">ZG</div>
+                <span>Zainab Ghadiyali</span>
+            </a>
             <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Toggle menu">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="#journey">Journey</a></li>
@@ -235,62 +665,67 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-inner">
-            <div class="hero-content fade-in">
-                <h1>Zainab<br><span class="highlight">Ghadiyali</span></h1>
+            <div class="hero-content fade-in-left">
+                <h1>Curiosity-Driven.<br><span>Design-Led.</span></h1>
                 <p class="hero-subtitle">From Mumbai with $107 to Product Lead at Airbnb, co-founder of Wogrammer, and founder of Eat Cook Joy. Designing a curiosity-driven career one bold move at a time.</p>
                 <div class="hero-tags">
-                    <span class="tag">Tech Leader</span>
+                    <span class="tag magenta">Tech Leader</span>
                     <span class="tag teal">Product Lead</span>
-                    <span class="tag gold">Eat Cook Joy</span>
-                    <span class="tag purple">Wogrammer</span>
+                    <span class="tag purple">Eat Cook Joy</span>
+                    <span class="tag blue">Wogrammer</span>
                     <span class="tag">Speaker</span>
                 </div>
                 <div class="hero-cta">
-                    <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn Profile</a>
+                    <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn Profile &#8594;</a>
                     <a href="#articles" class="btn btn-outline">Read Articles</a>
                 </div>
             </div>
-            <div class="hero-visual fade-in">
-                <div class="hero-card">
-                    <div class="hero-card-avatar">ZG</div>
-                    <h3>Zainab Ghadiyali</h3>
-                    <p>Founder & Product Leader</p>
-                    <div class="hero-card-stats">
-                        <div><div class="stat-value">3</div><div class="stat-label">Ventures</div></div>
-                        <div><div class="stat-value">60+</div><div class="stat-label">Links</div></div>
-                        <div><div class="stat-value">10+</div><div class="stat-label">Yrs in Tech</div></div>
-                    </div>
+            <div class="hero-cards fade-in-right">
+                <div class="hero-feature-card">
+                    <div class="card-label">Founder & CEO</div>
+                    <h3>Eat Cook Joy</h3>
+                    <p>AI-powered personal chef platform. $7/serving, $1M annualized revenue track. Serving 4 Texas metros.</p>
+                </div>
+                <div class="hero-feature-card">
+                    <div class="card-label">Co-Founder</div>
+                    <h3>Wogrammer</h3>
+                    <p>Featured 200+ women engineers. Named FP Top 100 Global Thinkers. Reached 4M+ people. Acquired by AnitaB.org.</p>
+                </div>
+                <div class="hero-feature-card">
+                    <div class="card-label">Tech Leadership</div>
+                    <h3>Facebook, Airbnb, Canva</h3>
+                    <p>Built products for 1.5B+ users. Mastered influence without authority across the world's top tech companies.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats -->
-    <section style="padding: 1.5rem 2rem;">
-        <div class="section-inner">
-            <div class="stats-strip fade-in">
-                <div class="stats-strip-item"><div class="stats-strip-value">$107</div><div class="stats-strip-label">Arrived in the US with</div></div>
-                <div class="stats-strip-item"><div class="stats-strip-value">200+</div><div class="stats-strip-label">Job rejections overcome</div></div>
-                <div class="stats-strip-item"><div class="stats-strip-value">200+</div><div class="stats-strip-label">Women engineers featured</div></div>
-                <div class="stats-strip-item"><div class="stats-strip-value">$1M</div><div class="stats-strip-label">Annualized revenue track</div></div>
-            </div>
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-bar-inner">
+            <div class="stat-item fade-in"><div class="stat-value">$107</div><div class="stat-label">Arrived in the US with</div></div>
+            <div class="stat-item fade-in"><div class="stat-value">200+</div><div class="stat-label">Job rejections overcome</div></div>
+            <div class="stat-item fade-in"><div class="stat-value">1.5B+</div><div class="stat-label">Users impacted at Facebook</div></div>
+            <div class="stat-item fade-in"><div class="stat-value">$1M</div><div class="stat-label">Annualized revenue track</div></div>
         </div>
-    </section>
+    </div>
 
     <!-- Quote -->
-    <section class="quote-section">
-        <div class="section-inner">
-            <div class="quote-block fade-in">
-                <blockquote>"Career ladder thinking puts you in a box."</blockquote>
-                <cite>-- Zainab Ghadiyali</cite>
-            </div>
+    <div class="quote-banner">
+        <div class="quote-inner fade-in">
+            <blockquote>"Career ladder thinking puts you in a box."</blockquote>
+            <cite>-- Zainab Ghadiyali</cite>
         </div>
-    </section>
+    </div>
 
     <!-- Journey -->
     <section id="journey">
         <div class="section-inner">
-            <div class="section-header fade-in"><span class="section-label">Career Path</span><h2>The Journey</h2><p>A career painted in bold brushstrokes, not climbed on a ladder</p></div>
+            <div class="section-header fade-in">
+                <span class="section-label magenta">Career Path</span>
+                <h2>The Journey</h2>
+                <p>A career painted in bold brushstrokes, not climbed on a ladder</p>
+            </div>
             <div class="timeline fade-in">
                 <div class="timeline-item"><div class="timeline-year">Origin</div><div class="timeline-title">Mumbai to South Carolina</div><div class="timeline-desc">Left India at 19 with $107 to study chemistry at Winthrop University. First-generation college student from a family of non-college-educated parents.</div></div>
                 <div class="timeline-item"><div class="timeline-year">College Years</div><div class="timeline-title">Global Research & Service</div><div class="timeline-desc">Conducted acupuncture research in Berlin via DAAD fellowship. Worked with FIMRC in remote Peru and Nicaragua building sustainable pediatric care models.</div></div>
@@ -303,10 +738,14 @@
         </div>
     </section>
 
-    <!-- EMBEDDED ARTICLES -->
-    <section id="articles" style="background: rgba(15,52,96,0.1);">
+    <!-- Articles -->
+    <section id="articles" class="articles-section">
         <div class="section-inner">
-            <div class="section-header fade-in"><span class="section-label">Read On-Site</span><h2>Featured Articles</h2><p>Full articles embedded for reading -- no external links needed</p></div>
+            <div class="section-header center fade-in">
+                <span class="section-label blue">Read On-Site</span>
+                <h2>Featured Articles</h2>
+                <p>Full articles embedded for reading -- no external links needed</p>
+            </div>
 
             <!-- Article 1: First Round Review -->
             <div class="article-reader fade-in" id="article-firstround">
@@ -515,7 +954,7 @@
                         </ul>
 
                         <h4>Listen on Multiple Platforms</h4>
-                        <p>Available on <a href="https://insideoutside.io/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer-on-ignorance-curiosity-and-persistence/" target="_blank" rel="noopener" style="color: var(--color-accent-light);">insideoutside.io</a>, <a href="https://open.spotify.com/episode/inside-outside-innovation-191-zainab-ghadiyali" target="_blank" rel="noopener" style="color: var(--color-accent-light);">Spotify</a>, <a href="https://podcasts.apple.com/us/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer/id1170743283" target="_blank" rel="noopener" style="color: var(--color-accent-light);">Apple Podcasts</a>, and <a href="https://www.youtube.com/watch?v=VmTSq1Gzb68" target="_blank" rel="noopener" style="color: var(--color-accent-light);">YouTube</a>.</p>
+                        <p>Available on <a href="https://insideoutside.io/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer-on-ignorance-curiosity-and-persistence/" target="_blank" rel="noopener" style="color: var(--accent-pink);">insideoutside.io</a>, <a href="https://open.spotify.com/episode/inside-outside-innovation-191-zainab-ghadiyali" target="_blank" rel="noopener" style="color: var(--accent-pink);">Spotify</a>, <a href="https://podcasts.apple.com/us/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer/id1170743283" target="_blank" rel="noopener" style="color: var(--accent-pink);">Apple Podcasts</a>, and <a href="https://www.youtube.com/watch?v=VmTSq1Gzb68" target="_blank" rel="noopener" style="color: var(--accent-pink);">YouTube</a>.</p>
                     </div>
                 </div>
             </div>
@@ -525,10 +964,13 @@
     <!-- Ventures -->
     <section id="ventures">
         <div class="section-inner">
-            <div class="section-header fade-in"><span class="section-label">Ventures & Impact</span><h2>What She's Built</h2></div>
+            <div class="section-header fade-in">
+                <span class="section-label orange">Ventures & Impact</span>
+                <h2>What She's Built</h2>
+            </div>
             <div class="ventures-grid fade-in">
                 <div class="venture-card">
-                    <div class="venture-icon" style="background:rgba(244,162,97,0.15);">&#127858;</div>
+                    <div class="venture-icon" style="background:rgba(245,158,11,0.12);">&#127858;</div>
                     <h3>Eat Cook Joy</h3>
                     <p>AI-powered platform connecting families with local chefs. Weekly meal prep from $7/serving across San Antonio, Austin, Dallas, Houston.</p>
                     <div class="venture-links">
@@ -543,7 +985,7 @@
                     </div>
                 </div>
                 <div class="venture-card">
-                    <div class="venture-icon" style="background:rgba(123,47,247,0.15);">&#128105;</div>
+                    <div class="venture-icon" style="background:rgba(123,75,255,0.12);">&#128105;</div>
                     <h3>Wogrammer</h3>
                     <p>Co-founded 2014. Reshaped media narratives about women in tech. 200+ profiles. Acquired by AnitaB.org. Reached 4M+ people.</p>
                     <div class="venture-links">
@@ -556,7 +998,7 @@
                     </div>
                 </div>
                 <div class="venture-card">
-                    <div class="venture-icon" style="background:rgba(46,196,182,0.15);">&#129302;</div>
+                    <div class="venture-icon" style="background:rgba(6,182,212,0.12);">&#129302;</div>
                     <h3>Stackbirds</h3>
                     <p>Building a platform to democratize AI agent technology, empowering the next generation of entrepreneurs.</p>
                     <div class="venture-links">
@@ -570,9 +1012,12 @@
     </section>
 
     <!-- Philosophy -->
-    <section id="philosophy" style="background:rgba(15,52,96,0.1);">
+    <section id="philosophy" class="articles-section">
         <div class="section-inner">
-            <div class="section-header fade-in"><span class="section-label">Core Principles</span><h2>Career Philosophy</h2></div>
+            <div class="section-header center fade-in">
+                <span class="section-label purple">Core Principles</span>
+                <h2>Career Philosophy</h2>
+            </div>
             <div class="philosophy-grid fade-in">
                 <div class="philosophy-card"><div class="philosophy-number">01</div><h3>Lean Into Curiosity</h3><p>At each crossroads ask: "What am I excited to learn next?" Let curiosity be your primary navigation tool.</p></div>
                 <div class="philosophy-card"><div class="philosophy-number">02</div><h3>Career as a Painting</h3><p>Reject the career ladder. Embrace interconnected brushstrokes that reveal a larger picture over time.</p></div>
@@ -587,11 +1032,17 @@
     <!-- Books -->
     <section id="books">
         <div class="section-inner">
-            <div class="section-header fade-in"><span class="section-label">Currently Reading</span><h2>Books in Progress</h2><p>Multiple books at once -- curiosity-driven reading</p></div>
-            <div class="books-grid fade-in">
-                <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#1a365d,#2c5282);">&#128218;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>HBR's 10 Must Reads on Communication</h3><div class="author">Harvard Business Review</div><p>Essential frameworks for persuasion, storytelling, and building influence.</p></div></div>
-                <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#2d3748,#4a5568);">&#129504;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>Spark: The Revolutionary New Science of Exercise and the Brain</h3><div class="author">John J. Ratey, MD</div><p>How exercise transforms the brain, boosts mood, and supercharges cognition.</p></div></div>
-                <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#744210,#dd6b20);">&#127909;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>Yo Soy Betty, La Fea (Transcripts)</h3><div class="author">Fernando Gaitan</div><p>Iconic Colombian telenovela transcripts. A masterclass in storytelling.</p></div></div>
+            <div class="section-header fade-in">
+                <span class="section-label teal">Currently Reading</span>
+                <h2>Books in Progress</h2>
+                <p>Multiple books at once -- curiosity-driven reading</p>
+            </div>
+            <div class="books-carousel-wrapper fade-in">
+                <div class="books-carousel">
+                    <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#1e3a5f,#3b82f6);">&#128218;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>HBR's 10 Must Reads on Communication</h3><div class="author">Harvard Business Review</div><p>Essential frameworks for persuasion, storytelling, and building influence.</p></div></div>
+                    <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#374151,#6b7280);">&#129504;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>Spark: The Revolutionary New Science of Exercise and the Brain</h3><div class="author">John J. Ratey, MD</div><p>How exercise transforms the brain, boosts mood, and supercharges cognition.</p></div></div>
+                    <div class="book-card"><div class="book-cover" style="background:linear-gradient(135deg,#92400e,#f59e0b);">&#127909;</div><div class="book-info"><span class="reading-badge">Reading</span><h3>Yo Soy Betty, La Fea (Transcripts)</h3><div class="author">Fernando Gaitan</div><p>Iconic Colombian telenovela transcripts. A masterclass in storytelling.</p></div></div>
+                </div>
             </div>
         </div>
     </section>
@@ -599,11 +1050,15 @@
     <!-- All Links -->
     <section id="links" class="links-section">
         <div class="section-inner">
-            <div class="section-header fade-in"><span class="section-label">Resource Directory</span><h2>All Links <span class="link-count">60+</span></h2><p>Comprehensive collection organized by category</p></div>
+            <div class="section-header center fade-in">
+                <span class="section-label magenta">Resource Directory</span>
+                <h2>All Links <span class="link-count">60+</span></h2>
+                <p>Comprehensive collection organized by category</p>
+            </div>
             <div class="search-bar fade-in"><input type="text" class="search-input" id="linkSearch" placeholder="Search links..." oninput="filterLinks()"></div>
 
             <div id="linksContainer">
-                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(233,69,96,0.15);">&#128100;</div>Core Profiles & Social</div><div class="links-grid">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(233,30,140,0.1);">&#128100;</div>Core Profiles & Social</div><div class="links-grid">
                     <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">in</div><div class="link-info"><div class="link-title">LinkedIn</div><div class="link-url">linkedin.com/in/zainabg</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://clay.earth/profile/zainab-g" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">&#9675;</div><div class="link-info"><div class="link-title">Clay Profile</div><div class="link-url">clay.earth</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://about.me/breaking-stereotypes-consulting" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">&#128100;</div><div class="link-info"><div class="link-title">About.me</div><div class="link-url">about.me</div></div><span class="link-arrow">&#8594;</span></a>
@@ -619,7 +1074,7 @@
                     <a href="https://stackoverflow.com/users/zainabg" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">SO</div><div class="link-info"><div class="link-title">Stack Overflow</div><div class="link-url">stackoverflow.com</div></div><span class="link-arrow">&#8594;</span></a>
                 </div></div>
 
-                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(244,162,97,0.15);">&#127891;</div>University & Alumni</div><div class="links-grid">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(245,158,11,0.1);">&#127891;</div>University & Alumni</div><div class="links-grid">
                     <a href="https://www.uwalumni.com/news/meet-2018-fuf-award-recipient-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">UW</div><div class="link-info"><div class="link-title">UW Alumni Award 2018</div><div class="link-url">uwalumni.com</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://engineering.wisc.edu/blog/alumni-spotlight-zainab-ghadiyali-tech-founder/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">UW</div><div class="link-info"><div class="link-title">Engineering Alumni Spotlight</div><div class="link-url">engineering.wisc.edu</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://www.winthrop.edu/mwe/zainab-ghadiyali.aspx" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">WU</div><div class="link-info"><div class="link-title">Winthrop University</div><div class="link-url">winthrop.edu</div></div><span class="link-arrow">&#8594;</span></a>
@@ -627,7 +1082,7 @@
                     <a href="https://www.warf.org/videos/innovation-roadmap-speaker-zainab-ghadiyali-9-20-18/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W</div><div class="link-info"><div class="link-title">WARF Innovation Talk</div><div class="link-url">warf.org</div></div><span class="link-arrow">&#8594;</span></a>
                 </div></div>
 
-                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(46,196,182,0.15);">&#128240;</div>Press & Features</div><div class="links-grid">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(6,182,212,0.1);">&#128240;</div>Press & Features</div><div class="links-grid">
                     <a href="https://review.firstround.com/the-secrets-to-designing-a-curiosity-driven-career/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">FR</div><div class="link-info"><div class="link-title">First Round Review</div><div class="link-url">review.firstround.com</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://news.crunchbase.com/startups/ai-founder-stopping-platform-ransom-ghadiyali-eat-cook-joy/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">CB</div><div class="link-info"><div class="link-title">Crunchbase News</div><div class="link-url">news.crunchbase.com</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://www.bizjournals.com/austin/inno/stories/inno-insights/2025/02/28/austin-startups-to-watch-eat-cook-joy.html" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ABJ</div><div class="link-info"><div class="link-title">Austin Biz Journal</div><div class="link-url">bizjournals.com</div></div><span class="link-arrow">&#8594;</span></a>
@@ -642,7 +1097,7 @@
                     <a href="https://www.austinbusinesswoman.com/directory/eat-cook-joy-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ABW</div><div class="link-info"><div class="link-title">ABW Directory</div><div class="link-url">austinbusinesswoman.com</div></div><span class="link-arrow">&#8594;</span></a>
                 </div></div>
 
-                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(123,47,247,0.15);">&#127908;</div>Talks, Podcasts & Videos</div><div class="links-grid">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(123,75,255,0.1);">&#127908;</div>Talks, Podcasts & Videos</div><div class="links-grid">
                     <a href="https://insideoutside.io/podcast/ep-191-zainab-ghadiyali-of-airbnb-wogrammer-on-ignorance-curiosity-and-persistence/" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">IO</div><div class="link-info"><div class="link-title">Inside Outside Ep 191</div><div class="link-url">insideoutside.io</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://www.youtube.com/watch?v=VmTSq1Gzb68" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">YT</div><div class="link-info"><div class="link-title">IO Innovation (Video)</div><div class="link-url">youtube.com</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://share.transistor.fm/s/b27b2a47" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">T</div><div class="link-info"><div class="link-title">Transistor FM</div><div class="link-url">transistor.fm</div></div><span class="link-arrow">&#8594;</span></a>
@@ -660,7 +1115,7 @@
                     <a href="https://www.winwisconsin.org/events/speaker-zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">WI</div><div class="link-info"><div class="link-title">WiN Wisconsin</div><div class="link-url">winwisconsin.org</div></div><span class="link-arrow">&#8594;</span></a>
                 </div></div>
 
-                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(123,47,247,0.15);">&#128105;</div>Wogrammer Ecosystem</div><div class="links-grid">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(123,75,255,0.1);">&#128105;</div>Wogrammer Ecosystem</div><div class="links-grid">
                     <a href="https://www.wogrammer.org" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">W</div><div class="link-info"><div class="link-title">Wogrammer.org</div><div class="link-url">wogrammer.org</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://www.facebook.com/wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">f</div><div class="link-info"><div class="link-title">Wogrammer Facebook</div><div class="link-url">facebook.com</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://twitter.com/wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">X</div><div class="link-info"><div class="link-title">Wogrammer Twitter</div><div class="link-url">twitter.com</div></div><span class="link-arrow">&#8594;</span></a>
@@ -669,7 +1124,7 @@
                     <a href="https://anitab.org/press-release/anitab-org-acquires-wogrammer" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">AB</div><div class="link-info"><div class="link-title">AnitaB Acquisition</div><div class="link-url">anitab.org</div></div><span class="link-arrow">&#8594;</span></a>
                 </div></div>
 
-                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(244,162,97,0.15);">&#127858;</div>Eat Cook Joy</div><div class="links-grid">
+                <div class="links-category fade-in"><div class="links-category-title"><div class="links-category-icon" style="background:rgba(245,158,11,0.1);">&#127858;</div>Eat Cook Joy</div><div class="links-grid">
                     <a href="https://www.eatcookjoy.com" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">Website</div><div class="link-url">eatcookjoy.com</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://www.eatcookjoy.com/about-us" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">About Us</div><div class="link-url">eatcookjoy.com/about-us</div></div><span class="link-arrow">&#8594;</span></a>
                     <a href="https://www.eatcookjoy.com/chefs/zainab-ghadiyali" target="_blank" rel="noopener" class="link-item"><div class="link-favicon">ECJ</div><div class="link-info"><div class="link-title">Chef Profile</div><div class="link-url">eatcookjoy.com/chefs</div></div><span class="link-arrow">&#8594;</span></a>
@@ -684,31 +1139,66 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-headline">Curiosity Never Stops</div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener" title="LinkedIn">in</a>
+            <a href="https://twitter.com/zainabg" target="_blank" rel="noopener" title="Twitter">X</a>
+            <a href="https://www.instagram.com/eatcookjoy" target="_blank" rel="noopener" title="Instagram">IG</a>
+            <a href="https://www.facebook.com/zainab.ghadiyali" target="_blank" rel="noopener" title="Facebook">f</a>
+            <a href="https://www.youtube.com/results?search_query=%22Zainab+Ghadiyali%22" target="_blank" rel="noopener" title="YouTube">YT</a>
+        </div>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://www.eatcookjoy.com" target="_blank" rel="noopener">Eat Cook Joy</a>
             <a href="https://www.wogrammer.org" target="_blank" rel="noopener">Wogrammer</a>
             <a href="https://review.firstround.com/the-secrets-to-designing-a-curiosity-driven-career/" target="_blank" rel="noopener">First Round Review</a>
         </div>
-        <p>Compiled profile with 60+ links and embedded articles. Last updated April 2026.</p>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">Compiled profile with 60+ links and embedded articles. Last updated April 2026.</div>
     </footer>
 
     <script>
-        const observer = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, {threshold: 0.1});
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        // Scroll animations
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
 
+        // Nav scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Article toggle
         function toggleArticle(id) {
             const el = document.getElementById(id);
             el.classList.toggle('open');
         }
 
+        // Link filter
         function filterLinks() {
             const q = document.getElementById('linkSearch').value.toLowerCase();
-            document.querySelectorAll('.link-item').forEach(item => { item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none'; });
-            document.querySelectorAll('.links-category').forEach(cat => { cat.style.display = cat.querySelectorAll('.link-item:not([style*="display: none"])').length === 0 ? 'none' : ''; });
+            document.querySelectorAll('.link-item').forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none';
+            });
+            document.querySelectorAll('.links-category').forEach(cat => {
+                cat.style.display = cat.querySelectorAll('.link-item:not([style*="display: none"])').length === 0 ? 'none' : '';
+            });
         }
 
-        document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if(t) { t.scrollIntoView({behavior:'smooth',block:'start'}); document.querySelector('.nav-links').classList.remove('active'); } }); });
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                const t = document.querySelector(this.getAttribute('href'));
+                if(t) {
+                    t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
