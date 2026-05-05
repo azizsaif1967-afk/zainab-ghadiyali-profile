@@ -63,8 +63,10 @@
   /* ===== Header ===== */
   header.site{position:sticky;top:0;z-index:80;background:rgba(253,248,241,.92);backdrop-filter:saturate(1.5) blur(12px);border-bottom:1px solid var(--rule)}
   .site-inner{max-width:1180px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .logo{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--teal-deep);letter-spacing:-.01em}
+  .logo{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--teal-deep);letter-spacing:-.01em;display:inline-flex;align-items:center;gap:12px}
   .logo em{font-style:italic;color:var(--coral)}
+  .logo-thumb{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 4px 12px -4px rgba(13,59,64,.3);flex-shrink:0}
+  @media (max-width:560px){.logo{font-size:20px;gap:10px}.logo-thumb{width:32px;height:32px}}
   .site nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap}
   .site nav a{font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
   .site nav a:hover{color:var(--teal-deep)}
@@ -353,7 +355,7 @@
 <!-- Sticky header -->
 <header class="site">
   <div class="site-inner">
-    <a href="#top" class="logo">Zainab <em>Ghadiyali</em></a>
+    <a href="#top" class="logo"><img class="logo-thumb" src="./portrait.jpg" alt="" width="36" height="36" loading="eager" /><span>Zainab <em>Ghadiyali</em></span></a>
     <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     <nav id="nav">
       <ul>
