@@ -269,12 +269,18 @@
   /* Eat Cook Joy theme — cream/black, clean serif */
   .v-art.ecj{background:linear-gradient(135deg,#fdf6ec 0%,#f3e3cb 70%,#ecd6b3 100%)}
   .v-art.ecj::before{border-color:rgba(26,22,20,.18)}
+  .v-art.ecj .v-content{display:flex;flex-direction:column;align-items:center;gap:18px;position:relative;z-index:2}
   .v-art.ecj .v-mark{color:#1a1614}
   .v-art.ecj .v-tag{color:rgba(26,22,20,.7)}
   .v-art.ecj .v-stamp{color:rgba(26,22,20,.62)}
   a.v-art.ecj::after{color:rgba(26,22,20,.45)}
   a.v-art.ecj:hover::after{color:#1a1614}
-  .v-art.ecj .ecj-rule{position:absolute;left:50%;bottom:108px;width:48px;height:1px;background:var(--coral);transform:translateX(-50%);opacity:.7}
+  .v-art.ecj .v-rule{display:block;width:48px;height:1px;background:var(--coral);opacity:.75}
+  .v-art.ecj .v-caption{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(15px,1.6vw,18px);line-height:1.45;color:#3a302a;max-width:18ch;margin:0;letter-spacing:-.005em}
+  /* Stackbirds caption */
+  .v-art.stackbirds .v-content{display:flex;flex-direction:column;align-items:center;gap:18px;position:relative;z-index:2}
+  .v-art.stackbirds .v-rule{display:block;width:48px;height:1px;background:linear-gradient(90deg,#A7E8C8,#FFD36E,#FF6B5B);opacity:.85}
+  .v-art.stackbirds .v-caption{font-family:'Inter',sans-serif;font-weight:500;font-size:clamp(13.5px,1.45vw,16px);line-height:1.5;color:rgba(255,255,255,.82);max-width:22ch;margin:0;letter-spacing:.005em}
   /* Stackbirds theme — deep indigo with brand pop dots */
   .v-art.stackbirds{background:linear-gradient(135deg,#241a3a 0%,#1B1530 100%)}
   .v-art.stackbirds::before{border-color:rgba(255,255,255,.18)}
@@ -811,8 +817,11 @@
   <div class="v-inner">
     <a class="v-art ecj" href="https://www.eatcookjoy.com" target="_blank" rel="noopener" aria-label="Visit Eat Cook Joy at eatcookjoy.com">
       <span class="v-tag">2022 — Present</span>
-      <div class="v-mark">Eat Cook<br/>Joy</div>
-      <span class="ecj-rule" aria-hidden="true"></span>
+      <div class="v-content">
+        <div class="v-mark">Eat Cook<br/>Joy</div>
+        <span class="v-rule" aria-hidden="true"></span>
+        <p class="v-caption">a private chef in your kitchen, without the price tag.</p>
+      </div>
       <span class="v-stamp">eatcookjoy.com</span>
     </a>
     <div class="v-body">
@@ -842,7 +851,11 @@
       <span class="pop pop-4" aria-hidden="true"></span>
       <span class="pop pop-5" aria-hidden="true"></span>
       <span class="v-tag">2024 — Present</span>
-      <div class="v-mark">Stackbirds</div>
+      <div class="v-content">
+        <div class="v-mark">Stackbirds</div>
+        <span class="v-rule" aria-hidden="true"></span>
+        <p class="v-caption">Your busywork, on autopilot. The world's first self-trained agent.</p>
+      </div>
       <span class="v-stamp">stackbirds.xyz</span>
     </a>
     <div class="v-body">
