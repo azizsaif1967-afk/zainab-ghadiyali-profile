@@ -1,583 +1,737 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inspiration — Zainab Ghadiyali</title>
-  <meta name="description" content="A curated collection of quotes, insights, and wisdom from Zainab Ghadiyali — on career, curiosity, leadership, confidence, and building with empathy.">
-  <link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
-  <style>
-    :root,[data-theme="light"]{
-      --color-bg:#faf8f3;--color-surface:#f5f2ea;--color-surface-2:#ede9df;
-      --color-surface-offset:#e5e0d4;--color-surface-dynamic:#d9d3c5;
-      --color-divider:#ccc7b8;--color-border:#c4bfaf;
-      --color-text:#1e1b14;--color-text-muted:#6b6658;--color-text-faint:#aaa69c;
-      --color-text-inverse:#faf8f3;
-      --color-primary:#8b5e3c;--color-primary-hover:#6e4828;
-      --color-primary-active:#4f3218;--color-primary-hl:#edddd0;
-      --color-accent2:#4a7c59;--color-accent2-hl:#d0e4d7;
-      --color-shadow:oklch(0.2 0.02 60/0.08);
-      --font-display:'Boska',Georgia,serif;--font-body:'Satoshi','Inter',system-ui,sans-serif;
-      --text-xs:clamp(0.75rem,0.7rem + 0.25vw,0.875rem);
-      --text-sm:clamp(0.875rem,0.8rem + 0.35vw,1rem);
-      --text-base:clamp(1rem,0.95rem + 0.25vw,1.125rem);
-      --text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);
-      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
-      --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
-      --text-3xl:clamp(2.5rem,1rem + 4vw,5rem);
-      --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;
-      --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
-      --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
-      --radius-sm:.25rem;--radius-md:.5rem;--radius-lg:.875rem;
-      --radius-xl:1.25rem;--radius-full:9999px;
-      --transition:180ms cubic-bezier(0.16,1,0.3,1);
-      --content-default:960px;--content-wide:1200px;
-    }
-    [data-theme="dark"]{
-      --color-bg:#1a1712;--color-surface:#201e18;--color-surface-2:#27241d;
-      --color-surface-offset:#2e2a22;--color-surface-dynamic:#383329;
-      --color-divider:#3d3830;--color-border:#4a4538;
-      --color-text:#e8e3d8;--color-text-muted:#9e9a8e;--color-text-faint:#625e55;
-      --color-text-inverse:#1a1712;
-      --color-primary:#d4956a;--color-primary-hover:#e8a87a;
-      --color-primary-active:#f0bf9a;--color-primary-hl:#3d2e22;
-      --color-accent2:#7ab890;--color-accent2-hl:#1e3328;
-      --color-shadow:oklch(0 0 0/0.35);
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;hanging-punctuation:first last;scroll-padding-top:var(--space-20)}
-    body{min-height:100dvh;line-height:1.65;font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background-color:var(--color-bg);transition:background-color var(--transition),color var(--transition)}
-    img{display:block;max-width:100%;height:auto}
-    button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
-    h1,h2,h3,h4{text-wrap:balance;line-height:1.15}
-    p{text-wrap:pretty;max-width:72ch}
-    ::selection{background:oklch(from var(--color-primary) l c h/0.2);color:var(--color-text)}
-    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+<meta charset="utf-8" />
+<title>Inspiration — Zainab Ghadiyali</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="A reading room of 87 quotes from Zainab Ghadiyali — on curiosity, mindset, confidence, influence, leadership and building with empathy." />
+<meta property="og:title" content="Inspiration — Zainab Ghadiyali" />
+<meta property="og:description" content="A wall of cards I read on slow mornings — borrowed lines from teachers, founders, engineers and grandmothers." />
+<meta property="og:image" content="https://zainabghadiyali.com/portrait.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16140F;
+    --ink-2:#3A352B;
+    --mute:#7A7263;
+    --paper:#F5F0E4;
+    --paper-2:#EDE6D4;
+    --paper-3:#E3DAC2;
+    --teal:#2F6B66;
+    --teal-deep:#1F4F4B;
+    --rust:#B5532A;
+    --rust-deep:#8A3C18;
+    --gold:#C8A24B;
+    --gold-soft:#E2C681;
+    --plum:#5D2E4A;
+    --plum-soft:#7E4566;
+    --sky:#3A5A7A;
+    --sky-soft:#5B7B9D;
+    --leaf:#4A6E3E;
+    --leaf-soft:#6A8E5E;
+    --rule:#1c1a14;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif}
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      radial-gradient(rgba(0,0,0,.035) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.022) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+    mix-blend-mode:multiply;opacity:.55;
+  }
+  main{position:relative;z-index:1}
+  a{color:inherit}
 
-    /* SKIP LINK */
-    .skip-link{position:absolute;top:var(--space-2);left:var(--space-2);padding:var(--space-2) var(--space-4);background:var(--color-primary);color:var(--color-text-inverse);font-size:var(--text-sm);font-weight:600;border-radius:var(--radius-md);text-decoration:none;z-index:1000;transform:translateY(-120%);transition:transform var(--transition)}
-    .skip-link:focus{transform:translateY(0)}
+  /* ============== Scroll progress ============== */
+  .scrollbar{position:fixed;left:0;top:0;height:2px;background:var(--rust);z-index:60;transition:width .1s ease-out;width:0}
 
-    /* HEADER */
-    .site-header{position:sticky;top:0;z-index:100;background:oklch(from var(--color-bg) l c h/0.88);backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);border-bottom:1px solid oklch(from var(--color-text) l c h/0.08);transition:background var(--transition),border-color var(--transition)}
-    .header-inner{max-width:var(--content-wide);margin-inline:auto;padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
-    .site-logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none;color:var(--color-text)}
-    .logo-mark{width:36px;height:36px;flex-shrink:0}
-    .logo-name{font-family:var(--font-display);font-size:var(--text-lg);font-weight:500;letter-spacing:-.02em}
-    .theme-toggle{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-full);color:var(--color-text-muted);transition:background var(--transition),color var(--transition)}
-    .theme-toggle:hover{background:var(--color-surface-2);color:var(--color-text)}
+  /* ============== Top Nav ============== */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,240,228,.92);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width:1280px;margin:0 auto;
+    padding:14px 28px;
+    display:flex;align-items:center;gap:18px;
+    flex-wrap:wrap;
+  }
+  .brand{
+    display:flex;align-items:center;gap:10px;
+    font-family:"Fraunces",serif;font-weight:500;font-size:20px;letter-spacing:-.01em;
+    color:var(--ink);text-decoration:none;flex-shrink:0;
+  }
+  .brand .glyph{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--teal-deep);color:var(--paper);
+    display:grid;place-items:center;font-family:"Fraunces",serif;font-style:italic;font-size:17px;
+  }
+  .brand em{font-style:italic;color:var(--teal-deep)}
+  .nav{display:flex;flex-wrap:wrap;gap:4px;flex:1;justify-content:center}
+  .nav a{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:7px 11px;border-radius:999px;
+    font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-2);text-decoration:none;transition:all .18s ease;white-space:nowrap;
+  }
+  .nav a:hover{background:var(--ink);color:var(--paper)}
+  .nav a.active{background:var(--rust);color:var(--paper)}
+  .nav a svg{width:13px;height:13px;flex-shrink:0}
 
-    /* HERO */
-    .hero{min-height:68vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:clamp(var(--space-20),10vw,var(--space-24)) var(--space-6)}
-    .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 20% 50%,oklch(from var(--color-primary) l c h/0.10) 0%,transparent 70%),radial-gradient(ellipse 60% 50% at 75% 30%,oklch(from var(--color-accent2) l c h/0.07) 0%,transparent 70%),var(--color-bg)}
-    .hero-inner{max-width:var(--content-default);margin-inline:auto;position:relative;z-index:1}
-    .hero-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-5);display:flex;align-items:center;gap:var(--space-3)}
-    .hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--color-primary)}
-    .hero-title{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;letter-spacing:-.02em;color:var(--color-text);line-height:1.1;margin-bottom:var(--space-6)}
-    .hero-title em{font-style:italic;color:var(--color-primary)}
-    .hero-sub{font-size:var(--text-lg);color:var(--color-text-muted);max-width:55ch;line-height:1.7;margin-bottom:var(--space-10)}
-    .hero-stats{display:flex;flex-wrap:wrap;gap:var(--space-8)}
-    .hero-stat-value{font-family:var(--font-display);font-size:var(--text-xl);font-weight:500;color:var(--color-text)}
-    .hero-stat-label{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.08em;margin-top:var(--space-1)}
+  /* ============== Hero ============== */
+  .hero{
+    max-width:1180px;margin:0 auto;
+    padding:60px 28px 36px;
+    display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:end;
+    border-bottom:1px solid var(--rule);
+  }
+  .portrait-thumb{
+    width:130px;height:130px;border-radius:50%;
+    overflow:hidden;flex-shrink:0;
+    box-shadow:0 14px 30px rgba(31,79,75,.32);
+    border:3px solid var(--paper);outline:1px solid var(--rule);
+    background:#2F6B66;position:relative;
+  }
+  .portrait-thumb img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;display:block;filter:contrast(1.02) saturate(1.05)}
+  .portrait-thumb .ring{
+    position:absolute;inset:-10px;border-radius:50%;
+    border:1px dashed rgba(28,26,20,.3);pointer-events:none;
+  }
+  .hero .text .eyebrow{
+    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--rust);
+    display:flex;align-items:center;gap:12px;margin-bottom:14px;
+  }
+  .hero .text .eyebrow .bar{width:54px;height:1px;background:var(--rust)}
+  .hero h1{
+    font-family:"Fraunces",serif;font-weight:400;
+    font-size:74px;line-height:.95;letter-spacing:-.03em;
+    margin:0 0 14px;color:var(--ink);
+  }
+  .hero h1 em{font-style:italic;color:var(--teal-deep);font-weight:500}
+  .hero h1 .amp{color:var(--rust);font-style:italic}
+  .hero .lede{
+    font-family:"Fraunces",serif;font-size:19px;line-height:1.55;color:var(--ink-2);
+    max-width:680px;margin:0;letter-spacing:-.003em;
+  }
+  .hero .meta-row{
+    margin-top:18px;display:flex;flex-wrap:wrap;gap:16px;
+    font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);
+  }
+  .hero .meta-row b{color:var(--ink);font-weight:500}
 
-    /* FILTER BAR */
-    .filter-bar{background:var(--color-surface);border-bottom:1px solid oklch(from var(--color-text) l c h/0.07);position:sticky;top:65px;z-index:90;transition:background var(--transition)}
-    .filter-inner{max-width:var(--content-wide);margin-inline:auto;padding:0 var(--space-6);display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .filter-inner::-webkit-scrollbar{display:none}
-    .filter-btn{flex-shrink:0;padding:var(--space-4) var(--space-5);font-size:var(--text-sm);font-weight:500;color:var(--color-text-muted);border-bottom:2px solid transparent;transition:color var(--transition),border-color var(--transition);white-space:nowrap}
-    .filter-btn:hover{color:var(--color-text)}
-    .filter-btn.active{color:var(--color-primary);border-bottom-color:var(--color-primary)}
+  /* ============== Index pills ============== */
+  .index{
+    max-width:1180px;margin:0 auto;
+    padding:28px 28px 8px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  }
+  .index .lbl{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-right:6px}
+  .index a{
+    font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-2);text-decoration:none;
+    padding:6px 10px;border:1px solid rgba(28,26,20,.3);border-radius:999px;
+    background:rgba(255,255,255,.4);
+    transition:all .18s;display:inline-flex;align-items:center;gap:6px;
+  }
+  .index a .dot{width:8px;height:8px;border-radius:50%}
+  .index a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
-    /* SEARCH */
-    .search-section{max-width:var(--content-default);margin-inline:auto;padding:var(--space-10) var(--space-6) var(--space-6)}
-    .search-wrap{position:relative}
-    .search-icon{position:absolute;left:var(--space-4);top:50%;transform:translateY(-50%);color:var(--color-text-faint);pointer-events:none}
-    .search-input{width:100%;padding:var(--space-3) var(--space-4) var(--space-3) var(--space-12);background:var(--color-surface);border:1px solid oklch(from var(--color-text) l c h/0.1);border-radius:var(--radius-full);font-size:var(--text-base);color:var(--color-text);transition:border-color var(--transition),box-shadow var(--transition)}
-    .search-input::placeholder{color:var(--color-text-faint)}
-    .search-input:focus{outline:none;border-color:var(--color-primary);box-shadow:0 0 0 3px oklch(from var(--color-primary) l c h/0.15)}
+  /* ============== Toolbar (search + filters) ============== */
+  .toolbar{
+    max-width:1180px;margin:0 auto;
+    padding:12px 28px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  }
+  .toolbar input[type=search]{
+    flex:1;min-width:220px;
+    font-family:"Inter Tight",sans-serif;font-size:14px;color:var(--ink);
+    background:rgba(255,255,255,.55);
+    border:1px solid var(--rule);border-radius:999px;
+    padding:9px 16px;outline:none;
+    transition:background .15s, box-shadow .15s;
+  }
+  .toolbar input[type=search]:focus{background:#fff;box-shadow:0 0 0 3px rgba(181,83,42,.18)}
+  .toolbar .count{
+    font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);
+  }
+  .toolbar .count b{color:var(--rust);font-weight:500}
 
-    /* BACK TO DASHBOARD */
-    .back-to-dash{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);font-size:var(--text-xs);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);background:var(--color-primary-hl);border-radius:var(--radius-full);cursor:pointer;transition:background var(--transition),color var(--transition);margin-right:var(--space-3)}
-    .back-to-dash:hover{background:var(--color-primary);color:var(--color-text-inverse)}
+  /* ============== Chapter sections ============== */
+  .chapter{
+    max-width:1180px;margin:0 auto;
+    padding:36px 28px 14px;
+  }
+  .chapter-head{
+    position:relative;overflow:hidden;
+    border:1px solid var(--rule);border-radius:3px;
+    padding:30px 30px 26px;margin-bottom:22px;
+    isolation:isolate;
+  }
+  .chapter-head .num{
+    font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    display:flex;align-items:center;gap:10px;margin-bottom:10px;opacity:.85;
+  }
+  .chapter-head .num::after{content:"";flex:1;height:1px;background:currentColor;opacity:.4}
+  .chapter-head h2{
+    margin:0 0 8px;font-family:"Fraunces",serif;font-weight:400;
+    font-size:42px;line-height:1;letter-spacing:-.02em;
+  }
+  .chapter-head h2 em{font-style:italic;font-weight:500}
+  .chapter-head .blurb{
+    margin:0;max-width:640px;
+    font-family:"Fraunces",serif;font-size:18px;line-height:1.5;letter-spacing:-.003em;opacity:.92;
+  }
+  .chapter-head .ct{
+    margin-top:14px;display:inline-block;
+    font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+    border:1px solid currentColor;padding:4px 9px;border-radius:999px;opacity:.78;
+  }
+  .chapter-head .graphic{position:absolute;pointer-events:none;opacity:.18}
 
-    /* DASHBOARD */
-    .dashboard-section{max-width:var(--content-wide);margin-inline:auto;padding:var(--space-8) var(--space-6) var(--space-4)}
-    .dashboard-header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);margin-bottom:var(--space-8)}
-    .dashboard-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:500;letter-spacing:-.02em;color:var(--color-text)}
-    .dashboard-subtitle{font-size:var(--text-sm);color:var(--color-text-muted)}
-    .dashboard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--space-5)}
-    .dash-card{position:relative;display:flex;flex-direction:column;padding:var(--space-6);border-radius:var(--radius-lg);border:1px solid var(--dc-border,oklch(from var(--color-text) l c h/0.08));background:var(--dc-bg,var(--color-surface));overflow:hidden;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit;transition:transform var(--transition),box-shadow var(--transition),border-color var(--transition);min-height:220px}
-    .dash-card::before{content:"";position:absolute;inset:0;background:var(--dc-pattern,none);opacity:.5;pointer-events:none;z-index:0}
-    .dash-card>*{position:relative;z-index:1}
-    .dash-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px -10px var(--color-shadow);border-color:var(--dc-accent,var(--color-primary))}
-    .dash-card:focus-visible{outline:2px solid var(--dc-accent,var(--color-primary));outline-offset:3px}
-    .dash-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);background:var(--dc-icon-bg,oklch(from var(--color-primary) l c h/0.12));color:var(--dc-accent,var(--color-primary));margin-bottom:var(--space-4)}
-    .dash-icon svg{width:22px;height:22px;stroke-width:1.75}
-    .dash-label{font-family:var(--font-display);font-size:var(--text-lg);font-weight:500;letter-spacing:-.01em;color:var(--color-text);margin-bottom:var(--space-2);line-height:1.2}
-    .dash-snippet{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.55;font-style:italic;margin-bottom:var(--space-5);display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
-    .dash-foot{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding-top:var(--space-3);border-top:1px solid oklch(from var(--color-text) l c h/0.06)}
-    .dash-count{display:inline-flex;align-items:baseline;gap:var(--space-2);font-size:var(--text-xs);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--dc-accent,var(--color-primary));line-height:1.2}
-    .dash-count .num{font-family:var(--font-display);font-size:1.1rem;font-weight:500;letter-spacing:-.01em;text-transform:none;line-height:1}
-    .dash-arrow{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-full);background:oklch(from var(--color-text) l c h/0.04);color:var(--color-text-muted);transition:transform var(--transition),background var(--transition),color var(--transition)}
-    .dash-card:hover .dash-arrow{background:var(--dc-accent,var(--color-primary));color:var(--color-text-inverse);transform:translateX(3px)}
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .card{
+    position:relative;overflow:hidden;
+    border-radius:3px;
+    padding:30px 28px 24px;
+    display:flex;flex-direction:column;gap:14px;
+    min-height:280px;
+    border:1px solid var(--rule);
+    transition:transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+    isolation:isolate;background:var(--paper);
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(0,0,0,.18)}
+  .card .num{
+    font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    display:flex;align-items:center;gap:10px;color:var(--mute);
+  }
+  .card .num::after{content:"";flex:1;height:1px;background:currentColor;opacity:.4}
+  .card .num .tag{color:inherit}
+  .card blockquote{
+    margin:0;
+    font-family:"Fraunces",serif;font-size:19px;line-height:1.42;letter-spacing:-.005em;font-weight:400;color:var(--ink);
+  }
+  .card blockquote::before{
+    content:"\201C";font-family:"Fraunces",serif;font-size:54px;line-height:0;
+    display:block;margin:0 0 -10px -4px;opacity:.32;color:currentColor;
+  }
+  .card .attr{
+    margin-top:auto;
+    font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+    opacity:.75;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  }
+  .card .attr .src{color:var(--ink-2)}
+  .card .copy{
+    background:none;border:1px solid currentColor;color:inherit;cursor:pointer;
+    font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+    padding:4px 8px;border-radius:999px;opacity:.55;transition:opacity .2s, background .2s, color .2s;
+  }
+  .card .copy:hover{opacity:1;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .card .copy.copied{background:var(--rust);color:var(--paper);border-color:var(--rust);opacity:1}
+  .card.featured{
+    grid-column:1 / -1;min-height:200px;
+    padding:36px 34px 28px;
+  }
+  .card.featured blockquote{font-size:26px;max-width:880px;line-height:1.35}
+  .card.featured blockquote::before{font-size:72px;margin:0 0 -16px -6px}
+  .card.hidden{display:none}
 
-    /* Per-section themes */
-    .dash-career{--dc-accent:#b45a3c;--dc-bg:linear-gradient(135deg,#fcf3e8 0%,#f5e6d2 100%);--dc-icon-bg:#f0d9b5;--dc-pattern:radial-gradient(circle at 90% 10%,rgba(180,90,60,.06) 0%,transparent 50%);--dc-border:#e8d3b0}
-    .dash-mindset{--dc-accent:#5b8a7a;--dc-bg:linear-gradient(135deg,#eef5f1 0%,#dde9e0 100%);--dc-icon-bg:#c9ddd0;--dc-pattern:radial-gradient(circle at 10% 90%,rgba(91,138,122,.08) 0%,transparent 50%);--dc-border:#cfdbd2}
-    .dash-imposter{--dc-accent:#7a5e8c;--dc-bg:linear-gradient(135deg,#f3edf6 0%,#e7dceb 100%);--dc-icon-bg:#d8c8de;--dc-pattern:radial-gradient(circle at 50% 100%,rgba(122,94,140,.08) 0%,transparent 60%);--dc-border:#d6c8db}
-    .dash-confidence{--dc-accent:#a07628;--dc-bg:linear-gradient(135deg,#fcf5e1 0%,#f5e9c4 100%);--dc-icon-bg:#ecd896;--dc-pattern:radial-gradient(circle at 100% 50%,rgba(160,118,40,.08) 0%,transparent 50%);--dc-border:#e8d4a0}
-    .dash-influence{--dc-accent:#4a6d9c;--dc-bg:linear-gradient(135deg,#eaf0f7 0%,#d7e2ee 100%);--dc-icon-bg:#c0d2e6;--dc-pattern:radial-gradient(circle at 20% 20%,rgba(74,109,156,.08) 0%,transparent 55%);--dc-border:#c9d6e6}
-    .dash-time{--dc-accent:#5e7e3c;--dc-bg:linear-gradient(135deg,#f0f5e6 0%,#dfead0 100%);--dc-icon-bg:#cadeac;--dc-pattern:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(94,126,60,.04) 12px,rgba(94,126,60,.04) 13px);--dc-border:#d4dfc1}
-    .dash-feedback{--dc-accent:#c4737a;--dc-bg:linear-gradient(135deg,#faecee 0%,#f0d5da 100%);--dc-icon-bg:#ecc6cc;--dc-pattern:radial-gradient(circle at 80% 80%,rgba(196,115,122,.07) 0%,transparent 50%);--dc-border:#e6c5cb}
-    .dash-performance{--dc-accent:#3a7a8a;--dc-bg:linear-gradient(135deg,#e6f0f3 0%,#cee0e5 100%);--dc-icon-bg:#b8d4dc;--dc-pattern:radial-gradient(circle at 0% 50%,rgba(58,122,138,.07) 0%,transparent 55%);--dc-border:#c3d6dc}
-    .dash-negotiation{--dc-accent:#8c3a3a;--dc-bg:linear-gradient(135deg,#f5e6e6 0%,#ebcccc 100%);--dc-icon-bg:#dfb5b5;--dc-pattern:repeating-linear-gradient(135deg,transparent,transparent 14px,rgba(140,58,58,.04) 14px,rgba(140,58,58,.04) 15px);--dc-border:#d8b5b5}
-    .dash-leadership{--dc-accent:#5a4a8a;--dc-bg:linear-gradient(135deg,#ece8f5 0%,#d8d0eb 100%);--dc-icon-bg:#c2b8de;--dc-pattern:radial-gradient(circle at 50% 0%,rgba(90,74,138,.08) 0%,transparent 60%);--dc-border:#cac0db}
-    .dash-people{--dc-accent:#c47a3a;--dc-bg:linear-gradient(135deg,#fcf0e2 0%,#f5dec1 100%);--dc-icon-bg:#eccba0;--dc-pattern:radial-gradient(circle at 100% 100%,rgba(196,122,58,.08) 0%,transparent 55%);--dc-border:#e8cfa8}
-    .dash-innovation{--dc-accent:#3a8a72;--dc-bg:linear-gradient(135deg,#e3f2ec 0%,#c8e3d6 100%);--dc-icon-bg:#a8d4c1;--dc-pattern:radial-gradient(circle at 80% 20%,rgba(58,138,114,.10) 0%,transparent 55%);--dc-border:#b8d8c8}
-    .dash-women{--dc-accent:#a0488c;--dc-bg:linear-gradient(135deg,#f7e8f1 0%,#ebcfde 100%);--dc-icon-bg:#e0b8d0;--dc-pattern:radial-gradient(circle at 0% 0%,rgba(160,72,140,.08) 0%,transparent 55%);--dc-border:#dec0d2}
-    .dash-founding{--dc-accent:#8a5a2a;--dc-bg:linear-gradient(135deg,#f5ead6 0%,#e6d2a8 100%);--dc-icon-bg:#dec48c;--dc-pattern:radial-gradient(circle at 50% 50%,rgba(138,90,42,.06) 0%,transparent 60%);--dc-border:#d8c08c}
-    .dash-tech{--dc-accent:#2a6a8a;--dc-bg:linear-gradient(135deg,#1e2a3a 0%,#2c3e54 100%);--dc-icon-bg:rgba(120,180,220,.18);--dc-pattern:radial-gradient(circle at 80% 20%,rgba(100,200,255,.10) 0%,transparent 50%),radial-gradient(circle at 20% 80%,rgba(100,200,255,.06) 0%,transparent 50%);--dc-border:#3a4d62}
-    .dash-tech .dash-label{color:#f0f4f8}
-    .dash-tech .dash-snippet{color:#aebccc}
-    .dash-tech .dash-icon{background:rgba(120,180,220,.18);color:#7ec0e8}
-    .dash-tech .dash-count{color:#7ec0e8}
-    .dash-tech .dash-foot{border-top-color:rgba(255,255,255,.08)}
-    .dash-tech .dash-arrow{background:rgba(255,255,255,.08);color:#aebccc}
-    .dash-tech:hover .dash-arrow{background:#7ec0e8;color:#1e2a3a}
+  /* Theme palettes — applied to chapter-head and featured card */
+  .t-career{background:var(--teal-deep);color:#EFEAE0}
+  .t-career .num,.t-career h2 em,.t-career .ct{color:var(--gold)}
+  .t-career blockquote{color:#EFEAE0}
+  .t-career .graphic{right:-30px;bottom:-30px;width:340px;height:340px}
 
-    [data-theme="dark"] .dash-card{--dc-bg:var(--color-surface-2);--dc-border:var(--color-border);--dc-pattern:none;--dc-icon-bg:oklch(from var(--dc-accent) l c h/0.18)}
-    [data-theme="dark"] .dash-label{color:var(--color-text)}
-    [data-theme="dark"] .dash-snippet{color:var(--color-text-muted)}
+  .t-mindset{background:var(--sky);color:#E8EFF6}
+  .t-mindset .num,.t-mindset h2 em,.t-mindset .ct{color:#F1C28A}
+  .t-mindset blockquote{color:#E8EFF6}
+  .t-mindset .graphic{left:-20px;bottom:-30px;width:300px;height:300px}
 
-    /* QUOTES GRID */
-    .quotes-section{max-width:var(--content-wide);margin-inline:auto;padding:var(--space-6) var(--space-6) var(--space-24)}
-    .category-section{margin-bottom:var(--space-16)}
-    .category-header{display:flex;align-items:baseline;gap:var(--space-4);margin-bottom:var(--space-8);padding-bottom:var(--space-4);border-bottom:1px solid oklch(from var(--color-text) l c h/0.08)}
-    .category-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:500;letter-spacing:-.02em;color:var(--color-text)}
-    .category-count{font-size:var(--text-xs);color:var(--color-text-faint);background:var(--color-surface-2);padding:2px var(--space-2);border-radius:var(--radius-full)}
-    .quotes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:var(--space-5)}
-    .quote-card{background:var(--color-surface);border:1px solid oklch(from var(--color-text) l c h/0.07);border-radius:var(--radius-xl);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4);transition:transform var(--transition),box-shadow var(--transition),background var(--transition);position:relative;overflow:hidden}
-    .quote-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--color-primary);border-radius:0 0 var(--radius-sm) var(--radius-sm);transition:height .35s cubic-bezier(0.16,1,0.3,1)}
-    .quote-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--color-shadow);background:var(--color-surface-2)}
-    .quote-card:hover::before{height:48px}
-    .quote-card.featured{grid-column:1/-1;background:oklch(from var(--color-primary) l c h/0.06);border-color:oklch(from var(--color-primary) l c h/0.18)}
-    @media(min-width:768px){.quote-card.featured{padding:var(--space-10)}}
-    .quote-mark{font-family:var(--font-display);font-size:3.5rem;line-height:.6;color:var(--color-primary);opacity:.35;user-select:none}
-    .quote-text{font-family:var(--font-display);font-size:clamp(1rem,.9rem + .5vw,1.25rem);font-weight:400;line-height:1.55;color:var(--color-text);flex:1}
-    .quote-card.featured .quote-text{font-size:clamp(1.2rem,1rem + 1vw,1.75rem)}
-    .quote-meta{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding-top:var(--space-3);border-top:1px solid oklch(from var(--color-text) l c h/0.07)}
-    .quote-source{font-size:var(--text-xs);color:var(--color-text-faint);font-weight:500}
-    .quote-actions{display:flex;gap:var(--space-2)}
-    .quote-action-btn{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-full);color:var(--color-text-faint);transition:background var(--transition),color var(--transition)}
-    .quote-action-btn:hover{background:var(--color-surface-dynamic);color:var(--color-text)}
-    .quote-action-btn.copied{color:var(--color-accent2)}
+  .t-imposter{background:var(--paper-2);color:var(--ink)}
+  .t-imposter .num,.t-imposter h2 em,.t-imposter .ct{color:var(--rust-deep)}
+  .t-imposter .graphic{right:-20px;top:-20px;width:280px;height:280px}
 
-    /* EMPTY STATE */
-    .empty-state{display:none;flex-direction:column;align-items:center;text-align:center;padding:var(--space-24) var(--space-8);color:var(--color-text-muted)}
-    .empty-state.visible{display:flex}
-    .empty-state-icon{width:56px;height:56px;color:var(--color-text-faint);margin-bottom:var(--space-4)}
-    .empty-state h3{color:var(--color-text);margin-bottom:var(--space-2);font-size:var(--text-lg)}
+  .t-confidence{background:var(--gold);color:var(--ink)}
+  .t-confidence .num,.t-confidence h2 em,.t-confidence .ct{color:var(--plum)}
+  .t-confidence .graphic{right:-40px;bottom:-50px;width:340px;height:340px}
 
-    /* FOOTER */
-    .site-footer{border-top:1px solid oklch(from var(--color-text) l c h/0.08);padding:var(--space-8) var(--space-6);text-align:center}
-    .footer-inner{max-width:var(--content-default);margin-inline:auto;display:flex;flex-direction:column;align-items:center;gap:var(--space-3)}
-    .footer-logo{font-family:var(--font-display);font-size:var(--text-base);color:var(--color-text-muted)}
-    .footer-note{font-size:var(--text-xs);color:var(--color-text-faint)}
-    .footer-link{color:var(--color-primary);text-decoration:none}
+  .t-influence{background:var(--rust);color:#FCEBD3}
+  .t-influence .num,.t-influence h2 em,.t-influence .ct{color:var(--paper)}
+  .t-influence blockquote{color:#FCEBD3}
+  .t-influence .graphic{left:-40px;bottom:-30px;width:300px;height:300px}
 
-    /* SCROLL ANIMATIONS */
-    .fade-in{opacity:1}
-    @supports(animation-timeline:scroll()){
-      .fade-in{opacity:0;animation:reveal-fade linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
-      @keyframes reveal-fade{to{opacity:1}}
-    }
+  .t-time{background:var(--ink);color:var(--paper)}
+  .t-time .num,.t-time h2 em,.t-time .ct{color:var(--gold)}
+  .t-time blockquote{color:var(--paper)}
+  .t-time .graphic{right:-30px;top:-30px;width:300px;height:300px}
 
-    /* BACK TO TOP */
-    .back-top{position:fixed;bottom:var(--space-6);right:var(--space-6);width:44px;height:44px;background:var(--color-primary);color:var(--color-text-inverse);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px var(--color-shadow);opacity:0;pointer-events:none;transition:opacity var(--transition),transform var(--transition);z-index:200}
-    .back-top.visible{opacity:1;pointer-events:auto}
-    .back-top:hover{transform:translateY(-2px)}
+  .t-feedback{background:var(--plum);color:#F2E2D8}
+  .t-feedback .num,.t-feedback h2 em,.t-feedback .ct{color:var(--gold)}
+  .t-feedback blockquote{color:#F2E2D8}
+  .t-feedback .graphic{left:-30px;top:-30px;width:300px;height:300px}
 
-    /* RESULTS COUNT */
-    .results-bar{max-width:var(--content-wide);margin-inline:auto;padding:0 var(--space-6) var(--space-4);font-size:var(--text-xs);color:var(--color-text-faint)}
+  .t-performance{background:var(--paper-3);color:var(--ink)}
+  .t-performance .num,.t-performance h2 em,.t-performance .ct{color:var(--teal-deep)}
+  .t-performance .graphic{right:-30px;bottom:-30px;width:320px;height:320px}
 
-    @media(max-width:600px){
-      .header-inner{padding:var(--space-3) var(--space-4)}
-      .hero{min-height:55vh;padding-block:var(--space-16)}
-      .hero-stats{gap:var(--space-6)}
-      .search-section{padding:var(--space-8) var(--space-4) var(--space-4)}
-      .quotes-section{padding:var(--space-4) var(--space-4) var(--space-16)}
-      .quotes-grid{gap:var(--space-4)}
-      .quote-card{padding:var(--space-5)}
-      .filter-inner{padding:0 var(--space-4)}
-      .results-bar{padding:0 var(--space-4) var(--space-3)}
-    }
-  </style>
+  .t-negotiation{background:var(--rust-deep);color:#FCEBD3}
+  .t-negotiation .num,.t-negotiation h2 em,.t-negotiation .ct{color:var(--gold-soft)}
+  .t-negotiation blockquote{color:#FCEBD3}
+  .t-negotiation .graphic{right:-20px;top:-30px;width:320px;height:320px}
+
+  .t-leadership{background:var(--teal);color:#EFEAE0}
+  .t-leadership .num,.t-leadership h2 em,.t-leadership .ct{color:var(--gold)}
+  .t-leadership blockquote{color:#EFEAE0}
+  .t-leadership .graphic{left:-30px;bottom:-30px;width:320px;height:320px}
+
+  .t-people{background:var(--gold-soft);color:var(--ink)}
+  .t-people .num,.t-people h2 em,.t-people .ct{color:var(--rust-deep)}
+  .t-people .graphic{right:-30px;top:-20px;width:310px;height:310px}
+
+  .t-innovation{background:var(--leaf);color:#F0EAD4}
+  .t-innovation .num,.t-innovation h2 em,.t-innovation .ct{color:#F8DD8B}
+  .t-innovation blockquote{color:#F0EAD4}
+  .t-innovation .graphic{right:-30px;bottom:-30px;width:320px;height:320px}
+
+  .t-women{background:var(--plum-soft);color:#F2E2D8}
+  .t-women .num,.t-women h2 em,.t-women .ct{color:var(--gold-soft)}
+  .t-women blockquote{color:#F2E2D8}
+  .t-women .graphic{left:-30px;top:-30px;width:300px;height:300px}
+
+  .t-founding{background:var(--ink-2);color:var(--paper)}
+  .t-founding .num,.t-founding h2 em,.t-founding .ct{color:var(--gold)}
+  .t-founding blockquote{color:var(--paper)}
+  .t-founding .graphic{right:-30px;top:-20px;width:320px;height:320px}
+
+  .t-tech{background:var(--sky-soft);color:#EFF3F8}
+  .t-tech .num,.t-tech h2 em,.t-tech .ct{color:var(--gold-soft)}
+  .t-tech blockquote{color:#EFF3F8}
+  .t-tech .graphic{left:-30px;bottom:-30px;width:320px;height:320px}
+
+  /* Featured card uses theme too */
+  .card.featured.t-career,.card.featured.t-mindset,.card.featured.t-influence,
+  .card.featured.t-time,.card.featured.t-feedback,.card.featured.t-negotiation,
+  .card.featured.t-leadership,.card.featured.t-innovation,.card.featured.t-women,
+  .card.featured.t-founding,.card.featured.t-tech{color:inherit}
+  .card.featured .num{color:inherit;opacity:.9}
+  .card.featured.t-imposter,.card.featured.t-confidence,
+  .card.featured.t-performance,.card.featured.t-people{color:var(--ink)}
+
+  /* Quote-card tint by chapter (subtle) */
+  .qchapter[data-theme="career"] .card:not(.featured){background:linear-gradient(180deg,#F7F1DF 0%,var(--paper) 100%)}
+  .qchapter[data-theme="mindset"] .card:not(.featured){background:linear-gradient(180deg,#EFEFE3 0%,var(--paper) 100%)}
+  .qchapter[data-theme="imposter"] .card:not(.featured){background:linear-gradient(180deg,#F1EAD7 0%,var(--paper) 100%)}
+  .qchapter[data-theme="confidence"] .card:not(.featured){background:linear-gradient(180deg,#F6EAC8 0%,var(--paper) 100%)}
+  .qchapter[data-theme="influence"] .card:not(.featured){background:linear-gradient(180deg,#F6DECC 0%,var(--paper) 100%)}
+  .qchapter[data-theme="time"] .card:not(.featured){background:linear-gradient(180deg,#E7E2D2 0%,var(--paper) 100%)}
+  .qchapter[data-theme="feedback"] .card:not(.featured){background:linear-gradient(180deg,#EEDFE7 0%,var(--paper) 100%)}
+  .qchapter[data-theme="performance"] .card:not(.featured){background:linear-gradient(180deg,#EAE3CC 0%,var(--paper) 100%)}
+  .qchapter[data-theme="negotiation"] .card:not(.featured){background:linear-gradient(180deg,#EFD9C7 0%,var(--paper) 100%)}
+  .qchapter[data-theme="leadership"] .card:not(.featured){background:linear-gradient(180deg,#DDE7E5 0%,var(--paper) 100%)}
+  .qchapter[data-theme="people"] .card:not(.featured){background:linear-gradient(180deg,#F0E4C6 0%,var(--paper) 100%)}
+  .qchapter[data-theme="innovation"] .card:not(.featured){background:linear-gradient(180deg,#DEE7D7 0%,var(--paper) 100%)}
+  .qchapter[data-theme="women"] .card:not(.featured){background:linear-gradient(180deg,#EAD8E2 0%,var(--paper) 100%)}
+  .qchapter[data-theme="founding"] .card:not(.featured){background:linear-gradient(180deg,#E2DCCB 0%,var(--paper) 100%)}
+  .qchapter[data-theme="tech"] .card:not(.featured){background:linear-gradient(180deg,#DDE3EC 0%,var(--paper) 100%)}
+
+  /* ============== Closing band ============== */
+  .closing{
+    max-width:1180px;margin:0 auto;
+    padding:40px 28px 80px;
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:36px;
+    border-top:1px solid var(--rule);margin-top:24px;
+  }
+  .closing .l,.closing .r{
+    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--mute);line-height:1.7;
+  }
+  .closing .r{text-align:right}
+  .closing .center{text-align:center}
+  .closing .center .pre{
+    display:block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--mute);margin-bottom:8px;
+  }
+  .closing .center a{
+    font-family:"Fraunces",serif;font-weight:500;font-size:30px;letter-spacing:-.01em;
+    color:var(--ink);text-decoration:none;font-style:italic;
+    border-bottom:2px solid var(--rust);padding-bottom:3px;
+  }
+  .closing .center a:hover{color:var(--rust)}
+
+  /* ============== Empty state ============== */
+  .empty{
+    max-width:1180px;margin:0 auto;padding:30px 28px;
+    font-family:"Fraunces",serif;font-style:italic;font-size:20px;color:var(--mute);
+    text-align:center;display:none;
+  }
+  .empty.show{display:block}
+
+  /* ============== Responsive ============== */
+  @media (max-width: 880px){
+    .quotes{grid-template-columns:1fr}
+    .card.featured{grid-column:auto}
+    .hero{grid-template-columns:1fr;gap:24px;align-items:start}
+    .hero h1{font-size:54px}
+    .closing{grid-template-columns:1fr;gap:18px;text-align:center}
+    .closing .r{text-align:center}
+    .chapter-head h2{font-size:34px}
+  }
+  @media (max-width: 560px){
+    .hero{padding:36px 20px 24px}
+    .chapter{padding:24px 20px 8px}
+    .topbar-inner{padding:12px 18px}
+    .index{padding:18px 20px 4px}
+    .toolbar{padding:10px 20px 0}
+    .closing{padding:30px 20px 60px}
+  }
+
+  /* In-view animation */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-    <a href="https://zainabghadiyali.com" class="site-logo" aria-label="Zainab Ghadiyali — Home" target="_blank" rel="noopener noreferrer">
-      <svg class="logo-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-        <rect width="36" height="36" rx="8" fill="currentColor" opacity="0.1"/>
-        <path d="M9 11h12l-9 14h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M21 11v7.5c0 2.5 1.5 6.5 5 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" opacity="0.6"/>
-      </svg>
-      <span class="logo-name">Zainab Ghadiyali</span>
+<div class="scrollbar" id="scrollbar"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/">
+      <span class="glyph">Z</span>
+      <span>Zainab <em>Ghadiyali</em></span>
     </a>
-    <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="5"/>
-        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-      </svg>
-    </button>
+    <nav class="nav" aria-label="Sections">
+      <a href="/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+        Home
+      </a>
+      <a href="/#about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg>
+        About
+      </a>
+      <a class="active" href="/inspiration.html" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+        Inspiration
+      </a>
+      <a href="/#writing">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 20 4-1 11-11-3-3L5 16zM14 6l3 3"/></svg>
+        Writing
+      </a>
+      <a href="/#speaking">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="9" width="4" height="6" rx="1"/><path d="M8 9 18 5v14L8 15"/></svg>
+        Speaking
+      </a>
+      <a href="/#ventures">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10l4-3 4 3v11M13 21V14h6v7"/></svg>
+        Ventures
+      </a>
+      <a href="/#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        Contact
+      </a>
+    </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" aria-labelledby="hero-heading">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Words &amp; Wisdom</p>
-    <h1 class="hero-title" id="hero-heading">Ideas that<br><em>move people</em> forward</h1>
-    <p class="hero-sub">A living collection of insights from 20+ years of building, leading, and learning — drawn from essays, podcasts, talks, and conversations.</p>
-    <div class="hero-stats" role="list">
-      <div role="listitem"><div class="hero-stat-value" id="total-count">87</div><div class="hero-stat-label">Quotes</div></div>
-      <div role="listitem"><div class="hero-stat-value">15</div><div class="hero-stat-label">Topics</div></div>
-      <div role="listitem"><div class="hero-stat-value">20+</div><div class="hero-stat-label">Years of insight</div></div>
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="portrait-thumb">
+      <img src="portrait.jpg" alt="Zainab Ghadiyali" loading="eager" />
+      <span class="ring"></span>
     </div>
-  </div>
-</section>
+    <div class="text">
+      <div class="eyebrow"><span class="bar"></span> A reading room · curated 2026 · Inspiration</div>
+      <h1>Quotes I keep<br><em>returning</em> to<span class="amp">.</span></h1>
+      <p class="lede">
+        A wall of cards I read on slow mornings — borrowed lines from teachers, founders,
+        engineers and grandmothers. Each one earned its place by being something I needed
+        more than once. Click any to follow it home.
+      </p>
+      <div class="meta-row">
+        <span><b>87</b> quotes</span>
+        <span><b>15</b> chapters</span>
+        <span>updated · <b>May 2026</b></span>
+      </div>
+    </div>
+  </section>
 
-<!-- FILTER BAR -->
-<nav class="filter-bar" aria-label="Filter by topic">
-  <div class="filter-inner" role="list">
-    <button class="filter-btn active" data-filter="all" role="listitem">All</button>
-    <button class="filter-btn" data-filter="career" role="listitem">Career</button>
-    <button class="filter-btn" data-filter="mindset" role="listitem">Mindset</button>
-    <button class="filter-btn" data-filter="imposter" role="listitem">Imposter Syndrome</button>
-    <button class="filter-btn" data-filter="confidence" role="listitem">Confidence</button>
-    <button class="filter-btn" data-filter="influence" role="listitem">Influence</button>
-    <button class="filter-btn" data-filter="time" role="listitem">Time &amp; Focus</button>
-    <button class="filter-btn" data-filter="feedback" role="listitem">Feedback</button>
-    <button class="filter-btn" data-filter="performance" role="listitem">Performance</button>
-    <button class="filter-btn" data-filter="negotiation" role="listitem">Negotiation</button>
-    <button class="filter-btn" data-filter="leadership" role="listitem">Leadership</button>
-    <button class="filter-btn" data-filter="people" role="listitem">People</button>
-    <button class="filter-btn" data-filter="innovation" role="listitem">Innovation</button>
-    <button class="filter-btn" data-filter="women" role="listitem">Women in Tech</button>
-    <button class="filter-btn" data-filter="founding" role="listitem">Founding</button>
-    <button class="filter-btn" data-filter="tech" role="listitem">Tech &amp; AI</button>
-  </div>
-</nav>
+  <!-- INDEX -->
+  <nav class="index" id="chapter-index" aria-label="Chapter index"></nav>
 
-<!-- SEARCH -->
-<section class="search-section" aria-label="Search quotes">
-  <div class="search-wrap">
-    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-    <input type="search" id="quote-search" class="search-input" placeholder="Search quotes, topics, or ideas…" aria-label="Search quotes" autocomplete="off" spellcheck="false">
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search 87 quotes — try ‘curiosity’, ‘hire for hunger’, ‘imposter’…" aria-label="Search quotes" />
+    <span class="count" id="count"><b>87</b> shown</span>
   </div>
-</section>
 
-<!-- DASHBOARD -->
-<section class="dashboard-section" id="dashboard" aria-labelledby="dashboard-heading">
-  <div class="dashboard-header">
-    <h2 class="dashboard-title" id="dashboard-heading">Browse by Theme</h2>
-    <p class="dashboard-subtitle">15 themed sections · click a card to open the full collection</p>
-  </div>
-  <div class="dashboard-grid" id="dashboard-grid"></div>
-</section>
+  <div class="empty" id="empty">Nothing matches that. Try a softer word.</div>
 
-<div class="results-bar" id="results-bar" aria-live="polite"></div>
+  <!-- CHAPTERS render here -->
+  <div id="chapters"></div>
 
-<!-- QUOTES -->
-<main id="main-content" class="quotes-section">
-  <div id="quotes-container"></div>
-  <div class="empty-state" id="empty-state">
-    <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <h3>No quotes found</h3>
-    <p>Try a different keyword or browse all topics.</p>
-  </div>
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="l">Stay <b style="color:var(--ink)">ignorant</b>.<br>Get curious. Persist.</div>
+    <div class="center">
+      <span class="pre">Reading room · More at</span>
+      <a href="/">zainabghadiyali.com</a>
+    </div>
+    <div class="r">Curiosity, persistently<br>practiced &middot; <b style="color:var(--ink)">© 2026</b></div>
+  </section>
+
 </main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-logo">Zainab Ghadiyali</div>
-    <p class="footer-note">Compiled from Substack, First Round Review, podcasts, press interviews, and LinkedIn. All rights reserved.</p>
-    <p class="footer-note"><a href="https://zainabghadiyali.com" class="footer-link" target="_blank" rel="noopener noreferrer">zainabghadiyali.com</a></p>
-  </div>
-</footer>
-
-<button class="back-top" id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
 
 <script>
 const QUOTES=[
-  {id:1,text:"Across all of my life experiences, I was just hungry to learn.",source:"First Round Review",category:"career",featured:false},
+  {id:1,text:"Across all of my life experiences, I was just hungry to learn.",source:"First Round Review",category:"career"},
   {id:2,text:"As you set out in your career, let curiosity be your guide. You'll never know where it might lead you, but that's the thrill — it empowers you to explore possibilities beyond what you could have imagined.",source:"First Round Review",category:"career",featured:true},
-  {id:3,text:"Think about your career as a work of art — expansive, independent movements that incrementally reveal a whole.",source:"First Round Review",category:"career",featured:false},
-  {id:4,text:"When you look at a painting from a distance, you see a larger, cohesive picture. But as you approach the canvas, you see that there are, in fact, hundreds of separate strokes that make up that picture.",source:"First Round Review",category:"career",featured:false},
-  {id:5,text:"When we visualize a career ladder, we start putting ourselves in a box. Step back and see the painting — every experience adds a brushstroke to a bigger picture.",source:"First Round Review",category:"career",featured:false},
-  {id:6,text:"Careers aren't just about rocketing upward. Expanding horizontally gives you a stronger foundation to pursue vertical growth.",source:"First Round Review",category:"career",featured:false},
-  {id:7,text:"Everyone feels unqualified or not ready at some point in their careers — what will determine your success is whether you're willing to put in the work to prove that voice wrong.",source:"First Round Review",category:"career",featured:false},
-  {id:8,text:"When the train is leaving the station, you need to jump on it.",source:"First Round Review",category:"career",featured:false},
-  {id:9,text:"A risk won't actually move you forward unless it's followed by a dedication to progress.",source:"First Round Review",category:"career",featured:false},
-  {id:10,text:"At every career crossroads, I ask myself: 'What am I excited to learn next? What's the next level of learning I want to reach?'",source:"First Round Review",category:"career",featured:false},
-  {id:11,text:"Just because you were successful in one role doesn't mean you can apply those same skills to another. For every new opportunity, evaluate what you can apply from the past and what you still have yet to learn.",source:"First Round Review",category:"career",featured:false},
-  {id:12,text:"Don't worry too much about building a resume. Focus on building your repertoire of skills, and most of all, on creating a really great life.",source:"First Round Review",category:"career",featured:false},
-  {id:13,text:"The most important moves are rarely the ones that make sense on paper first. They're the ones you make because you see something other people aren't looking at yet, and you're willing to figure out the rest on the way there.",source:"CanvasRebel Magazine",category:"career",featured:false},
-  {id:14,text:"I didn't even know Silicon Valley existed until I was 25.",source:"First Round Review",category:"career",featured:false},
-  {id:15,text:"The reactive mindset is driven by fear. You think of a problem, you see it as a threat, then you react to it. This leads you down a spiral of anxiety, in which you focus on all the reasons why you can't do something.",source:"First Round Review",category:"mindset",featured:false},
+  {id:3,text:"Think about your career as a work of art — expansive, independent movements that incrementally reveal a whole.",source:"First Round Review",category:"career"},
+  {id:4,text:"When you look at a painting from a distance, you see a larger, cohesive picture. But as you approach the canvas, you see that there are, in fact, hundreds of separate strokes that make up that picture.",source:"First Round Review",category:"career"},
+  {id:5,text:"When we visualize a career ladder, we start putting ourselves in a box. Step back and see the painting — every experience adds a brushstroke to a bigger picture.",source:"First Round Review",category:"career"},
+  {id:6,text:"Careers aren't just about rocketing upward. Expanding horizontally gives you a stronger foundation to pursue vertical growth.",source:"First Round Review",category:"career"},
+  {id:7,text:"Everyone feels unqualified or not ready at some point in their careers — what will determine your success is whether you're willing to put in the work to prove that voice wrong.",source:"First Round Review",category:"career"},
+  {id:8,text:"When the train is leaving the station, you need to jump on it.",source:"First Round Review",category:"career"},
+  {id:9,text:"A risk won't actually move you forward unless it's followed by a dedication to progress.",source:"First Round Review",category:"career"},
+  {id:10,text:"At every career crossroads, I ask myself: 'What am I excited to learn next? What's the next level of learning I want to reach?'",source:"First Round Review",category:"career"},
+  {id:11,text:"Just because you were successful in one role doesn't mean you can apply those same skills to another. For every new opportunity, evaluate what you can apply from the past and what you still have yet to learn.",source:"First Round Review",category:"career"},
+  {id:12,text:"Don't worry too much about building a resume. Focus on building your repertoire of skills, and most of all, on creating a really great life.",source:"First Round Review",category:"career"},
+  {id:13,text:"The most important moves are rarely the ones that make sense on paper first. They're the ones you make because you see something other people aren't looking at yet, and you're willing to figure out the rest on the way there.",source:"CanvasRebel Magazine",category:"career"},
+  {id:14,text:"I didn't even know Silicon Valley existed until I was 25.",source:"First Round Review",category:"career"},
+  {id:15,text:"The reactive mindset is driven by fear. You think of a problem, you see it as a threat, then you react to it. This leads you down a spiral of anxiety, in which you focus on all the reasons why you can't do something.",source:"First Round Review",category:"mindset"},
   {id:16,text:"The creative mindset is driven by possibility. Instead of fretting over a problem, you emphasize what's possible. It inspires curiosity and passion, which leads to action.",source:"First Round Review",category:"mindset",featured:true},
-  {id:17,text:"If you're focused on a positive outcome, you're implicitly acknowledging that it's possible. Then, instead of worrying about fear, you can start to brainstorm ways to reach that end goal.",source:"First Round Review",category:"mindset",featured:false},
+  {id:17,text:"If you're focused on a positive outcome, you're implicitly acknowledging that it's possible. Then, instead of worrying about fear, you can start to brainstorm ways to reach that end goal.",source:"First Round Review",category:"mindset"},
   {id:18,text:"Imposter syndrome is not something you overcome, but rather something you manage.",source:"Substack — Don't Overcome Imposter Syndrome",category:"imposter",featured:true},
-  {id:19,text:"The higher you rise in your career, the more likely you are to face issues you have not faced before. The bigger your dreams, the more you challenge yourself, the more likely you are to feel like an imposter.",source:"Substack — Imposter Syndrome",category:"imposter",featured:false},
-  {id:20,text:"The more you do to show up and face situations in spite of imposter syndrome, the better you will get at managing the feeling and moving forward no matter what stories your mind makes up.",source:"Substack — Imposter Syndrome",category:"imposter",featured:false},
-  {id:21,text:"At the heart of Imposter Syndrome is validation. Am I good enough? We are genetically programmed to be tribal and feel like we belong. It is hence natural to seek validation.",source:"Substack — Imposter Syndrome",category:"imposter",featured:false},
-  {id:22,text:"Managing Imposter Syndrome is a mental game, and the good news is that you can change your mind.",source:"Substack — Imposter Syndrome",category:"imposter",featured:false},
-  {id:23,text:"A bit of imposter syndrome feeling is healthy — it shows you are being challenged.",source:"Substack — Imposter Syndrome",category:"imposter",featured:false},
-  {id:24,text:"Unconventionality makes you more susceptible to impostor syndrome. You might be more anxious about how you might fail or all the ways in which you don't belong because you don't fit the mold.",source:"First Round Review",category:"imposter",featured:false},
-  {id:25,text:"Surrounding yourself with builders is the antidote to impostor syndrome: They don't let you give in to fear.",source:"First Round Review",category:"imposter",featured:false},
-  {id:26,text:"You don't have to be confident in everything, but you must build confidence in skills that are core to performing your role well.",source:"Substack — On Confidence",category:"confidence",featured:false},
+  {id:19,text:"The higher you rise in your career, the more likely you are to face issues you have not faced before. The bigger your dreams, the more you challenge yourself, the more likely you are to feel like an imposter.",source:"Substack — Imposter Syndrome",category:"imposter"},
+  {id:20,text:"The more you do to show up and face situations in spite of imposter syndrome, the better you will get at managing the feeling and moving forward no matter what stories your mind makes up.",source:"Substack — Imposter Syndrome",category:"imposter"},
+  {id:21,text:"At the heart of Imposter Syndrome is validation. Am I good enough? We are genetically programmed to be tribal and feel like we belong. It is hence natural to seek validation.",source:"Substack — Imposter Syndrome",category:"imposter"},
+  {id:22,text:"Managing Imposter Syndrome is a mental game, and the good news is that you can change your mind.",source:"Substack — Imposter Syndrome",category:"imposter"},
+  {id:23,text:"A bit of imposter syndrome feeling is healthy — it shows you are being challenged.",source:"Substack — Imposter Syndrome",category:"imposter"},
+  {id:24,text:"Unconventionality makes you more susceptible to impostor syndrome. You might be more anxious about how you might fail or all the ways in which you don't belong because you don't fit the mold.",source:"First Round Review",category:"imposter"},
+  {id:25,text:"Surrounding yourself with builders is the antidote to impostor syndrome: They don't let you give in to fear.",source:"First Round Review",category:"imposter"},
+  {id:26,text:"You don't have to be confident in everything, but you must build confidence in skills that are core to performing your role well.",source:"Substack — On Confidence",category:"confidence"},
   {id:27,text:"Confidence is 90% validation and 10% familiarity.",source:"Substack — On Confidence",category:"confidence",featured:true},
-  {id:28,text:"Your confidence will increase every time you start and finish a task slightly outside your comfort zone.",source:"Substack — On Confidence",category:"confidence",featured:false},
-  {id:29,text:"Confidence isn't about believing in your idea and digging your heels in and never changing it. It's about the ability to support an idea and take the best from feedback to create the best overall result.",source:"Substack — On Confidence",category:"confidence",featured:false},
-  {id:30,text:"No one has context about everything out there. Not even experts — we are all learning along the way.",source:"Substack — On Confidence",category:"confidence",featured:false},
-  {id:31,text:"Avoid broad statements like 'I wish I was more confident'. Instead be specific: 'I want to get more confident with [insert skill].'",source:"Substack — On Confidence",category:"confidence",featured:false},
-  {id:32,text:"Growing in your career has a lot to do with your ability to build influence and be perceived as a leader. We all want to follow leaders who inspire us and who we can believe in.",source:"Substack — On Confidence",category:"confidence",featured:false},
+  {id:28,text:"Your confidence will increase every time you start and finish a task slightly outside your comfort zone.",source:"Substack — On Confidence",category:"confidence"},
+  {id:29,text:"Confidence isn't about believing in your idea and digging your heels in and never changing it. It's about the ability to support an idea and take the best from feedback to create the best overall result.",source:"Substack — On Confidence",category:"confidence"},
+  {id:30,text:"No one has context about everything out there. Not even experts — we are all learning along the way.",source:"Substack — On Confidence",category:"confidence"},
+  {id:31,text:"Avoid broad statements like 'I wish I was more confident'. Instead be specific: 'I want to get more confident with [insert skill].'",source:"Substack — On Confidence",category:"confidence"},
+  {id:32,text:"Growing in your career has a lot to do with your ability to build influence and be perceived as a leader. We all want to follow leaders who inspire us and who we can believe in.",source:"Substack — On Confidence",category:"confidence"},
   {id:33,text:"You don't need authority in order to influence. Authority is the least optimal way to influence at work.",source:"Substack — How to Be Influential",category:"influence",featured:true},
-  {id:34,text:"Influence is the ability to get your audience — manager, recruiter, teammate — to believe in you or your message, and then happily take up your request.",source:"Substack — How to Be Influential",category:"influence",featured:false},
-  {id:35,text:"At the heart of influence is trust. If someone does not trust you, you cannot influence them.",source:"Substack — How to Be Influential",category:"influence",featured:false},
-  {id:36,text:"We think of influence as a superpower. But the truth is, everyone is an influencer. Influence is a life skill — and we should all exercise it more deliberately at work.",source:"First Round Review",category:"influence",featured:false},
-  {id:37,text:"Executive summaries are not just for executives.",source:"Substack — On Written Communication",category:"influence",featured:false},
-  {id:38,text:"Be intentionally positive in your tone since it is especially easy to lose context or misunderstand tone in written format.",source:"Substack — On Written Communication",category:"influence",featured:false},
-  {id:39,text:"When people say they love complexity, they are usually thinking about flavor, not written communication. Bias towards using simple words.",source:"Substack — On Written Communication",category:"influence",featured:false},
+  {id:34,text:"Influence is the ability to get your audience — manager, recruiter, teammate — to believe in you or your message, and then happily take up your request.",source:"Substack — How to Be Influential",category:"influence"},
+  {id:35,text:"At the heart of influence is trust. If someone does not trust you, you cannot influence them.",source:"Substack — How to Be Influential",category:"influence"},
+  {id:36,text:"We think of influence as a superpower. But the truth is, everyone is an influencer. Influence is a life skill — and we should all exercise it more deliberately at work.",source:"First Round Review",category:"influence"},
+  {id:37,text:"Executive summaries are not just for executives.",source:"Substack — On Written Communication",category:"influence"},
+  {id:38,text:"Be intentionally positive in your tone since it is especially easy to lose context or misunderstand tone in written format.",source:"Substack — On Written Communication",category:"influence"},
+  {id:39,text:"When people say they love complexity, they are usually thinking about flavor, not written communication. Bias towards using simple words.",source:"Substack — On Written Communication",category:"influence"},
   {id:40,text:"Time management at work is not about doing more. It is about finding the right things to focus on and over time reducing the effort that goes into doing them.",source:"Substack — On Time Management",category:"time",featured:true},
-  {id:41,text:"At the heart of effective time management is focusing on the right things rather than doing the most things.",source:"Substack — On Time Management",category:"time",featured:false},
-  {id:42,text:"There is no one system that works all the time. As you grow in your career and as your company's priorities shift, evaluate your current system to see if it still serves you.",source:"Substack — On Time Management",category:"time",featured:false},
-  {id:43,text:"I realized time management at work was not about doing more — it was about driving the most impact by doing less and focusing on the right things.",source:"Substack — On Time Management",category:"time",featured:false},
-  {id:44,text:"Not all feedback is a gift. Sometimes feedback is unhelpful: it might lack context or be miscommunicated.",source:"Substack — On Receiving Negative Feedback",category:"feedback",featured:false},
+  {id:41,text:"At the heart of effective time management is focusing on the right things rather than doing the most things.",source:"Substack — On Time Management",category:"time"},
+  {id:42,text:"There is no one system that works all the time. As you grow in your career and as your company's priorities shift, evaluate your current system to see if it still serves you.",source:"Substack — On Time Management",category:"time"},
+  {id:43,text:"I realized time management at work was not about doing more — it was about driving the most impact by doing less and focusing on the right things.",source:"Substack — On Time Management",category:"time"},
+  {id:44,text:"Not all feedback is a gift. Sometimes feedback is unhelpful: it might lack context or be miscommunicated.",source:"Substack — On Receiving Negative Feedback",category:"feedback"},
   {id:45,text:"The key to receiving feedback well is to filter and sort.",source:"Substack — On Receiving Negative Feedback",category:"feedback",featured:true},
-  {id:46,text:"You don't have to act upon every feedback you receive.",source:"Substack — On Receiving Negative Feedback",category:"feedback",featured:false},
-  {id:47,text:"Irrespective of how the feedback is delivered, treat the giver with dignity and respect.",source:"Substack — On Receiving Negative Feedback",category:"feedback",featured:false},
-  {id:48,text:"Even if you disagree with the feedback itself, strive to understand the 'why' behind it. If people perceive that you're listening, it leaves both of you open to discussion and growth.",source:"First Round Review",category:"feedback",featured:false},
-  {id:49,text:"When you're struggling with something, it doesn't help to keep it to yourself. Let others know that you recognize where you need to grow and that you're working on it.",source:"First Round Review",category:"feedback",featured:false},
+  {id:46,text:"You don't have to act upon every feedback you receive.",source:"Substack — On Receiving Negative Feedback",category:"feedback"},
+  {id:47,text:"Irrespective of how the feedback is delivered, treat the giver with dignity and respect.",source:"Substack — On Receiving Negative Feedback",category:"feedback"},
+  {id:48,text:"Even if you disagree with the feedback itself, strive to understand the 'why' behind it. If people perceive that you're listening, it leaves both of you open to discussion and growth.",source:"First Round Review",category:"feedback"},
+  {id:49,text:"When you're struggling with something, it doesn't help to keep it to yourself. Let others know that you recognize where you need to grow and that you're working on it.",source:"First Round Review",category:"feedback"},
   {id:50,text:"Don't wait for your manager or company's process to get started. Own your story and show up prepared to help your manager make the best case for you.",source:"Substack — On Performance Reviews",category:"performance",featured:true},
-  {id:51,text:"Hard work is not necessarily the key indicator of impact. You can work hard and not drive the impact your manager considers important. It is more important to understand what your company values.",source:"Substack — On Performance Reviews",category:"performance",featured:false},
-  {id:52,text:"Performance reviews are incredibly powerful tools for your career growth. Own your story.",source:"Substack — On Performance Reviews",category:"performance",featured:false},
-  {id:53,text:"Even the best of managers don't have all the context about the work you do, so it is important to play an active role in the process.",source:"Substack — On Performance Reviews",category:"performance",featured:false},
-  {id:54,text:"The impact and actions a company rewards are an indicator not just of the company culture but also of its long-term success.",source:"Substack — On Performance Reviews",category:"performance",featured:false},
+  {id:51,text:"Hard work is not necessarily the key indicator of impact. You can work hard and not drive the impact your manager considers important. It is more important to understand what your company values.",source:"Substack — On Performance Reviews",category:"performance"},
+  {id:52,text:"Performance reviews are incredibly powerful tools for your career growth. Own your story.",source:"Substack — On Performance Reviews",category:"performance"},
+  {id:53,text:"Even the best of managers don't have all the context about the work you do, so it is important to play an active role in the process.",source:"Substack — On Performance Reviews",category:"performance"},
+  {id:54,text:"The impact and actions a company rewards are an indicator not just of the company culture but also of its long-term success.",source:"Substack — On Performance Reviews",category:"performance"},
   {id:55,text:"Always ask for three things, and let at least one to two asks be more than just money.",source:"Substack — On Negotiations",category:"negotiation",featured:true},
-  {id:56,text:"Successful negotiations leave both parties satisfied with the outcome. You are usually building a long-term relationship with the other party.",source:"Substack — On Negotiations",category:"negotiation",featured:false},
-  {id:57,text:"Money is only one component of career satisfaction. Would you rather make X amount of money and be excited about your work, or make 10% more and hate your job?",source:"Substack — On Negotiations",category:"negotiation",featured:false},
-  {id:58,text:"Negotiating is a natural process during the course of business.",source:"Substack — On Negotiations",category:"negotiation",featured:false},
-  {id:59,text:"When I hire, I ignore checklist items such as 'three to five years of experience.' Instead, I define the three things that are most important for each role.",source:"First Round Review",category:"leadership",featured:false},
-  {id:60,text:"Especially for startups and for leadership roles, managers should hire for hunger.",source:"First Round Review",category:"leadership",featured:false},
+  {id:56,text:"Successful negotiations leave both parties satisfied with the outcome. You are usually building a long-term relationship with the other party.",source:"Substack — On Negotiations",category:"negotiation"},
+  {id:57,text:"Money is only one component of career satisfaction. Would you rather make X amount of money and be excited about your work, or make 10% more and hate your job?",source:"Substack — On Negotiations",category:"negotiation"},
+  {id:58,text:"Negotiating is a natural process during the course of business.",source:"Substack — On Negotiations",category:"negotiation"},
+  {id:59,text:"When I hire, I ignore checklist items such as 'three to five years of experience.' Instead, I define the three things that are most important for each role.",source:"First Round Review",category:"leadership"},
+  {id:60,text:"Especially for startups and for leadership roles, managers should hire for hunger.",source:"First Round Review",category:"leadership"},
   {id:61,text:"Hunger means a desire to learn about what it takes to solve a problem. It's readily, eagerly seeking out that challenge.",source:"First Round Review",category:"leadership",featured:true},
-  {id:62,text:"In Silicon Valley, we tend to over-index on a rigid list of qualifications, when in reality, softer skills have far more impact than a sequence of specific titles on a resume.",source:"First Round Review",category:"leadership",featured:false},
-  {id:63,text:"The number one goal for a leadership meeting is alignment. Everyone in that group needs to be in lockstep.",source:"Lenny's Newsletter",category:"leadership",featured:false},
-  {id:64,text:"I believe there's truth in calendars. If someone tells you they really care about the mentorship of their employees, their calendar should reflect that.",source:"First Round Review",category:"leadership",featured:false},
+  {id:62,text:"In Silicon Valley, we tend to over-index on a rigid list of qualifications, when in reality, softer skills have far more impact than a sequence of specific titles on a resume.",source:"First Round Review",category:"leadership"},
+  {id:63,text:"The number one goal for a leadership meeting is alignment. Everyone in that group needs to be in lockstep.",source:"Lenny's Newsletter",category:"leadership"},
+  {id:64,text:"I believe there's truth in calendars. If someone tells you they really care about the mentorship of their employees, their calendar should reflect that.",source:"First Round Review",category:"leadership"},
   {id:65,text:"There are two types of people in this world — those who build sandcastles and those who smush them. I try to surround myself with people who are builders, not smushers.",source:"First Round Review",category:"people",featured:true},
-  {id:66,text:"Who leaves you feeling inspired or excited about solving a problem after a conversation? That's the mark of a builder. They're invested in your growth.",source:"First Round Review",category:"people",featured:false},
-  {id:67,text:"Don't let the initial shock derail you. Over time, I've learned to ignore the naysayers and stay focused on the next step I can take to achieve my own goals.",source:"First Round Review",category:"people",featured:false},
-  {id:68,text:"If I had to share just one life lesson, it would be this: Surround yourself with people who lift you up and inspire you.",source:"LinkedIn",category:"people",featured:false},
-  {id:69,text:"Big shifts don't start with technology. They start with empathy.",source:"LinkedIn",category:"innovation",featured:false},
+  {id:66,text:"Who leaves you feeling inspired or excited about solving a problem after a conversation? That's the mark of a builder. They're invested in your growth.",source:"First Round Review",category:"people"},
+  {id:67,text:"Don't let the initial shock derail you. Over time, I've learned to ignore the naysayers and stay focused on the next step I can take to achieve my own goals.",source:"First Round Review",category:"people"},
+  {id:68,text:"If I had to share just one life lesson, it would be this: Surround yourself with people who lift you up and inspire you.",source:"LinkedIn",category:"people"},
+  {id:69,text:"Big shifts don't start with technology. They start with empathy.",source:"LinkedIn",category:"innovation"},
   {id:70,text:"Innovation truly happens when you stop building for people and start building with them. This is the only way to ensure you don't end up becoming a solution looking for a problem.",source:"LinkedIn",category:"innovation",featured:true},
-  {id:71,text:"The revolution pretty much never happens inside large companies. It starts with consumers and small businesses.",source:"LinkedIn — Stackbirds",category:"innovation",featured:false},
-  {id:72,text:"The category is crowded because everyone is solving the same surface problem. Go one layer deeper.",source:"LinkedIn — Stackbirds",category:"innovation",featured:false},
-  {id:73,text:"Do something that allows you to develop soft skills. The jobs that will be more valuable in the future will require creative problem-solving, empathy, communication and influence — those are the qualities that make you invaluable.",source:"First Round Review",category:"innovation",featured:false},
-  {id:74,text:"Too often, women are asked what it is like to be a woman engineer, rather than being asked about the groundbreaking technology they've built.",source:"LinkedIn / Wogrammer",category:"women",featured:false},
+  {id:71,text:"The revolution pretty much never happens inside large companies. It starts with consumers and small businesses.",source:"LinkedIn — Stackbirds",category:"innovation"},
+  {id:72,text:"The category is crowded because everyone is solving the same surface problem. Go one layer deeper.",source:"LinkedIn — Stackbirds",category:"innovation"},
+  {id:73,text:"Do something that allows you to develop soft skills. The jobs that will be more valuable in the future will require creative problem-solving, empathy, communication and influence — those are the qualities that make you invaluable.",source:"First Round Review",category:"innovation"},
+  {id:74,text:"Too often, women are asked what it is like to be a woman engineer, rather than being asked about the groundbreaking technology they've built.",source:"LinkedIn / Wogrammer",category:"women"},
   {id:75,text:"It's not who you know; it's not what you know; it's who knows what you know.",source:"LinkedIn / Wogrammer",category:"women",featured:true},
-  {id:76,text:"You don't ask a man what it's like to be a male product lead, so don't ask a woman what it's like to be a female product lead. Ask her about her accomplishments and what she's building.",source:"First Round Review",category:"women",featured:false},
-  {id:77,text:"We believed women should feel equally comfortable talking about their technical accomplishments. We wanted to encourage women to take ownership of their professional achievements, then amplify those wins.",source:"First Round Review",category:"women",featured:false},
+  {id:76,text:"You don't ask a man what it's like to be a male product lead, so don't ask a woman what it's like to be a female product lead. Ask her about her accomplishments and what she's building.",source:"First Round Review",category:"women"},
+  {id:77,text:"We believed women should feel equally comfortable talking about their technical accomplishments. We wanted to encourage women to take ownership of their professional achievements, then amplify those wins.",source:"First Round Review",category:"women"},
   {id:78,text:"Being a founder means you will face moments where the situation is genuinely unprecedented, and the only thing you can control is how clear you are — clear on the goal, on the team you need, and on what you will and won't do.",source:"CanvasRebel Magazine",category:"founding",featured:true},
-  {id:79,text:"I needed to know whether this was actually solving something real. So I funded it myself and started small, working directly with chefs and clients, coordinating everything by hand, learning from every interaction.",source:"CanvasRebel Magazine",category:"founding",featured:false},
-  {id:80,text:"Perception can be the gap between a door opening and a door staying shut.",source:"CanvasRebel Magazine",category:"founding",featured:false},
-  {id:81,text:"The mental load is real and it's underestimated. It's not just cooking. It's the daily accumulation of decisions: what to make, whether it's healthy, whether you have the ingredients, whether you have the time.",source:"CanvasRebel Magazine",category:"founding",featured:false},
-  {id:82,text:"Every profession has tools designed to help them succeed — accountants have accounting software, designers have design platforms — but chefs had nothing. That gap became the foundation for Eat Cook Joy.",source:"CanvasRebel Magazine",category:"founding",featured:false},
-  {id:83,text:"There's no doubt that technology is changing the nature of jobs. I would encourage anyone in the workforce to remain adaptable to the changing nature of work.",source:"First Round Review",category:"tech",featured:false},
+  {id:79,text:"I needed to know whether this was actually solving something real. So I funded it myself and started small, working directly with chefs and clients, coordinating everything by hand, learning from every interaction.",source:"CanvasRebel Magazine",category:"founding"},
+  {id:80,text:"Perception can be the gap between a door opening and a door staying shut.",source:"CanvasRebel Magazine",category:"founding"},
+  {id:81,text:"The mental load is real and it's underestimated. It's not just cooking. It's the daily accumulation of decisions: what to make, whether it's healthy, whether you have the ingredients, whether you have the time.",source:"CanvasRebel Magazine",category:"founding"},
+  {id:82,text:"Every profession has tools designed to help them succeed — accountants have accounting software, designers have design platforms — but chefs had nothing. That gap became the foundation for Eat Cook Joy.",source:"CanvasRebel Magazine",category:"founding"},
+  {id:83,text:"There's no doubt that technology is changing the nature of jobs. I would encourage anyone in the workforce to remain adaptable to the changing nature of work.",source:"First Round Review",category:"tech"},
   {id:84,text:"20 years ago, the cloud changed how we experienced the web. 10 years ago, mobile changed how we connected with people. Now, AI agents are about to change how we get work done.",source:"LinkedIn — Stackbirds",category:"tech",featured:true},
-  {id:85,text:"Every decade — or so-ish with AI — technology rewires how we live and work.",source:"LinkedIn — Stackbirds",category:"tech",featured:false},
-  {id:86,text:"Whether you're researching medicine, building a nonprofit, or coding in Silicon Valley, the ability to analyze and solve problems is the most important skill to have.",source:"First Round Review",category:"career",featured:false},
-  {id:87,text:"Books instilled the desire to learn about worlds that were very different from mine.",source:"First Round Review",category:"career",featured:false},
+  {id:85,text:"Every decade — or so-ish with AI — technology rewires how we live and work.",source:"LinkedIn — Stackbirds",category:"tech"},
+  {id:86,text:"Whether you're researching medicine, building a nonprofit, or coding in Silicon Valley, the ability to analyze and solve problems is the most important skill to have.",source:"First Round Review",category:"career"},
+  {id:87,text:"Books instilled the desire to learn about worlds that were very different from mine.",source:"First Round Review",category:"career"},
 ];
 
 const CATEGORIES=[
-  {key:"career",label:"Career & Curiosity",kicker:"Chapter 01",blurb:"Curiosity as compass, non-linear paths, lateral skill-building.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6z"/></svg>'},
-  {key:"mindset",label:"Mindset",kicker:"Chapter 02",blurb:"Trade reactive fear for creative possibility.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 2a5 5 0 0 0-5 5c0 1.5.6 2.8 1.6 3.7-.4 1.1-.6 2.2-.6 3.3a7 7 0 0 0 14 0c0-1.1-.2-2.2-.6-3.3A5 5 0 0 0 15 2a4.9 4.9 0 0 0-3 1A4.9 4.9 0 0 0 9 2zM12 14v8"/></svg>'},
-  {key:"imposter",label:"Imposter Syndrome",kicker:"Chapter 03",blurb:"Don’t overcome it. Manage it. Show up anyway.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12a10 10 0 1 0 20 0 10 10 0 0 0-20 0z"/><path d="M9 9h.01M15 9h.01M8 16c1 1 2.5 2 4 2s3-1 4-2"/></svg>'},
-  {key:"confidence",label:"Confidence",kicker:"Chapter 04",blurb:"90% validation + 10% familiarity. Earned, not declared.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>'},
-  {key:"influence",label:"Influence & Communication",kicker:"Chapter 05",blurb:"Trust beats authority. Everyone is an influencer.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11a8 8 0 0 1 16 0v3a1 1 0 0 1-1 1h-2v-4h3M3 11v3a1 1 0 0 0 1 1h2v-4H3M16 11v8a3 3 0 0 1-3 3h-1"/></svg>'},
-  {key:"time",label:"Time Management & Focus",kicker:"Chapter 06",blurb:"Not doing more — doing the right things.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>'},
-  {key:"feedback",label:"Receiving Feedback",kicker:"Chapter 07",blurb:"Not all feedback is a gift — filter and sort.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'},
-  {key:"performance",label:"Performance Reviews",kicker:"Chapter 08",blurb:"Own your story. Don’t wait for process.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>'},
-  {key:"negotiation",label:"Negotiation",kicker:"Chapter 09",blurb:"Always ask for three things. One past money.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11a3 3 0 0 0 6 0V5a3 3 0 0 0-6 0z"/><path d="M5 11v2a7 7 0 0 0 14 0v-2M12 18v4M8 22h8"/></svg>'},
-  {key:"leadership",label:"Leadership & Hiring",kicker:"Chapter 10",blurb:"Hire for hunger. Calendars don’t lie.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21l1.5-5 6-6 4 4-6 6L3 21zM13.5 6.5l4 4M14 4l6 6"/></svg>'},
-  {key:"people",label:"People — Builders & Smushers",kicker:"Chapter 11",blurb:"Surround yourself with sandcastle builders.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="7" r="4"/><path d="M17 11a3 3 0 1 0 0-6M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M21 21v-2a4 4 0 0 0-3-3.85"/></svg>'},
-  {key:"innovation",label:"Innovation & Empathy",kicker:"Chapter 12",blurb:"Big shifts start with empathy, not technology.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 13c.5.5 1 1.3 1 2v1h6v-1c0-.7.5-1.5 1-2a7 7 0 0 0-4-13z"/></svg>'},
-  {key:"women",label:"Women in Tech",kicker:"Chapter 13",blurb:"Ask about what she built — not what it’s like to be a woman.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="9" r="6"/><path d="M12 15v7M9 19h6"/></svg>'},
-  {key:"founding",label:"Founding & Entrepreneurship",kicker:"Chapter 14",blurb:"Be clear on the goal, the team, and what you won’t do.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 21l4-9 4 6 6-13M5 21h14"/></svg>'},
-  {key:"tech",label:"Technology & AI",kicker:"Chapter 15",blurb:"Cloud. Mobile. Now AI agents — every decade rewires work.",icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>'},
+  {key:"career",      label:"Career & Curiosity",       chapter:"Chapter 01", color:"#1F4F4B", blurb:"Curiosity as compass. Non-linear paths. Lateral skill-building."},
+  {key:"mindset",     label:"Mindset",                   chapter:"Chapter 02", color:"#3A5A7A", blurb:"Trade reactive fear for creative possibility."},
+  {key:"imposter",    label:"Imposter Syndrome",         chapter:"Chapter 03", color:"#8A3C18", blurb:"Don't overcome it. Manage it. Show up anyway."},
+  {key:"confidence",  label:"Confidence",                chapter:"Chapter 04", color:"#C8A24B", blurb:"90% validation + 10% familiarity. Earned, not declared."},
+  {key:"influence",   label:"Influence & Communication", chapter:"Chapter 05", color:"#B5532A", blurb:"Trust beats authority. Everyone is an influencer."},
+  {key:"time",        label:"Time Management & Focus",   chapter:"Chapter 06", color:"#16140F", blurb:"Not doing more — doing the right things."},
+  {key:"feedback",    label:"Receiving Feedback",        chapter:"Chapter 07", color:"#5D2E4A", blurb:"Not all feedback is a gift — filter and sort."},
+  {key:"performance", label:"Performance Reviews",       chapter:"Chapter 08", color:"#7A7263", blurb:"Own your story. Don't wait for process."},
+  {key:"negotiation", label:"Negotiation",               chapter:"Chapter 09", color:"#8A3C18", blurb:"Always ask for three things. One past money."},
+  {key:"leadership",  label:"Leadership & Hiring",       chapter:"Chapter 10", color:"#2F6B66", blurb:"Hire for hunger. Calendars don't lie."},
+  {key:"people",      label:"People — Builders & Smushers", chapter:"Chapter 11", color:"#E2C681", blurb:"Surround yourself with sandcastle builders."},
+  {key:"innovation",  label:"Innovation & Empathy",      chapter:"Chapter 12", color:"#4A6E3E", blurb:"Big shifts start with empathy, not technology."},
+  {key:"women",       label:"Women in Tech",             chapter:"Chapter 13", color:"#7E4566", blurb:"Ask about what she built — not what it's like to be a woman."},
+  {key:"founding",    label:"Founding & Entrepreneurship", chapter:"Chapter 14", color:"#3A352B", blurb:"Be clear on the goal, the team, and what you won't do."},
+  {key:"tech",        label:"Technology & AI",           chapter:"Chapter 15", color:"#5B7B9D", blurb:"Cloud. Mobile. Now AI agents — every decade rewires work."},
 ];
 
-function buildDashboard(){
-  const grid=document.getElementById("dashboard-grid");
-  if(!grid)return;
-  grid.innerHTML=CATEGORIES.map(cat=>{
-    const qs=QUOTES.filter(q=>q.category===cat.key);
-    const feat=qs.find(q=>q.featured)||qs[0];
-    const snip=feat?(feat.text.length>140?feat.text.slice(0,138)+"…":feat.text):"";
-    return `<button class="dash-card dash-${cat.key}" data-jump="${cat.key}" aria-label="Open ${cat.label} — ${qs.length} quotes">
-      <div class="dash-icon" aria-hidden="true">${cat.icon}</div>
-      <div class="dash-label">${cat.label}</div>
-      <p class="dash-snippet">“${snip}”</p>
-      <div class="dash-foot">
-        <span class="dash-count"><span class="num">${qs.length}</span> quotes</span>
-        <span class="dash-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </div>
-    </button>`;
-  }).join("");
-  grid.querySelectorAll("[data-jump]").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      const key=btn.getAttribute("data-jump");
-      document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.getAttribute("data-filter")===key));
-      activeFilter=key;searchTerm="";
-      document.getElementById("quote-search").value="";
-      update();
-      const mc=document.getElementById("main-content");
-      window.scrollTo({top:mc.offsetTop-130,behavior:"smooth"});
-    });
-  });
+const GRAPHICS = {
+  career:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="94"/><line x1="100" y1="6" x2="100" y2="194"/><line x1="6" y1="100" x2="194" y2="100"/></g><circle cx="100" cy="100" r="6" fill="currentColor"/></svg>`,
+  mindset:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M100 30 Q60 70 100 110 T 100 180"/><circle cx="100" cy="30" r="4" fill="currentColor"/><circle cx="100" cy="180" r="4" fill="currentColor"/><path d="M40 100 Q 70 60 100 100 T 160 100"/></g></svg>`,
+  imposter:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="100" cy="100" r="70"/><path d="M70 90 Q 100 60 130 90"/><line x1="70" y1="120" x2="130" y2="120"/><circle cx="80" cy="95" r="3" fill="currentColor"/><circle cx="120" cy="95" r="3" fill="currentColor"/></g></svg>`,
+  confidence:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M100 20 L160 60 V140 L100 180 L40 140 V60 Z"/><path d="M100 50 L130 70 V130 L100 150 L70 130 V70 Z"/><circle cx="100" cy="100" r="6" fill="currentColor"/></g></svg>`,
+  influence:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="60" cy="100" r="14"/><circle cx="140" cy="60" r="10"/><circle cx="150" cy="140" r="10"/><circle cx="120" cy="100" r="8"/><line x1="74" y1="100" x2="112" y2="100"/><line x1="128" y1="100" x2="140" y2="70"/><line x1="128" y1="105" x2="142" y2="135"/><line x1="140" y1="70" x2="150" y2="130"/></g></svg>`,
+  time:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="100" cy="100" r="70"/><line x1="100" y1="30" x2="100" y2="40"/><line x1="100" y1="160" x2="100" y2="170"/><line x1="30" y1="100" x2="40" y2="100"/><line x1="160" y1="100" x2="170" y2="100"/><line x1="100" y1="100" x2="100" y2="55" stroke-width="1.8"/><line x1="100" y1="100" x2="140" y2="100" stroke-width="1.8"/></g><circle cx="100" cy="100" r="3" fill="currentColor"/></svg>`,
+  feedback:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><rect x="30" y="40" width="100" height="70" rx="6"/><path d="M40 110 L40 140 L70 110"/><rect x="80" y="80" width="90" height="60" rx="6"/><line x1="50" y1="60" x2="115" y2="60"/><line x1="50" y1="80" x2="105" y2="80"/></g></svg>`,
+  performance:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 170 L20 30 M20 170 L180 170"/><path d="M40 150 L70 110 L100 130 L140 70 L170 50" stroke-width="1.6"/><circle cx="40" cy="150" r="3" fill="currentColor"/><circle cx="70" cy="110" r="3" fill="currentColor"/><circle cx="100" cy="130" r="3" fill="currentColor"/><circle cx="140" cy="70" r="3" fill="currentColor"/><circle cx="170" cy="50" r="3" fill="currentColor"/></g></svg>`,
+  negotiation:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M40 60 L60 50 L80 60 L80 130 L40 130 Z"/><path d="M120 60 L140 50 L160 60 L160 130 L120 130 Z"/><line x1="80" y1="95" x2="120" y2="95"/><circle cx="100" cy="95" r="8"/></g></svg>`,
+  leadership:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="100" cy="60" r="14"/><circle cx="50" cy="140" r="12"/><circle cx="100" cy="140" r="12"/><circle cx="150" cy="140" r="12"/><line x1="100" y1="74" x2="50" y2="128"/><line x1="100" y1="74" x2="100" y2="128"/><line x1="100" y1="74" x2="150" y2="128"/></g></svg>`,
+  people:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><rect x="50" y="120" width="100" height="40"/><rect x="65" y="100" width="70" height="20"/><rect x="80" y="80" width="40" height="20"/><rect x="95" y="60" width="10" height="20"/><line x1="40" y1="160" x2="160" y2="160"/></g></svg>`,
+  innovation:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M100 30 C 70 60 70 100 100 130 C 130 100 130 60 100 30"/><line x1="100" y1="130" x2="100" y2="170"/><line x1="85" y1="155" x2="115" y2="155"/><line x1="90" y1="165" x2="110" y2="165"/><circle cx="100" cy="80" r="6" fill="currentColor"/></g></svg>`,
+  women:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="100" cy="80" r="36"/><line x1="100" y1="116" x2="100" y2="160"/><line x1="80" y1="140" x2="120" y2="140"/><circle cx="100" cy="80" r="60" stroke-dasharray="2 4"/></g></svg>`,
+  founding:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M100 30 L120 70 L160 76 L130 105 L138 145 L100 126 L62 145 L70 105 L40 76 L80 70 Z"/><circle cx="100" cy="95" r="5" fill="currentColor"/></g></svg>`,
+  tech:`<svg class="graphic" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><rect x="50" y="50" width="100" height="100"/><rect x="75" y="75" width="50" height="50"/><line x1="100" y1="20" x2="100" y2="50"/><line x1="100" y1="150" x2="100" y2="180"/><line x1="20" y1="100" x2="50" y2="100"/><line x1="150" y1="100" x2="180" y2="100"/><line x1="50" y1="50" x2="30" y2="30"/><line x1="150" y1="50" x2="170" y2="30"/><line x1="50" y1="150" x2="30" y2="170"/><line x1="150" y1="150" x2="170" y2="170"/></g></svg>`,
+};
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function pad(n){return String(n).padStart(2,"0")}
+
+function renderIndex(){
+  const root = document.getElementById("chapter-index");
+  const html = ['<span class="lbl">Index ·</span>'].concat(
+    CATEGORIES.map(c => `<a href="#ch-${c.key}"><span class="dot" style="background:${c.color}"></span>${esc(c.label.split(" ")[0])}</a>`)
+  ).join("");
+  root.innerHTML = html;
 }
-buildDashboard();
 
-function copyIcon(){return`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;}
-function checkIcon(){return`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>`;}
-
-function buildCard(q){
-  const esc=q.text.replace(/"/g,"&quot;").replace(/'/g,"&#39;");
-  return`<article class="quote-card fade-in${q.featured?" featured":""}" data-id="${q.id}" data-category="${q.category}">
-    <div class="quote-mark" aria-hidden="true">“</div>
-    <p class="quote-text">${q.text}</p>
-    <div class="quote-meta">
-      <span class="quote-source">${q.source}</span>
-      <div class="quote-actions">
-        <button class="quote-action-btn copy-btn" aria-label="Copy quote to clipboard" data-copy="${esc}">${copyIcon()}</button>
-      </div>
+function buildCard(q, idxInChapter){
+  return `<article class="card reveal" data-id="${q.id}" data-cat="${q.category}">
+    <div class="num"><span class="tag">#${pad(q.id)}</span></div>
+    <blockquote>${esc(q.text)}</blockquote>
+    <div class="attr">
+      <span class="src">— ${esc(q.source)}</span>
+      <button class="copy" data-text="${esc(q.text)} — ${esc(q.source)}" aria-label="Copy quote">Copy</button>
     </div>
   </article>`;
 }
 
-function renderAll(list,mode){
-  const c=document.getElementById("quotes-container");
-  const e=document.getElementById("empty-state");
-  const rb=document.getElementById("results-bar");
-  if(!list.length){c.innerHTML="";e.classList.add("visible");rb.textContent="";return;}
-  e.classList.remove("visible");
-  if(mode==="all"){
-    let html="";
-    CATEGORIES.forEach(cat=>{
-      const qs=list.filter(q=>q.category===cat.key);
-      if(!qs.length)return;
-      html+=`<section class="category-section" aria-labelledby="cat-${cat.key}">
-        <div class="category-header">
-          <h2 class="category-title" id="cat-${cat.key}">${cat.label}</h2>
-          <span class="category-count">${qs.length}</span>
+function buildChapter(cat, i){
+  const qs = QUOTES.filter(q => q.category === cat.key);
+  const featured = qs.find(q => q.featured) || qs[0];
+  const rest = qs.filter(q => q !== featured);
+  const themeClass = `t-${cat.key}`;
+  return `<section class="chapter qchapter" id="ch-${cat.key}" data-theme="${cat.key}">
+    <header class="chapter-head reveal ${themeClass}">
+      <div class="num">${esc(cat.chapter)} · ${esc(cat.label)}</div>
+      <h2><em>${esc(cat.label.split(" & ")[0].split(" — ")[0])}</em>${cat.label.includes(" & ")||cat.label.includes(" — ")?" "+esc(cat.label.replace(cat.label.split(" & ")[0].split(" — ")[0],"")) :""}</h2>
+      <p class="blurb">${esc(cat.blurb)}</p>
+      <span class="ct">${qs.length} quote${qs.length===1?"":"s"}</span>
+      ${GRAPHICS[cat.key]||""}
+    </header>
+    <div class="quotes">
+      <article class="card featured reveal ${themeClass}" data-id="${featured.id}" data-cat="${featured.category}">
+        <div class="num"><span class="tag">Featured · #${pad(featured.id)}</span></div>
+        <blockquote>${esc(featured.text)}</blockquote>
+        <div class="attr">
+          <span class="src">— ${esc(featured.source)}</span>
+          <button class="copy" data-text="${esc(featured.text)} — ${esc(featured.source)}" aria-label="Copy quote">Copy</button>
         </div>
-        <div class="quotes-grid">${qs.map(q=>buildCard(q)).join("")}</div>
-      </section>`;
+      </article>
+      ${rest.map((q,i)=>buildCard(q,i)).join("")}
+    </div>
+  </section>`;
+}
+
+function render(){
+  renderIndex();
+  document.getElementById("chapters").innerHTML = CATEGORIES.map(buildChapter).join("");
+  observeReveals();
+  wireCopyButtons();
+}
+
+function observeReveals(){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+}
+
+function wireCopyButtons(){
+  document.querySelectorAll('.copy').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const text = btn.getAttribute('data-text');
+      try { await navigator.clipboard.writeText(text); } catch(_){}
+      const old = btn.textContent;
+      btn.textContent = 'Copied';
+      btn.classList.add('copied');
+      setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1400);
     });
-    c.innerHTML=html;
-    rb.textContent=`${list.length} quotes across all topics`;
-  } else {
-    const cat=CATEGORIES.find(c=>c.key===mode);
-    const label=cat?cat.label:(mode==="search"?"Search results":mode);
-    c.innerHTML=`<section class="category-section">
-      <div class="category-header">
-        <button class="back-to-dash" type="button" aria-label="Back to all themes">← Back to themes</button>
-        <h2 class="category-title">${label}</h2>
-        <span class="category-count">${list.length}</span>
-      </div>
-      <div class="quotes-grid">${list.map(q=>buildCard(q)).join("")}</div>
-    </section>`;
-    const bb=c.querySelector(".back-to-dash");
-    if(bb)bb.addEventListener("click",()=>{
-      activeFilter="all";searchTerm="";
-      document.getElementById("quote-search").value="";
-      document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.getAttribute("data-filter")==="all"));
-      update();
-      document.getElementById("dashboard").scrollIntoView({behavior:"smooth",block:"start"});
-    });
-    rb.textContent=`${list.length} quote${list.length!==1?"s":""}`;
-  }
-  document.querySelectorAll(".copy-btn").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      const text=btn.getAttribute("data-copy");
-      const full="“"+text+"” — Zainab Ghadiyali";
-      navigator.clipboard.writeText(full).then(()=>{
-        btn.innerHTML=checkIcon();btn.classList.add("copied");
-        setTimeout(()=>{btn.innerHTML=copyIcon();btn.classList.remove("copied");},2000);
-      }).catch(()=>{
-        const ta=document.createElement("textarea");ta.value=full;
-        ta.style.cssText="position:fixed;opacity:0";document.body.appendChild(ta);
-        ta.select();document.execCommand("copy");document.body.removeChild(ta);
+  });
+}
+
+// Search
+function wireSearch(){
+  const input = document.getElementById('search');
+  const count = document.getElementById('count');
+  const empty = document.getElementById('empty');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    document.querySelectorAll('.qchapter').forEach(chap => {
+      let chapShown = 0;
+      chap.querySelectorAll('.card').forEach(card => {
+        const text = (card.querySelector('blockquote')?.textContent + ' ' + card.querySelector('.src')?.textContent).toLowerCase();
+        const match = !q || text.includes(q);
+        card.classList.toggle('hidden', !match);
+        if (match) { shown++; chapShown++; }
       });
+      chap.style.display = chapShown === 0 && q ? 'none' : '';
     });
+    count.innerHTML = `<b>${shown}</b> shown`;
+    empty.classList.toggle('show', shown === 0);
   });
 }
 
-let activeFilter="all";
-let searchTerm="";
-function getFiltered(){
-  return QUOTES.filter(q=>{
-    const mf=activeFilter==="all"||q.category===activeFilter;
-    const ms=!searchTerm||q.text.toLowerCase().includes(searchTerm)||q.source.toLowerCase().includes(searchTerm)||q.category.toLowerCase().includes(searchTerm);
-    return mf&&ms;
-  });
+// Scroll progress
+function wireScroll(){
+  const sb = document.getElementById('scrollbar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight);
+    sb.style.width = (pct * 100).toFixed(2) + '%';
+  }, {passive:true});
 }
-function update(){renderAll(getFiltered(),searchTerm?"search":activeFilter);}
-update();
 
-document.querySelectorAll(".filter-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
-    activeFilter=btn.getAttribute("data-filter");
-    searchTerm="";
-    document.getElementById("quote-search").value="";
-    update();
-    const mc=document.getElementById("main-content");
-    window.scrollTo({top:mc.offsetTop-130,behavior:"smooth"});
-  });
-});
-
-document.getElementById("quote-search").addEventListener("input",e=>{
-  searchTerm=e.target.value.trim().toLowerCase();
-  if(searchTerm){activeFilter="all";document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));document.querySelector("[data-filter=all]").classList.add("active");}
-  update();
-});
-
-const backBtn=document.getElementById("back-top");
-window.addEventListener("scroll",()=>{backBtn.classList.toggle("visible",window.scrollY>400);},{passive:true});
-
-(function(){
-  const t=document.querySelector("[data-theme-toggle]"),r=document.documentElement;
-  let d=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";
-  r.setAttribute("data-theme",d);
-  t&&t.addEventListener("click",()=>{
-    d=d==="dark"?"light":"dark";
-    r.setAttribute("data-theme",d);
-    t.setAttribute("aria-label","Switch to "+(d==="dark"?"light":"dark")+" mode");
-    t.innerHTML=d==="dark"
-      ?`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`
-      :`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-  });
-})();
+render();
+wireSearch();
+wireScroll();
 </script>
+
 </body>
 </html>
