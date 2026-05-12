@@ -94,7 +94,8 @@
   .nav-thumb .thumb-desc{font-family:'Inter',sans-serif;font-size:13px;color:#3a3d44;line-height:1.55;margin:0 0 12px;font-weight:400;letter-spacing:0;text-transform:none}
   .nav-thumb .thumb-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
   .nav-thumb .thumb-tag{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.04em;color:var(--teal);background:rgba(13,59,64,.06);border:1px solid rgba(13,59,64,.08);padding:3px 8px;border-radius:999px;text-transform:none}
-  .nav-thumb .thumb-cta{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;display:inline-flex;align-items:center;gap:6px;border-top:1px solid var(--rule);padding-top:10px;margin-top:2px}
+  .nav-thumb .thumb-cta{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:6px;border-top:1px solid var(--rule);padding-top:10px;margin-top:2px;text-decoration:none;cursor:pointer;transition:color .2s ease}
+  .nav-thumb a.thumb-cta:hover{color:var(--coral)}
   .nav-thumb .thumb-cta::after{content:"→";font-family:'Inter',sans-serif;font-weight:600;transition:transform .2s ease}
   .site nav li:hover .nav-thumb .thumb-cta::after{transform:translateX(3px)}
 
@@ -504,7 +505,7 @@
             <h4 class="thumb-name">The Curiosity-Driven <em>Career</em></h4>
             <p class="thumb-desc">Founder, engineer and product leader — a portrait in ignorance, persistence and reinvention from public-health work to Facebook to her own ventures.</p>
             <div class="thumb-meta"><span class="thumb-tag">Founder</span><span class="thumb-tag">Engineer</span><span class="thumb-tag">Ex-Airbnb</span></div>
-            <span class="thumb-cta">Read the bio</span>
+            <a class="thumb-cta" href="#about">Read the bio</a>
           </div>
         </li>
         <li>
@@ -514,7 +515,7 @@
             <h4 class="thumb-name">The <em>Journey</em></h4>
             <p class="thumb-desc">Two decades from Madison engineering classrooms to shipping for 2B people at Facebook, leading product at Airbnb, and founding in Austin.</p>
             <div class="thumb-meta"><span class="thumb-tag">2008–today</span><span class="thumb-tag">Madison → Austin</span></div>
-            <span class="thumb-cta">See the timeline</span>
+            <a class="thumb-cta" href="#career">See the timeline</a>
           </div>
         </li>
         <li>
@@ -524,7 +525,7 @@
             <h4 class="thumb-name">Stay <em>Ignorant.</em> Persist.</h4>
             <p class="thumb-desc">First Round's profile on career design, built around three deceptively simple ideas — stay ignorant, follow real curiosity, and persist past the novelty.</p>
             <div class="thumb-meta"><span class="thumb-tag">Long-read</span><span class="thumb-tag">Career design</span></div>
-            <span class="thumb-cta">Read the article</span>
+            <a class="thumb-cta" href="#article">Read the article</a>
           </div>
         </li>
         <li>
@@ -534,7 +535,7 @@
             <h4 class="thumb-name">Talks &amp; <em>Videos</em></h4>
             <p class="thumb-desc">Keynotes and conversations at WARF, Mind the Product, Product School and SXSW on building products, curiosity and the ignorance advantage.</p>
             <div class="thumb-meta"><span class="thumb-tag">Keynotes</span><span class="thumb-tag">Conferences</span></div>
-            <span class="thumb-cta">Watch the talks</span>
+            <a class="thumb-cta" href="#videos">Watch the talks</a>
           </div>
         </li>
         <li>
@@ -544,7 +545,7 @@
             <h4 class="thumb-name">Podcasts &amp; <em>Audio</em></h4>
             <p class="thumb-desc">Inside Outside Innovation, Ready For Launch and the Wogrammer podcast — the founder origin stories told in her own voice.</p>
             <div class="thumb-meta"><span class="thumb-tag">Apple</span><span class="thumb-tag">Inside Outside</span></div>
-            <span class="thumb-cta">Listen now</span>
+            <a class="thumb-cta" href="#podcasts">Listen now</a>
           </div>
         </li>
         <li>
@@ -554,7 +555,7 @@
             <h4 class="thumb-name">The <em>Reading List</em></h4>
             <p class="thumb-desc">The books Zainab returns to — three at a time, always — on craft, leadership, and learning faster than the problem is moving.</p>
             <div class="thumb-meta"><span class="thumb-tag">Books</span><span class="thumb-tag">Currently reading</span></div>
-            <span class="thumb-cta">Browse the shelf</span>
+            <a class="thumb-cta" href="#reading">Browse the shelf</a>
           </div>
         </li>
         <li>
@@ -564,7 +565,7 @@
             <h4 class="thumb-name">Eat Cook Joy &amp; <em>Stackbirds</em></h4>
             <p class="thumb-desc">An Austin personal-chef service and an AI-agents company keeping founders out of platform lock-in — both small, ambitious, hand-built.</p>
             <div class="thumb-meta"><span class="thumb-tag">Eat Cook Joy</span><span class="thumb-tag">Stackbirds</span><span class="thumb-tag">Wogrammer</span></div>
-            <span class="thumb-cta">Meet the companies</span>
+            <a class="thumb-cta" href="#ventures">Meet the companies</a>
           </div>
         </li>
         <li>
@@ -574,7 +575,7 @@
             <h4 class="thumb-name">What She's <em>Up To</em></h4>
             <p class="thumb-desc">A live snapshot of what Zainab is building, reading and thinking about this season — updated regularly in the spirit of nownownow.com.</p>
             <div class="thumb-meta"><span class="thumb-tag">2026</span><span class="thumb-tag">In progress</span></div>
-            <span class="thumb-cta">See what's now</span>
+            <a class="thumb-cta" href="#now">See what's now</a>
           </div>
         </li>
         <li>
@@ -584,7 +585,7 @@
             <h4 class="thumb-name">Writing &amp; <em>Essays</em></h4>
             <p class="thumb-desc">Notes on career design, founding, the ignorance advantage and the productive discomfort of not yet knowing what you're doing.</p>
             <div class="thumb-meta"><span class="thumb-tag">Essays</span><span class="thumb-tag">LinkedIn</span></div>
-            <span class="thumb-cta">Read the essays</span>
+            <a class="thumb-cta" href="#writing">Read the essays</a>
           </div>
         </li>
         <li>
@@ -594,7 +595,7 @@
             <h4 class="thumb-name">Awards &amp; <em>Honors</em></h4>
             <p class="thumb-desc">Industry honors, fellowships and community awards across two decades of product, engineering, and women-in-tech advocacy.</p>
             <div class="thumb-meta"><span class="thumb-tag">Fellowships</span><span class="thumb-tag">Industry</span></div>
-            <span class="thumb-cta">View honors</span>
+            <a class="thumb-cta" href="#awards">View honors</a>
           </div>
         </li>
         <li>
@@ -604,7 +605,7 @@
             <h4 class="thumb-name">In the <em>Press</em></h4>
             <p class="thumb-desc">Profiles and features from First Round, Voyage San Antonio, and across the tech and founder press — gathered in one place.</p>
             <div class="thumb-meta"><span class="thumb-tag">Features</span><span class="thumb-tag">Interviews</span></div>
-            <span class="thumb-cta">Read the press</span>
+            <a class="thumb-cta" href="#press">Read the press</a>
           </div>
         </li>
         <li>
@@ -614,7 +615,7 @@
             <h4 class="thumb-name">Sixty-Plus <em>Links</em></h4>
             <p class="thumb-desc">Every interview, talk, profile and project — LinkedIn, Clay, Crunchbase, Product Hunt, Twitter and more, all in one searchable directory.</p>
             <div class="thumb-meta"><span class="thumb-tag">60+ links</span><span class="thumb-tag">LinkedIn</span><span class="thumb-tag">Clay</span></div>
-            <span class="thumb-cta">Open the directory</span>
+            <a class="thumb-cta" href="#links">Open the directory</a>
           </div>
         </li>
         <li>
@@ -624,7 +625,7 @@
             <h4 class="thumb-name">Say <em>Hello</em></h4>
             <p class="thumb-desc">Open DMs on LinkedIn, a profile on Clay, and the unofficial reading-room policy — she still answers her own messages.</p>
             <div class="thumb-meta"><span class="thumb-tag">LinkedIn DM</span><span class="thumb-tag">Open</span></div>
-            <span class="thumb-cta">Reach out</span>
+            <a class="thumb-cta" href="#connect">Reach out</a>
           </div>
         </li>
         <li>
@@ -636,7 +637,7 @@
             <h4 class="thumb-name"><em>Inspiration</em></h4>
             <p class="thumb-desc">A separate reading room — the people, books and ideas that shape how Zainab thinks about curiosity, craft and the next thing to build.</p>
             <div class="thumb-meta"><span class="thumb-tag">New</span><span class="thumb-tag">Companion page</span></div>
-            <span class="thumb-cta">Open the page</span>
+            <a class="thumb-cta" href="/inspiration">Open the page</a>
           </div>
         </li>
       </ul>
