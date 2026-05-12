@@ -415,6 +415,28 @@
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
     .reveal.in{opacity:1;transform:none}
   }
+
+  /* ===== Award Night Photo Album ===== */
+  .album-wrap{max-width:1180px;margin:40px auto 0;padding:0 24px 56px}
+  .album-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media (max-width:880px){.album-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.album-grid{grid-template-columns:1fr}}
+  .album-item{margin:0;cursor:pointer;border-radius:8px;overflow:hidden;background:#fff;border:1px solid var(--rule);box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+  .album-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-deep)}
+  .album-item img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .album-item figcaption{padding:10px 12px;font-size:12px;color:var(--muted);font-family:'Inter',sans-serif;line-height:1.4}
+
+  /* ===== Lightbox ===== */
+  .lightbox{display:none;position:fixed;inset:0;z-index:900;background:rgba(6,37,40,.93);align-items:center;justify-content:center;flex-direction:column;gap:14px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(90vw,780px);max-height:80vh;object-fit:contain;border-radius:6px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+  .lb-caption{color:#e2bd72;font-family:'Fraunces',serif;font-style:italic;font-size:16px;text-align:center;margin:0;padding:0 20px}
+  .lb-close{position:fixed;top:20px;right:24px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer;line-height:1;opacity:.8}
+  .lb-close:hover{opacity:1}
+  .lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;font-size:44px;cursor:pointer;padding:6px 14px;border-radius:6px;line-height:1}
+  .lb-prev{left:14px}
+  .lb-next{right:14px}
+  .lb-prev:hover,.lb-next:hover{background:rgba(255,255,255,.25)}
 </style>
 </head>
 <body>
@@ -1082,12 +1104,6 @@
         <span class="read">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
       </a>
 
-      <a class="press-card" href="https://www.women2.com/stories/zainab-ghadiyali-wogrammer-facebook-airbnb" target="_blank" rel="noopener">
-        <span class="outlet">Women 2.0</span>
-        <h4>Wogrammer · Facebook · Airbnb</h4>
-        <p>Career-arc feature on the Wogrammer co-founder.</p>
-        <span class="read">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
-      </a>
 
       <a class="press-card" href="https://canvasrebel.com/meet-zainab-ghadiyali/" target="_blank" rel="noopener">
         <span class="outlet">CanvasRebel</span>
@@ -1177,6 +1193,38 @@
         <span class="read" style="color:var(--muted)">Wisconsin Alumni Research Foundation</span>
       </div>
     </div>
+
+  <!-- ===== Award Night Photo Album ===== -->
+  <div class="album-wrap">
+    <div class="kicker" style="text-align:center;margin-bottom:18px">Award Night</div>
+    <div class="album-grid">
+      <figure class="album-item" data-src="./assets/awards/award-photo-1.jpg">
+        <img src="./assets/awards/award-photo-1.jpg" alt="Selfie at Salon C before the Austin Business Woman Awards ceremony" loading="lazy" />
+        <figcaption>Salon C — before the ceremony</figcaption>
+      </figure>
+      <figure class="album-item" data-src="./assets/awards/award-photo-2.jpg">
+        <img src="./assets/awards/award-photo-2.jpg" alt="Ballroom with caption: What an incredible honor. Thank you @austinbusinesswoman" loading="lazy" />
+        <figcaption>“What an incredible honor. Thank you @austinbusinesswoman”</figcaption>
+      </figure>
+      <figure class="album-item" data-src="./assets/awards/award-photo-3.jpg">
+        <img src="./assets/awards/award-photo-3.jpg" alt="Product Innovation Finalists screen showing Zainab Ghadiyali of Eat Cook Joy" loading="lazy" />
+        <figcaption>Product Innovation Finalists — Eat Cook Joy</figcaption>
+      </figure>
+      <figure class="album-item" data-src="./assets/awards/award-photo-4.jpg">
+        <img src="./assets/awards/award-photo-4.jpg" alt="Wide ballroom shot at the Austin Business Woman Awards gala" loading="lazy" />
+        <figcaption>Ballroom — Austin Business Woman Awards gala</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+    <button class="lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+    <img id="lbImg" src="" alt="" />
+    <p id="lbCaption" class="lb-caption"></p>
+  </div>
   </div>
 </section>
 
@@ -1195,20 +1243,18 @@
         <a href="https://www.linkedin.com/in/zainabg" target="_blank" rel="noopener"><span class="dom">linkedin.com/in/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://clay.earth/profile/zainab-g" target="_blank" rel="noopener"><span class="dom">clay.earth/profile/zainab-g</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://about.me/breaking-stereotypes-consulting" target="_blank" rel="noopener"><span class="dom">about.me/breaking-stereotypes-consulting</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://www.weekday.works/people/zainab-ghadiyali-zainabg" target="_blank" rel="noopener"><span class="dom">weekday.works/people/zainab-ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://contactout.com/Zainab-Ghadiyali-84595550" target="_blank" rel="noopener"><span class="dom">contactout.com/Zainab-Ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://twitter.com/zainabg" target="_blank" rel="noopener"><span class="dom">twitter.com/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.facebook.com/zainab.ghadiyali" target="_blank" rel="noopener"><span class="dom">facebook.com/zainab.ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://github.com/zainabg" target="_blank" rel="noopener"><span class="dom">github.com/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.producthunt.com/@zainabg" target="_blank" rel="noopener"><span class="dom">producthunt.com/@zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://stackoverflow.com/users/zainabg" target="_blank" rel="noopener"><span class="dom">stackoverflow.com/users/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://www.goodreads.com/user/show/zainabg" target="_blank" rel="noopener"><span class="dom">goodreads.com/user/show/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://angel.co/u/zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">angel.co/u/zainab-ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.crunchbase.com/person/zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">crunchbase.com/person/zainab-ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.slideshare.net/zainabg" target="_blank" rel="noopener"><span class="dom">slideshare.net/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+        <a href="https://productify.substack.com" target="_blank" rel="noopener"><span class="dom">productify.substack.com</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+        <a href="https://substack.com/@zainabghadiyali" target="_blank" rel="noopener"><span class="dom">substack.com/@zainabghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
       </div>
     </div>
-
     <div class="link-group">
       <h3>University &amp; Alumni</h3>
       <div class="link-list">
@@ -1254,7 +1300,6 @@
         <a href="https://www.facebook.com/eatcookjoy" target="_blank" rel="noopener"><span class="dom">facebook.com/eatcookjoy</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.bizjournals.com/austin/inno/stories/inno-insights/2025/02/28/austin-startups-to-watch-eat-cook-joy.html" target="_blank" rel="noopener"><span class="dom">austin inno · startups to watch</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://voyagesanantonio.com/interview/community-highlights-meet-zainab-ghadiyali-of-eat-cook-joy-inc/" target="_blank" rel="noopener"><span class="dom">voyagesanantonio.com · interview</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://www.austinbusinesswoman.com/post/eat-cook-joy-member-feature-zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">austinbusinesswoman.com · feature</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.austinstartup.com/eat-cook-joy-personal-chefs-ai-zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">austinstartup.com · personal chefs &amp; AI</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.startupdigest.com/founders/eat-cook-joy-zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">startupdigest.com · founder profile</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
       </div>
@@ -1282,13 +1327,11 @@
         <a href="https://www.youtube.com/results?search_query=%22Zainab+Ghadiyali%22" target="_blank" rel="noopener"><span class="dom">youtube · all videos</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.productschool.com/blog/product-management-2/zainab-ghadiyali-airbnb-product-lead" target="_blank" rel="noopener"><span class="dom">productschool.com · airbnb pm</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://mindtheproduct.com/speaker/zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">mindtheproduct.com · speaker</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://www.women2.com/stories/zainab-ghadiyali-wogrammer-facebook-airbnb" target="_blank" rel="noopener"><span class="dom">women2.com · feature</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://canvasrebel.com/meet-zainab-ghadiyali/" target="_blank" rel="noopener"><span class="dom">canvasrebel.com · meet zainab ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://foreignpolicy.com/2015-global-thinkers/" target="_blank" rel="noopener"><span class="dom">foreignpolicy.com · global thinkers</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://schedule.sxsw.com/2020/events/" target="_blank" rel="noopener"><span class="dom">sxsw schedule</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.eventbrite.com/o/wisconsin-alumni-research-foundation-warf" target="_blank" rel="noopener"><span class="dom">eventbrite · WARF talk</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.winwisconsin.org/events/" target="_blank" rel="noopener"><span class="dom">winwisconsin.org · speaker</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://www.austinbusinesswoman.com/directory/eat-cook-joy-zainab-ghadiyali" target="_blank" rel="noopener"><span class="dom">austinbusinesswoman.com · directory</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
       </div>
     </div>
 
@@ -1408,5 +1451,28 @@
   document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
 </script>
 
+<script>
+  // ===== Lightbox for award photos =====
+  (function(){
+    const items = Array.from(document.querySelectorAll('.album-item'));
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbCap = document.getElementById('lbCaption');
+    const lbClose = document.getElementById('lbClose');
+    const lbPrev = document.getElementById('lbPrev');
+    const lbNext = document.getElementById('lbNext');
+    let current = 0;
+    function open(idx){current=idx;const fig=items[idx];lbImg.src=fig.dataset.src;lbImg.alt=fig.querySelector('img').alt;lbCap.textContent=fig.querySelector('figcaption').textContent;lb.classList.add('open');document.body.style.overflow='hidden';}
+    function close(){lb.classList.remove('open');document.body.style.overflow='';}
+    function prev(){open((current-1+items.length)%items.length);}
+    function next(){open((current+1)%items.length);}
+    items.forEach((fig,i)=>fig.addEventListener('click',()=>open(i)));
+    lbClose.addEventListener('click',close);
+    lbPrev.addEventListener('click',prev);
+    lbNext.addEventListener('click',next);
+    lb.addEventListener('click',function(e){if(e.target===lb)close();});
+    document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')prev();if(e.key==='ArrowRight')next();});
+  })();
+</script>
 </body>
 </html>
