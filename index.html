@@ -75,31 +75,36 @@
   .site nav a:hover::after{width:18px}
   .site nav a.active{color:var(--coral-deep);background:rgba(232,93,78,.10)}
   .site nav a.active::after{width:22px;background:var(--coral-deep)}
+  /* Icon-only nav item (Inspiration link) */
+  .site nav a.nav-icon{padding:7px;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--rule);background:#fff;color:var(--teal-deep);margin-left:6px}
+  .site nav a.nav-icon:hover{background:var(--coral);color:#fff;border-color:var(--coral);transform:translateY(-1px)}
+  .site nav a.nav-icon::after{display:none}
+  .site nav a.nav-icon svg{width:16px;height:16px;fill:currentColor;display:block}
+  @media (max-width:980px){.site nav a.nav-icon{width:auto;height:auto;border-radius:8px;justify-content:flex-start;gap:10px;border:0;background:transparent;margin-left:0;padding:11px 14px}.site nav a.nav-icon::before{content:"Inspiration";font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.site nav a.nav-icon svg{order:-1}}
 
-  /* Floating section thumbnail preview */
-  .nav-thumb{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);width:240px;background:#fff;border:1px solid var(--rule);border-radius:10px;box-shadow:0 22px 50px -18px rgba(13,59,64,.35),0 4px 12px -6px rgba(13,59,64,.18);padding:10px;opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:90}
+  /* Floating section info card (text-rich, azizsaif-style) */
+  .nav-thumb{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-6px);width:300px;background:#fff;border:1px solid var(--rule);border-radius:10px;box-shadow:0 22px 50px -18px rgba(13,59,64,.35),0 4px 12px -6px rgba(13,59,64,.18);padding:16px 18px 14px;opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;z-index:90;text-align:left}
   .nav-thumb::before{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%) rotate(45deg);width:12px;height:12px;background:#fff;border-left:1px solid var(--rule);border-top:1px solid var(--rule);border-radius:2px}
+  .nav-thumb::after{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
   .site nav li:hover .nav-thumb,.site nav li:focus-within .nav-thumb{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
-  .nav-thumb .thumb-art{width:100%;aspect-ratio:16/10;border-radius:7px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-style:italic;font-size:22px;font-weight:600;letter-spacing:.01em;text-shadow:0 2px 10px rgba(0,0,0,.35)}
-  .nav-thumb .thumb-art::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.35) 100%)}
-  .nav-thumb .thumb-art span{position:relative;z-index:2;padding:0 14px;text-align:center}
-  .nav-thumb .thumb-kicker{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;margin:10px 4px 4px}
-  .nav-thumb .thumb-desc{font-family:'Inter',sans-serif;font-size:12.5px;color:#3a3d44;line-height:1.5;margin:0 4px 6px;font-weight:400;letter-spacing:0;text-transform:none}
+  .nav-thumb .thumb-kicker{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .nav-thumb .thumb-kicker::before{content:"";width:18px;height:1.5px;background:var(--coral);display:inline-block;border-radius:2px}
+  .nav-thumb .thumb-name{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--teal-deep);line-height:1.2;margin:0 0 8px;letter-spacing:-.01em}
+  .nav-thumb .thumb-name em{font-style:italic;color:var(--coral);font-weight:500}
+  .nav-thumb .thumb-desc{font-family:'Inter',sans-serif;font-size:13px;color:#3a3d44;line-height:1.55;margin:0 0 12px;font-weight:400;letter-spacing:0;text-transform:none}
+  .nav-thumb .thumb-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .nav-thumb .thumb-tag{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.04em;color:var(--teal);background:rgba(13,59,64,.06);border:1px solid rgba(13,59,64,.08);padding:3px 8px;border-radius:999px;text-transform:none}
+  .nav-thumb .thumb-cta{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;display:inline-flex;align-items:center;gap:6px;border-top:1px solid var(--rule);padding-top:10px;margin-top:2px}
+  .nav-thumb .thumb-cta::after{content:"→";font-family:'Inter',sans-serif;font-weight:600;transition:transform .2s ease}
+  .site nav li:hover .nav-thumb .thumb-cta::after{transform:translateX(3px)}
 
-  /* Section thumbnail gradients (match tile palette) */
-  .ta-about{background:linear-gradient(135deg,#0d3b40 0%,#1f5e64 40%,#e85d4e 100%)}
-  .ta-journey{background:linear-gradient(135deg,#1f5e64 0%,#0d3b40 50%,#062528 100%)}
-  .ta-article{background:linear-gradient(135deg,#bf3b2c 0%,#e85d4e 100%)}
-  .ta-videos{background:linear-gradient(135deg,#e2bd72 0%,#c89849 50%,#8e6a2a 100%)}
-  .ta-podcasts{background:linear-gradient(135deg,#f5917f 0%,#e85d4e 50%,#bf3b2c 100%)}
-  .ta-reading{background:linear-gradient(135deg,#c89849 0%,#0d3b40 100%)}
-  .ta-ventures{background:linear-gradient(135deg,#0d3b40 0%,#e85d4e 100%)}
-  .ta-now{background:linear-gradient(135deg,#1f5e64 0%,#e2bd72 100%)}
-  .ta-writing{background:linear-gradient(135deg,#062528 0%,#bf3b2c 100%)}
-  .ta-awards{background:linear-gradient(135deg,#c89849 0%,#e2bd72 50%,#8e6a2a 100%)}
-  .ta-press{background:linear-gradient(135deg,#5b6270 0%,#062528 100%)}
-  .ta-links{background:linear-gradient(135deg,#0d3b40 0%,#c89849 100%)}
-  .ta-connect{background:linear-gradient(135deg,#e85d4e 0%,#0d3b40 100%)}
+  /* Keep card from clipping off-screen at the edges */
+  .site nav li:first-child .nav-thumb{left:0;transform:translateX(0) translateY(-6px)}
+  .site nav li:first-child .nav-thumb::before{left:32px}
+  .site nav li:first-child:hover .nav-thumb,.site nav li:first-child:focus-within .nav-thumb{transform:translateX(0) translateY(0)}
+  .site nav li:last-child .nav-thumb{left:auto;right:0;transform:translateX(0) translateY(-6px)}
+  .site nav li:last-child .nav-thumb::before{left:auto;right:32px;transform:rotate(45deg)}
+  .site nav li:last-child:hover .nav-thumb,.site nav li:last-child:focus-within .nav-thumb{transform:translateX(0) translateY(0)}
 
   .menu-btn{display:none;background:none;border:0;font-size:24px;color:var(--teal-deep);cursor:pointer;padding:4px}
   @media (max-width:1180px){
@@ -495,105 +500,143 @@
         <li>
           <a href="#about" data-target="about">About</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-about"><span>Biography</span></div>
-            <div class="thumb-kicker">Chapter 01</div>
-            <p class="thumb-desc">A portrait in ignorance, persistence and reinvention.</p>
+            <div class="thumb-kicker">Chapter 01 · Biography</div>
+            <h4 class="thumb-name">The Curiosity-Driven <em>Career</em></h4>
+            <p class="thumb-desc">Founder, engineer and product leader — a portrait in ignorance, persistence and reinvention from public-health work to Facebook to her own ventures.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Founder</span><span class="thumb-tag">Engineer</span><span class="thumb-tag">Ex-Airbnb</span></div>
+            <span class="thumb-cta">Read the bio</span>
           </div>
         </li>
         <li>
           <a href="#career" data-target="career">Journey</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-journey"><span>The Journey</span></div>
             <div class="thumb-kicker">Timeline</div>
-            <p class="thumb-desc">Two decades from Madison classrooms to Airbnb to Eat Cook Joy.</p>
+            <h4 class="thumb-name">The <em>Journey</em></h4>
+            <p class="thumb-desc">Two decades from Madison engineering classrooms to shipping for 2B people at Facebook, leading product at Airbnb, and founding in Austin.</p>
+            <div class="thumb-meta"><span class="thumb-tag">2008–today</span><span class="thumb-tag">Madison → Austin</span></div>
+            <span class="thumb-cta">See the timeline</span>
           </div>
         </li>
         <li>
           <a href="#article" data-target="article">Article</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-article"><span>Featured Read</span></div>
-            <div class="thumb-kicker">First Round Review</div>
-            <p class="thumb-desc">Stay ignorant, follow curiosity, persist past the novelty.</p>
+            <div class="thumb-kicker">First Round Review · Featured</div>
+            <h4 class="thumb-name">Stay <em>Ignorant.</em> Persist.</h4>
+            <p class="thumb-desc">First Round's profile on career design, built around three deceptively simple ideas — stay ignorant, follow real curiosity, and persist past the novelty.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Long-read</span><span class="thumb-tag">Career design</span></div>
+            <span class="thumb-cta">Read the article</span>
           </div>
         </li>
         <li>
           <a href="#videos" data-target="videos">Videos</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-videos"><span>Talks &amp; Videos</span></div>
-            <div class="thumb-kicker">Stage</div>
-            <p class="thumb-desc">WARF, Mind the Product, Product School and SXSW keynotes.</p>
+            <div class="thumb-kicker">Talks & Stage</div>
+            <h4 class="thumb-name">Talks &amp; <em>Videos</em></h4>
+            <p class="thumb-desc">Keynotes and conversations at WARF, Mind the Product, Product School and SXSW on building products, curiosity and the ignorance advantage.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Keynotes</span><span class="thumb-tag">Conferences</span></div>
+            <span class="thumb-cta">Watch the talks</span>
           </div>
         </li>
         <li>
           <a href="#podcasts" data-target="podcasts">Podcasts</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-podcasts"><span>Audio</span></div>
-            <div class="thumb-kicker">Long-form</div>
-            <p class="thumb-desc">Inside Outside, Ready For Launch, Wogrammer conversations.</p>
+            <div class="thumb-kicker">Long-form Audio</div>
+            <h4 class="thumb-name">Podcasts &amp; <em>Audio</em></h4>
+            <p class="thumb-desc">Inside Outside Innovation, Ready For Launch and the Wogrammer podcast — the founder origin stories told in her own voice.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Apple</span><span class="thumb-tag">Inside Outside</span></div>
+            <span class="thumb-cta">Listen now</span>
           </div>
         </li>
         <li>
           <a href="#reading" data-target="reading">Reading</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-reading"><span>Reading List</span></div>
             <div class="thumb-kicker">Bookshelf</div>
-            <p class="thumb-desc">The books Zainab returns to — three at a time, always.</p>
+            <h4 class="thumb-name">The <em>Reading List</em></h4>
+            <p class="thumb-desc">The books Zainab returns to — three at a time, always — on craft, leadership, and learning faster than the problem is moving.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Books</span><span class="thumb-tag">Currently reading</span></div>
+            <span class="thumb-cta">Browse the shelf</span>
           </div>
         </li>
         <li>
           <a href="#ventures" data-target="ventures">Ventures</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-ventures"><span>Ventures</span></div>
-            <div class="thumb-kicker">Companies</div>
-            <p class="thumb-desc">Eat Cook Joy, Stackbirds and Wogrammer — built hand-in-hand.</p>
+            <div class="thumb-kicker">Companies Founded</div>
+            <h4 class="thumb-name">Eat Cook Joy &amp; <em>Stackbirds</em></h4>
+            <p class="thumb-desc">An Austin personal-chef service and an AI-agents company keeping founders out of platform lock-in — both small, ambitious, hand-built.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Eat Cook Joy</span><span class="thumb-tag">Stackbirds</span><span class="thumb-tag">Wogrammer</span></div>
+            <span class="thumb-cta">Meet the companies</span>
           </div>
         </li>
         <li>
           <a href="#now" data-target="now">Now</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-now"><span>Now</span></div>
             <div class="thumb-kicker">Currently</div>
-            <p class="thumb-desc">What she is building, reading and thinking about this season.</p>
+            <h4 class="thumb-name">What She's <em>Up To</em></h4>
+            <p class="thumb-desc">A live snapshot of what Zainab is building, reading and thinking about this season — updated regularly in the spirit of nownownow.com.</p>
+            <div class="thumb-meta"><span class="thumb-tag">2026</span><span class="thumb-tag">In progress</span></div>
+            <span class="thumb-cta">See what's now</span>
           </div>
         </li>
         <li>
           <a href="#writing" data-target="writing">Writing</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-writing"><span>Writing</span></div>
-            <div class="thumb-kicker">Essays</div>
-            <p class="thumb-desc">Notes on career design, founding, and the ignorance advantage.</p>
+            <div class="thumb-kicker">Essays & Notes</div>
+            <h4 class="thumb-name">Writing &amp; <em>Essays</em></h4>
+            <p class="thumb-desc">Notes on career design, founding, the ignorance advantage and the productive discomfort of not yet knowing what you're doing.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Essays</span><span class="thumb-tag">LinkedIn</span></div>
+            <span class="thumb-cta">Read the essays</span>
           </div>
         </li>
         <li>
           <a href="#awards" data-target="awards">Awards</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-awards"><span>Honors</span></div>
             <div class="thumb-kicker">Recognition</div>
-            <p class="thumb-desc">Industry honors, fellowships and community awards.</p>
+            <h4 class="thumb-name">Awards &amp; <em>Honors</em></h4>
+            <p class="thumb-desc">Industry honors, fellowships and community awards across two decades of product, engineering, and women-in-tech advocacy.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Fellowships</span><span class="thumb-tag">Industry</span></div>
+            <span class="thumb-cta">View honors</span>
           </div>
         </li>
         <li>
           <a href="#press" data-target="press">Press</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-press"><span>In the Press</span></div>
-            <div class="thumb-kicker">Coverage</div>
-            <p class="thumb-desc">Profiles and features from across the tech &amp; founder press.</p>
+            <div class="thumb-kicker">Press Coverage</div>
+            <h4 class="thumb-name">In the <em>Press</em></h4>
+            <p class="thumb-desc">Profiles and features from First Round, Voyage San Antonio, and across the tech and founder press — gathered in one place.</p>
+            <div class="thumb-meta"><span class="thumb-tag">Features</span><span class="thumb-tag">Interviews</span></div>
+            <span class="thumb-cta">Read the press</span>
           </div>
         </li>
         <li>
           <a href="#links" data-target="links">Links</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-links"><span>Links</span></div>
             <div class="thumb-kicker">Directory</div>
-            <p class="thumb-desc">Sixty-plus links — interviews, talks, profiles and projects.</p>
+            <h4 class="thumb-name">Sixty-Plus <em>Links</em></h4>
+            <p class="thumb-desc">Every interview, talk, profile and project — LinkedIn, Clay, Crunchbase, Product Hunt, Twitter and more, all in one searchable directory.</p>
+            <div class="thumb-meta"><span class="thumb-tag">60+ links</span><span class="thumb-tag">LinkedIn</span><span class="thumb-tag">Clay</span></div>
+            <span class="thumb-cta">Open the directory</span>
           </div>
         </li>
         <li>
           <a href="#connect" data-target="connect">Connect</a>
           <div class="nav-thumb" role="tooltip">
-            <div class="thumb-art ta-connect"><span>Say Hello</span></div>
             <div class="thumb-kicker">Get in touch</div>
-            <p class="thumb-desc">LinkedIn, Clay, Crunchbase and the open DM policy.</p>
+            <h4 class="thumb-name">Say <em>Hello</em></h4>
+            <p class="thumb-desc">Open DMs on LinkedIn, a profile on Clay, and the unofficial reading-room policy — she still answers her own messages.</p>
+            <div class="thumb-meta"><span class="thumb-tag">LinkedIn DM</span><span class="thumb-tag">Open</span></div>
+            <span class="thumb-cta">Reach out</span>
+          </div>
+        </li>
+        <li>
+          <a href="/inspiration" class="nav-icon" aria-label="Inspiration" title="Inspiration">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.01 8.01 0 0 1-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
+          </a>
+          <div class="nav-thumb" role="tooltip">
+            <div class="thumb-kicker">New Page</div>
+            <h4 class="thumb-name"><em>Inspiration</em></h4>
+            <p class="thumb-desc">A separate reading room — the people, books and ideas that shape how Zainab thinks about curiosity, craft and the next thing to build.</p>
+            <div class="thumb-meta"><span class="thumb-tag">New</span><span class="thumb-tag">Companion page</span></div>
+            <span class="thumb-cta">Open the page</span>
           </div>
         </li>
       </ul>
@@ -1420,7 +1463,7 @@
         <a href="https://clay.earth/profile/zainab-g" target="_blank" rel="noopener noreferrer"><span class="dom">clay.earth/profile/zainab-g</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://about.me/breaking-stereotypes-consulting" target="_blank" rel="noopener noreferrer"><span class="dom">about.me/breaking-stereotypes-consulting</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://twitter.com/zainabg" target="_blank" rel="noopener noreferrer"><span class="dom">twitter.com/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        <a href="https://www.facebook.com/zainab.ghadiyali" target="_blank" rel="noopener noreferrer"><span class="dom">facebook.com/zainab.ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+        <a href="https://www.facebook.com/thekakal?locale=fr_FR&amp;wa_status_inline=true&amp;ref=1" target="_blank" rel="noopener noreferrer"><span class="dom">facebook.com/thekakal</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://github.com/zainabg" target="_blank" rel="noopener noreferrer"><span class="dom">github.com/zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://www.producthunt.com/@zainabg" target="_blank" rel="noopener noreferrer"><span class="dom">producthunt.com/@zainabg</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
         <a href="https://angel.co/u/zainab-ghadiyali" target="_blank" rel="noopener noreferrer"><span class="dom">angel.co/u/zainab-ghadiyali</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
@@ -1544,9 +1587,9 @@
         <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85 0 3.2 0 3.58-.07 4.85-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07-3.2 0-3.58 0-4.85-.07-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.16 15.58 2.16 15.2 2.16 12c0-3.2 0-3.58.07-4.85.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.16 8.8 2.16 12 2.16M12 0C8.74 0 8.33 0 7.05.07 5.78.13 4.9.33 4.14.63a6 6 0 0 0-2.17 1.4A6 6 0 0 0 .56 4.2C.26 4.96.06 5.84 0 7.11 0 8.39 0 8.8 0 12.06c0 3.25 0 3.66.07 4.95.06 1.26.26 2.14.56 2.9a6 6 0 0 0 1.4 2.17 6 6 0 0 0 2.17 1.4c.76.3 1.64.5 2.9.56C8.4 24 8.8 24 12.06 24c3.26 0 3.67 0 4.95-.06 1.26-.06 2.14-.26 2.9-.56a6 6 0 0 0 2.17-1.4 6 6 0 0 0 1.4-2.17c.3-.76.5-1.64.56-2.9C24 15.6 24 15.2 24 12s0-3.67-.06-4.95c-.06-1.26-.26-2.14-.56-2.9a6 6 0 0 0-1.4-2.17A6 6 0 0 0 19.8.56c-.76-.3-1.64-.5-2.9-.56C15.6 0 15.2 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg></span>
         <b>Instagram</b><span>@eatcookjoy</span>
       </a>
-      <a class="c-card fb" href="https://www.facebook.com/zainab.ghadiyali" target="_blank" rel="noopener">
+      <a class="c-card fb" href="https://www.facebook.com/thekakal?locale=fr_FR&amp;wa_status_inline=true&amp;ref=1" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H7.9V12h2.53V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.57V12h2.77l-.44 2.89h-2.33v7A10 10 0 0 0 22 12Z"/></svg></span>
-        <b>Facebook</b><span>zainab.ghadiyali</span>
+        <b>Facebook</b><span>facebook.com/thekakal</span>
       </a>
       <a class="c-card gh" href="https://github.com/zainabg" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.83-.26.83-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3"/></svg></span>
