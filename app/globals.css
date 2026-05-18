@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: #FFB59E;
+    color: #1B1530;
+  }
+}
+
+@layer utilities {
+  .hairline {
+    @apply border border-line;
+  }
+
+  .container-page {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+
+  /* Warm hero gradient — peach to lavender with coral accents */
+  .bg-warm {
+    background:
+      radial-gradient(ellipse 70% 60% at 20% 10%, rgba(255, 181, 158, 0.55) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 85% 15%, rgba(201, 184, 255, 0.5) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 40% at 50% 100%, rgba(255, 211, 110, 0.35) 0%, transparent 60%),
+      linear-gradient(180deg, #FFF8F3 0%, #FFF3EC 100%);
+  }
+
+  .bg-warm-soft {
+    background:
+      radial-gradient(ellipse 60% 50% at 100% 0%, rgba(201, 184, 255, 0.28) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 0% 100%, rgba(255, 181, 158, 0.3) 0%, transparent 55%),
+      #FFF8F3;
+  }
+
+  .bg-cta {
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 0%, rgba(255, 181, 158, 0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 50% 100%, rgba(201, 184, 255, 0.5) 0%, transparent 60%),
+      linear-gradient(180deg, #FFF3EC 0%, #FFF8F3 100%);
+  }
+
+  /* Gradient text — coral to violet */
+  .text-gradient {
+    background: linear-gradient(100deg, #FF6B5B 0%, #FF8A6B 35%, #8B6BFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(100deg, #FF6B5B 0%, #FFB59E 50%, #FFD36E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Soft card — the canva/lovable signature */
+  .card {
+    @apply bg-white rounded-3xl shadow-soft hairline;
+  }
+
+  .card-lg {
+    @apply bg-white rounded-4xl shadow-softLg hairline;
+  }
+
+  /* Subtle grid pattern for backgrounds */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(27, 21, 48, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27, 21, 48, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white hairline text-xs font-medium text-muted shadow-soft;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-ink text-cream font-medium text-[15px] shadow-softLg hover:shadow-softXl hover:-translate-y-0.5 transition-all;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white hairline text-ink font-medium text-[15px] shadow-soft hover:shadow-softLg transition-all;
+  }
+}
